@@ -1,0 +1,60 @@
+﻿@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+@*@inherits SampleBaseComponent;*@
+
+<div class=" col-lg-8 control-section" id="target" style="height:350px;">
+    <div>
+        @if (this.ShowButton)
+        {
+            <button class="e-btn" @onclick="@OnBtnClick">Open</button>
+        }
+    </div>
+    <SfDialog Width="335px" Target="#target" IsModal="true" @bind-Visible="Visibility">
+        <DialogTemplates>
+            <Header> @Header </Header>
+            <Content>
+                <p>@Content</p>
+            </Content>
+        </DialogTemplates>
+        <DialogButtons>
+            <DialogButton Content="OK" IsPrimary="true" OnClick="@DlgButtonClick" />
+        </DialogButtons>
+        <DialogEvents OnOpen="@DialogOpen" Closed="@DialogClose" OnOverlayClick="@OverlayClick"></DialogEvents>
+        <DialogAnimationSettings Effect="@DialogEffect.None"></DialogAnimationSettings>
+    </SfDialog>
+</div>
+
+@code {
+    [Parameter] public string Header { get; set; }
+    [Parameter] public string Content { get; set; }
+
+    private bool Visibility { get; set; } = true;
+    private bool ShowButton { get; set; } = false;
+    private void DialogOpen(Object args)
+    {
+        this.ShowButton = false;
+    }
+    private void DialogClose(Object args)
+    {
+        this.ShowButton = true;
+    }
+    private void OnBtnClick()
+    {
+        this.Visibility = true;
+    }
+    private void DlgButtonClick()
+    {
+        this.Visibility = false;
+    }
+    private void OverlayClick(Object args)
+    {
+        //if ((bool)this.CheckboxObj.Checked)
+        //{
+        //    this.Visibility = false;
+        //}
+        //else
+        //{
+        //    this.Visibility = true;
+        //}
+    }
+}
