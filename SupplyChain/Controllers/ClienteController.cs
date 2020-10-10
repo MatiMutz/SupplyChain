@@ -4,9 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SupplyChain.Server.DataAccess;
-using SupplyChain.Shared.Models;
 
 namespace SupplyChain
 {
@@ -23,9 +20,9 @@ namespace SupplyChain
 
         // GET: api/Cliente
         [HttpGet]
-        public async Task<IEnumerable<Cliente>> Get()
+        public IEnumerable<ClienteEntity> Get()
         {
-            var xitem = await _context.Cliente.ToListAsync();
+            var xitem = _context.Cliente.ToList();
             return xitem;
         }
     }

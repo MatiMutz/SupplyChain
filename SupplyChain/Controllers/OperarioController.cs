@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SupplyChain.Server.DataAccess;
 
 namespace SupplyChain
 {
@@ -64,7 +63,6 @@ namespace SupplyChain
         {
             try
             {
-                xitem.CG_OPER = 0;
                 _context.Operario.Add(xitem);
                 await _context.SaveChangesAsync();
             }
