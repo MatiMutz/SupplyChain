@@ -21,7 +21,7 @@ namespace SupplyChain
             _context = context;
         }
 
-        // GET: api/Operario
+        // GET: api/Medida
         [HttpGet]
         public IEnumerable<Medida> Get()
         {
@@ -29,7 +29,7 @@ namespace SupplyChain
             return (IEnumerable<Medida>)xitem;
         }
 
-        // PUT: api/Operario/{id}
+        // PUT: api/Medida/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, Medida xitem)
         {
@@ -59,7 +59,7 @@ namespace SupplyChain
             return NoContent();
         }
 
-        // POST: api/Operario
+        // POST: api/Medida
         [HttpPost]
         public async Task<ActionResult<Medida>> Post(Medida xitem)
         {
@@ -75,7 +75,7 @@ namespace SupplyChain
             return CreatedAtAction("Get", new { id = xitem.ID }, xitem);
         }
 
-        // DELETE: api/Operario/{id}
+        // DELETE: api/Medida/{id}
         [HttpDelete("{id}")]
         public async Task<ActionResult<Medida>> Delete(int id)
         {

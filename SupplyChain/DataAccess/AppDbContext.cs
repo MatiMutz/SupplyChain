@@ -34,9 +34,12 @@ namespace SupplyChain.Server.DataAccess
 
         //
 
-        public DbSet<Prod> Prod { get; set; }
-        public DbSet<Sobrepresion> Sobrepresion { get; set; }
-        public DbSet<Tipo> Tipo { get; set; }
+        public DbSet<ProdPage> Prod { get; set; }
+     
+      
+        public DbSet<Servicio> Servicios { get; set; }
+        public DbSet<Sobrepres> Sobrepresion { get; set; }
+        public DbSet<Tip> Tipo { get; set; }
         public DbSet<Estado> Estado { get; set; }
         public DbSet<TrabajosEfec> TrabajosEfec { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

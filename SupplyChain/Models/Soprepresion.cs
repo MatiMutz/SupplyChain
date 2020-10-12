@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
-    public class Sobrepresion
+    public class Sobrepres
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

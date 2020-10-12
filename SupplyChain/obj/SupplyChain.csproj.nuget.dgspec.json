@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {}
+    "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {
+    "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
+        "projectUniqueName": "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
         "projectName": "SupplyChain",
-        "projectPath": "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
-        "packagesPath": "C:\\Users\\a4344\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\obj\\",
+        "projectPath": "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
+        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
+        "outputPath": "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\a4344\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -83,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

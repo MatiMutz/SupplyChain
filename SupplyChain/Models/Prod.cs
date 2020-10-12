@@ -8,7 +8,7 @@ namespace SupplyChain
 {
 
     [Table("Prod")]
-    public class Prod
+    public class ProdPage
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
+    [Table("Servicio")]
     public class Servicio
     {
         [StringLength(255)]
@@ -102,7 +103,7 @@ namespace SupplyChain.Shared.Models
         [StringLength(255)]
         public string ACTA { get; set; }
         [StringLength(255)]
-        public string PRESENCAINSPEC { get; set; }
+        public string PRESENCIAINSPEC { get; set; }
         [StringLength(500)]
         public string DESCARTICULO { get; set; }
         [StringLength(8000)]
