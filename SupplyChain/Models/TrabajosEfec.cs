@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
+    [Table("Trabajosefec")]
     public class TrabajosEfec
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]

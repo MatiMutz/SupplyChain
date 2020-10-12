@@ -23,7 +23,7 @@ namespace SupplyChain
 
         // GET: api/Sobrepresion
         [HttpGet]
-        public IEnumerable<Sobrepresion> Get()
+        public IEnumerable<Sobrepres> Get()
         {
             var xitem = _context.Sobrepresion.ToList();
             return xitem;
@@ -31,7 +31,7 @@ namespace SupplyChain
 
         // PUT: api/Sobrepresion/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Sobrepresion xitem)
+        public async Task<IActionResult> Put(int id, Sobrepres xitem)
         {
             if (id != xitem.Id)
             {
@@ -61,7 +61,7 @@ namespace SupplyChain
 
         // POST: api/Sobrepresion
         [HttpPost]
-        public async Task<ActionResult<Sobrepresion>> Post(Sobrepresion xitem)
+        public async Task<ActionResult<Sobrepres>> Post(Sobrepres xitem)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace SupplyChain
 
         // DELETE: api/Sobrepresion/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Sobrepresion>> Delete(int id)
+        public async Task<ActionResult<Sobrepres>> Delete(int id)
         {
             var xitem = await _context.Sobrepresion.FindAsync(id);
             if (xitem == null)
