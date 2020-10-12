@@ -21,6 +21,7 @@ namespace SupplyChain.Server.DataAccess
         public virtual DbSet<Stock> Pedidos { get; set; }
         public DbSet<ResumenStock> ResumenStock { get; set; }
         public DbSet<Programa> Programas { get; set; }
+<<<<<<< HEAD
 
         //
 
@@ -32,6 +33,13 @@ namespace SupplyChain.Server.DataAccess
 
         //
 
+=======
+        public DbSet<Servicio> Servicios { get; set; }
+        public DbSet<Sobrepresion> Sobrepresion { get; set; }
+        public DbSet<Tipo> Tipo { get; set; }
+        public DbSet<Estado> Estado { get; set; }
+        public DbSet<TrabajosEfec> TrabajosEfec { get; set; }
+>>>>>>> 8f1ff9fd7573067a7349a21adf6310b5b75f9b75
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }
 
