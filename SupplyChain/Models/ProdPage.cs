@@ -4,14 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace SupplyChain
+namespace SupplyChain.Shared.Models
 {
 
     [Table("Prod")]
-    public class ProdPage
+    public class Prodd
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CG_PROD { get; set; }
         [StringLength(500)]
         public string DES_PROD { get; set; }

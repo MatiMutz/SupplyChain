@@ -17,13 +17,13 @@ namespace SupplyChain.Pages.Prod
     {
         [Inject] protected CustomHttpClient Http { get; set; }
         [Inject] protected IJSRuntime JsRuntime { get; set; }
-        protected SfGrid<ProdPage> Grid;
+        protected SfGrid<Prodd> Grid;
 
         public bool Enabled = true;
         public bool Disabled = false;
 
 
-        protected List<ProdPage> Prods = new List<ProdPage>();
+        protected List<Prodd> prods = new List<Prodd>();
         protected List<OperarioEntity> operarios = new List<OperarioEntity>();
         protected List<CatOpeEntity> categorias = new List<CatOpeEntity>();
         protected List<UsuarioEntity> usuarios = new List<UsuarioEntity>();
@@ -43,9 +43,7 @@ namespace SupplyChain.Pages.Prod
 
         protected override async Task OnInitializedAsync()
         {
-            prods = await Http.GetFromJsonAsync<List<ProdPage>>("api/Prod");
-            operarios = await Http.GetFromJsonAsync<List<OperarioEntity>>("api/Operario");
-            operarios = operarios.OrderByDescending(s => s.CG_OPER).ToList();
+            prods = await Http.GetFromJsonAsync<List<Prodd>>("api/Prod");
             categorias = await Http.GetFromJsonAsync<List<CatOpeEntity>>("api/CatOpe");
             usuarios = await Http.GetFromJsonAsync<List<UsuarioEntity>>("api/Usuarios");
             clientes = await Http.GetFromJsonAsync<List<Cliente>>("api/Cliente");
@@ -86,23 +84,23 @@ namespace SupplyChain.Pages.Prod
             new EstaActivo() { BActivo= true, Text= "SI"},
             new EstaActivo() { BActivo= false, Text= "NO"}};
 
-        public async Task ActionBegin(ActionEventArgs<OperarioEntity> args)
+        public async Task ActionBegin(ActionEventArgs<Prodd> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
             {
                 HttpResponseMessage response;
-                bool found = operarios.Any(o => o.CG_OPER == args.Data.CG_OPER);
-                OperarioEntity ur = new OperarioEntity();
+                bool found = prods.Any(p => p.CG_PROD == args.Data.CG_PROD);
+                ProdPage ur = new ProdPage();
 
                 if (!found)
                 {
-                    response = await Http.PostAsJsonAsync("api/Operario", args.Data);
+                    response = await Http.PostAsJsonAsync("api/Prod", args.Data);
 
                 }
                 else
                 {
 
-                    response = await Http.PutAsJsonAsync($"api/Operario/{args.Data.CG_OPER}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/Prod/{args.Data.CG_PROD}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -117,7 +115,7 @@ namespace SupplyChain.Pages.Prod
             }
         }
 
-        private async Task EliminarOperario(ActionEventArgs<OperarioEntity> args)
+        private async Task EliminarOperario(ActionEventArgs<Prodd> args)
         {
             try
             {
@@ -127,7 +125,7 @@ namespace SupplyChain.Pages.Prod
                     if (isConfirmed)
                     {
                         //operarios.Remove(operarios.Find(m => m.CG_OPER == args.Data.CG_OPER));
-                        await Http.DeleteAsync($"api/Operario/{args.Data.CG_OPER}");
+                        await Http.DeleteAsync($"api/Prod/{args.Data.CG_PROD}");
                     }
                 }
             }
@@ -151,7 +149,7 @@ namespace SupplyChain.Pages.Prod
                             ProdPage Nuevo = new ProdPage();
 
                             //Nuevo.CG_OPER = operarios.Max(s => s.CG_OPER) + 1;
-                            Nuevo.DES_OPER = selectedRecord.DES_OPER;
+                            Nuevo.DES_PROD = selectedRecord.DES_PROD;
                             Nuevo.CG_TURNO = selectedRecord.CG_TURNO;
                             Nuevo.RENDIM = selectedRecord.RENDIM;
                             Nuevo.FE_FINAL = selectedRecord.FE_FINAL;
@@ -163,19 +161,19 @@ namespace SupplyChain.Pages.Prod
                             Nuevo.CG_CIA = selectedRecord.CG_CIA;
                             Nuevo.USUARIO = selectedRecord.USUARIO;
 
-                            var response = await Http.PostAsJsonAsync("api/Operario", Nuevo);
+                            var response = await Http.PostAsJsonAsync("api/Prod", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 Grid.Refresh();
-                                var operario = await response.Content.ReadFromJsonAsync<OperarioEntity>();
+                                var prod = await response.Content.ReadFromJsonAsync<OperarioEntity>();
                                 await InvokeAsync(StateHasChanged);
-                                Nuevo.CG_OPER = operario.CG_OPER;
-                                operarios.Add(Nuevo);
-                                var itemsJson = JsonSerializer.Serialize(operario);
+                                Nuevo.CG_PROD = prod.CG_PROD;
+                                prods.Add(Nuevo);
+                                var itemsJson = JsonSerializer.Serialize(prod);
                                 Console.WriteLine(itemsJson);
                                 //toastService.ShowToast($"Registrado Correctemente.Vale {StockGuardado.VALE}", TipoAlerta.Success);
-                                operarios.OrderByDescending(o => o.CG_OPER);
+                                prods.OrderByDescending(p => p.CG_PROD);
                             }
 
                         }

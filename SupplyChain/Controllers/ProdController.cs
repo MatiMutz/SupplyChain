@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
+using SupplyChain.Shared.Models;
 
 namespace SupplyChain
 {
@@ -22,15 +23,15 @@ namespace SupplyChain
 
         // GET: api/Prod
         [HttpGet]
-        public IEnumerable<Prod> Get()
+        public IEnumerable<Prodd> Get()
         {
             var xitem = _context.Prod.ToList();
             return xitem;
         }
 
-        // PUT: api/Operario/{id}
+        // PUT: api/Prod/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Prod xitem)
+        public async Task<IActionResult> Put(int id, Prodd xitem)
         {
             if (id != xitem.CG_PROD)
             {
@@ -60,7 +61,7 @@ namespace SupplyChain
 
         // POST: api/Prod                                                                                                                                                                   
         [HttpPost]
-        public async Task<ActionResult<Prod>> Post(Prod xitem)
+        public async Task<ActionResult<Prodd>> Post(Prodd xitem)
         {
             try
             {
@@ -76,7 +77,7 @@ namespace SupplyChain
 
         // DELETE: api/Prod/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Prod>> Delete(int id)
+        public async Task<ActionResult<Prodd>> Delete(int id)
         {
             var xitem = await _context.Prod.FindAsync(id);
             if (xitem == null)

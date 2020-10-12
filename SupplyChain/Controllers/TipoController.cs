@@ -23,7 +23,7 @@ namespace SupplyChain
 
         // GET: api/Tipo
         [HttpGet]
-        public IEnumerable<Tipo> Get()
+        public IEnumerable<Tip> Get()
         {
             var xitem = _context.Tipo.ToList();
             return xitem;
@@ -31,7 +31,7 @@ namespace SupplyChain
 
         // PUT: api/Tipo/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Tipo xitem)
+        public async Task<IActionResult> Put(int id, Tip xitem)
         {
             if (id != xitem.Id)
             {
@@ -61,7 +61,7 @@ namespace SupplyChain
 
         // POST: api/Tipo
         [HttpPost]
-        public async Task<ActionResult<Tipo>> Post(Tipo xitem)
+        public async Task<ActionResult<Tip>> Post(Tip xitem)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace SupplyChain
 
         // DELETE: api/Tipo/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Tipo>> Delete(int id)
+        public async Task<ActionResult<Tip>> Delete(int id)
         {
             var xitem = await _context.Tipo.FindAsync(id);
             if (xitem == null)
