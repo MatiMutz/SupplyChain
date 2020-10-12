@@ -21,6 +21,17 @@ namespace SupplyChain.Server.DataAccess
         public virtual DbSet<Stock> Pedidos { get; set; }
         public DbSet<ResumenStock> ResumenStock { get; set; }
         public DbSet<Programa> Programas { get; set; }
+
+        //
+
+        public DbSet<Modelo> Modelo { get; set; }
+        public DbSet<Medida> Medida { get; set; }
+        public DbSet<Serie> Serie { get; set; }
+        public DbSet<Orificio> Orificio { get; set; }
+        public DbSet<Marca> Marca { get; set; }
+
+        //
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }
 
