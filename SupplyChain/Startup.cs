@@ -11,6 +11,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SupplyChain.Client.HelperService;
+using SupplyChain.Server.DataAccess;
 using Syncfusion.Blazor;
 
 namespace SupplyChain
@@ -28,20 +30,21 @@ namespace SupplyChain
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddRazorPages();
             services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true; });
 
-            services.AddSingleton<CustomHttpClient>();
-
+            services.AddTransient<CustomHttpClient>();
+            services.AddSingleton<ToastService>();
             services.AddSyncfusionBlazor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzAxNzEyQDMxMzgyZTMyMmUzMGlkK3pHNjhzY2JmeVVyNTFSdjluZ0tPanZjTmJFdmwzQm14OHBrZkwwM0U9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzMzMDI5QDMxMzgyZTMzMmUzMGxtSXJLVFRvWDNvUmROa2NnK1Z1WWkxRWpiK210UG5DWmRxZk80bWNuNms9");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

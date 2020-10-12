@@ -2,12 +2,12 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Microsoft.AspNetCore.Authorization/3.1.7": {
+      "Microsoft.AspNetCore.Authorization/3.1.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "3.1.7",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
-          "Microsoft.Extensions.Options": "3.1.7"
+          "Microsoft.AspNetCore.Metadata": "3.1.8",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.8",
+          "Microsoft.Extensions.Options": "3.1.8"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
@@ -16,12 +16,12 @@
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components/3.1.7": {
+      "Microsoft.AspNetCore.Components/3.1.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "3.1.7",
-          "Microsoft.AspNetCore.Components.Analyzers": "3.1.7",
-          "Microsoft.JSInterop": "3.1.7"
+          "Microsoft.AspNetCore.Authorization": "3.1.8",
+          "Microsoft.AspNetCore.Components.Analyzers": "3.1.8",
+          "Microsoft.JSInterop": "3.1.8"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll": {}
@@ -30,16 +30,16 @@
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/3.1.7": {
+      "Microsoft.AspNetCore.Components.Analyzers/3.1.8": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/3.1.7": {
+      "Microsoft.AspNetCore.Components.Forms/3.1.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.1.7"
+          "Microsoft.AspNetCore.Components": "3.1.8"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll": {}
@@ -48,13 +48,13 @@
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Web/3.1.7": {
+      "Microsoft.AspNetCore.Components.Web/3.1.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.1.7",
-          "Microsoft.AspNetCore.Components.Forms": "3.1.7",
-          "Microsoft.Extensions.DependencyInjection": "3.1.7",
-          "Microsoft.JSInterop": "3.1.7"
+          "Microsoft.AspNetCore.Components": "3.1.8",
+          "Microsoft.AspNetCore.Components.Forms": "3.1.8",
+          "Microsoft.Extensions.DependencyInjection": "3.1.8",
+          "Microsoft.JSInterop": "3.1.8"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.dll": {}
@@ -104,7 +104,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Metadata/3.1.7": {
+      "Microsoft.AspNetCore.Metadata/3.1.8": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll": {}
@@ -496,7 +496,7 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
-      "Microsoft.JSInterop/3.1.7": {
+      "Microsoft.JSInterop/3.1.8": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Microsoft.JSInterop.dll": {}
@@ -631,16 +631,16 @@
           }
         }
       },
-      "Syncfusion.Blazor/18.2.0.57": {
+      "Syncfusion.Blazor/18.3.0.38": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "3.1.7",
+          "Microsoft.AspNetCore.Components.Web": "3.1.8",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.CSharp": "4.5.0",
           "Newtonsoft.Json": "12.0.1",
-          "Syncfusion.ExcelExport.Net.Core": "18.2.0.57",
-          "Syncfusion.Licensing": "18.2.0.57",
-          "Syncfusion.PdfExport.Net.Core": "18.2.0.57"
+          "Syncfusion.ExcelExport.Net.Core": "18.3.0.38",
+          "Syncfusion.Licensing": "18.3.0.38",
+          "Syncfusion.PdfExport.Net.Core": "18.3.0.38"
         },
         "compile": {
           "lib/netcoreapp3.1/Syncfusion.Blazor.dll": {}
@@ -655,7 +655,7 @@
           "buildMultiTargeting/Syncfusion.Blazor.props": {}
         }
       },
-      "Syncfusion.ExcelExport.Net.Core/18.2.0.57": {
+      "Syncfusion.ExcelExport.Net.Core/18.3.0.38": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -667,7 +667,7 @@
           "lib/netstandard2.0/Syncfusion.ExcelExport.Net.dll": {}
         }
       },
-      "Syncfusion.Licensing/18.2.0.57": {
+      "Syncfusion.Licensing/18.3.0.38": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Syncfusion.Licensing.dll": {}
@@ -676,7 +676,7 @@
           "lib/netcoreapp3.1/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.PdfExport.Net.Core/18.2.0.57": {
+      "Syncfusion.PdfExport.Net.Core/18.3.0.38": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -1653,10 +1653,10 @@
     }
   },
   "libraries": {
-    "Microsoft.AspNetCore.Authorization/3.1.7": {
-      "sha512": "PAT7CVkoK8fXGax3CwHOOX9gj8/nJVmY6MdshGJ3CTReEBeURMN7vr0TvTYkFcmINPMqaVNws9lLKM8SrpJArg==",
+    "Microsoft.AspNetCore.Authorization/3.1.8": {
+      "sha512": "vBVCalVaxmv8MqFH1/Qe/fMjwmFWZhGJISiNEa6Is0ZNNFAHHdbvBmreL7qmGaIHt4krnDiV8i3GZa/zi21FBA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authorization/3.1.7",
+      "path": "microsoft.aspnetcore.authorization/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1666,14 +1666,14 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.3.1.8.nupkg.sha512",
         "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components/3.1.7": {
-      "sha512": "H8/DLdPNCk0EdWZV1+H289zQtVj0ypPj1gR6AcGuLoHrhEXgL9pZXSMCBHeBqOhzkND/kbQF3yPt0QDf7C69Sg==",
+    "Microsoft.AspNetCore.Components/3.1.8": {
+      "sha512": "lNMY8gacn3hcqpJQbpGmAHkKMN2Wx4U/2KpffJ3ZuWd2JW8ka9aebYvkfFsu7XIe0cQrBbAKngnZoX+Pr9svqw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components/3.1.7",
+      "path": "microsoft.aspnetcore.components/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1683,14 +1683,14 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.xml",
-        "microsoft.aspnetcore.components.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.components.3.1.8.nupkg.sha512",
         "microsoft.aspnetcore.components.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Analyzers/3.1.7": {
-      "sha512": "aiV6z5JW1GH9hchfCzjr30QJOlwcuXudyFdIirBSB4+IqBQw9UMQIVmKYMY59ABWwlQX1vo4ZIt7OqVMYR2ePQ==",
+    "Microsoft.AspNetCore.Components.Analyzers/3.1.8": {
+      "sha512": "ODBBAHa7Kxk85HHf/En3ZYw+oGPb+oosb30PZrrB1gGqDo/qtleHLfdR2XsjOdRyZujesOMX0c/FU0t3hyXRpA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/3.1.7",
+      "path": "microsoft.aspnetcore.components.analyzers/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1699,14 +1699,14 @@
         "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
         "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
         "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "microsoft.aspnetcore.components.analyzers.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.3.1.8.nupkg.sha512",
         "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Forms/3.1.7": {
-      "sha512": "XxBwS15FaNEw164nO1ag47R4/iNuU/pLB5FWvpkUUfY7B85kSFgUspsYHFXLpNHBlBkJ9+zJZ99scI4sr+hPmw==",
+    "Microsoft.AspNetCore.Components.Forms/3.1.8": {
+      "sha512": "tdsF/dnpTxACV54gTmjNu+SkP6JOqlo8HlksG/BHGpgXVXF4LZISKh1wFdLJDOy8iejl6aZNHm8zudLETm67pA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.forms/3.1.7",
+      "path": "microsoft.aspnetcore.components.forms/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1716,14 +1716,14 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "microsoft.aspnetcore.components.forms.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.3.1.8.nupkg.sha512",
         "microsoft.aspnetcore.components.forms.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Web/3.1.7": {
-      "sha512": "TqfuD0ajpFzt/xhmhx0g1x6gee0imXVhxyQ+MG4Slax3Zq1wuH08aZXns44obDfn8BUyhKXXKHoGo6G7HLPk2A==",
+    "Microsoft.AspNetCore.Components.Web/3.1.8": {
+      "sha512": "ghAaxACp1QAOri472hDMtwIAFVVhh4kkGirE2was+4M1m4sjhy1FfDT8lFQ+98TGflf4EuIhPvHt4V+OHtXrsw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.web/3.1.7",
+      "path": "microsoft.aspnetcore.components.web/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1733,7 +1733,7 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.3.1.8.nupkg.sha512",
         "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
@@ -1776,10 +1776,10 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Metadata/3.1.7": {
-      "sha512": "/I601EPB+/YnD7cgqqnzMSmuUgRKQ6FQQvZB6+q0CNfW4FmbUpFz2zFchRFVjLVwDbwJHvULwfZ6wa3Wwe0L7A==",
+    "Microsoft.AspNetCore.Metadata/3.1.8": {
+      "sha512": "JBZcWJb3JsSsFqdh0DVcOIc/oZ0Mpn0DMeL7Rfk2mUBSm3wdCmJOpt+tVX+M7r0/BRPHe+/2jj9wth5ili+V9A==",
       "type": "package",
-      "path": "microsoft.aspnetcore.metadata/3.1.7",
+      "path": "microsoft.aspnetcore.metadata/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1789,7 +1789,7 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.3.1.8.nupkg.sha512",
         "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
@@ -2421,10 +2421,10 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.JSInterop/3.1.7": {
-      "sha512": "RhS2auDs21V/IV7AifLed4vnVBIDxQpzyVge+ffNwv4fiS/58ZykpRKBEPVdab8ceRUk0a+eQdaB6dAzwpYApA==",
+    "Microsoft.JSInterop/3.1.8": {
+      "sha512": "unbg+GMGotfUoXa3+QsvqerVX//RYTtLI7dvnmQfNxVKkvaU7Ffm5Iv8j7xY5W1wunmH3RZyflhmkH8qSdSAcg==",
       "type": "package",
-      "path": "microsoft.jsinterop/3.1.7",
+      "path": "microsoft.jsinterop/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2433,7 +2433,7 @@
         "lib/netcoreapp3.1/Microsoft.JSInterop.xml",
         "lib/netstandard2.0/Microsoft.JSInterop.dll",
         "lib/netstandard2.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.3.1.7.nupkg.sha512",
+        "microsoft.jsinterop.3.1.8.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
@@ -2768,10 +2768,10 @@
         "version.txt"
       ]
     },
-    "Syncfusion.Blazor/18.2.0.57": {
-      "sha512": "Qd5OYW4HTDv3rZffELeA1KA4Ya30iksPG4azXIbyHJjDrLfU2npDSfKn7cftFGWEmk+3V2OVBBvqM9xMiPT0xg==",
+    "Syncfusion.Blazor/18.3.0.38": {
+      "sha512": "xpQmyTW+vF/UUWxLKJRlOWEUKIXXyOUmUci0QAElWeJgVfy5R5WVmjiVoyMeljwaksMM2gFeloDqnpCOD+jYQw==",
       "type": "package",
-      "path": "syncfusion.blazor/18.2.0.57",
+      "path": "syncfusion.blazor/18.3.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2779,115 +2779,122 @@
         "build/Syncfusion.Blazor.props",
         "buildMultiTargeting/Syncfusion.Blazor.props",
         "buildTransitive/Syncfusion.Blazor.props",
+        "lib/net5.0/Syncfusion.Blazor.dll",
+        "lib/net5.0/Syncfusion.Blazor.xml",
         "lib/netcoreapp3.1/Syncfusion.Blazor.dll",
         "lib/netcoreapp3.1/Syncfusion.Blazor.xml",
         "lib/netstandard2.1/Syncfusion.Blazor.dll",
         "lib/netstandard2.1/Syncfusion.Blazor.xml",
-        "staticwebassets/scripts/accordion-ffbe68.min.js",
-        "staticwebassets/scripts/accumulationchart-ffbe68.min.js",
-        "staticwebassets/scripts/autocomplete-ffbe68.min.js",
-        "staticwebassets/scripts/barcodegenerator-ffbe68.min.js",
-        "staticwebassets/scripts/bulletchart-ffbe68.min.js",
-        "staticwebassets/scripts/button-ffbe68.min.js",
-        "staticwebassets/scripts/buttonsbase-ffbe68.min.js",
-        "staticwebassets/scripts/calendar-ffbe68.min.js",
-        "staticwebassets/scripts/chart-ffbe68.min.js",
-        "staticwebassets/scripts/charts-ffbe68.min.js",
-        "staticwebassets/scripts/chartsbase-ffbe68.min.js",
-        "staticwebassets/scripts/checkbox-ffbe68.min.js",
-        "staticwebassets/scripts/chiplist-ffbe68.min.js",
-        "staticwebassets/scripts/circulargauge-ffbe68.min.js",
-        "staticwebassets/scripts/colorpicker-ffbe68.min.js",
-        "staticwebassets/scripts/combobox-ffbe68.min.js",
-        "staticwebassets/scripts/compression-ffbe68.min.js",
-        "staticwebassets/scripts/contextmenu-ffbe68.min.js",
-        "staticwebassets/scripts/dashboardlayout-ffbe68.min.js",
-        "staticwebassets/scripts/data-ffbe68.min.js",
-        "staticwebassets/scripts/datepicker-ffbe68.min.js",
-        "staticwebassets/scripts/daterangepicker-ffbe68.min.js",
-        "staticwebassets/scripts/datetimepicker-ffbe68.min.js",
-        "staticwebassets/scripts/diagrams-ffbe68.min.js",
-        "staticwebassets/scripts/dialog-ffbe68.min.js",
-        "staticwebassets/scripts/documenteditor-ffbe68.min.js",
-        "staticwebassets/scripts/documenteditorbase-ffbe68.min.js",
-        "staticwebassets/scripts/documenteditorcontainer-ffbe68.min.js",
-        "staticwebassets/scripts/drawings-ffbe68.min.js",
-        "staticwebassets/scripts/dropdownbutton-ffbe68.min.js",
-        "staticwebassets/scripts/dropdownlist-ffbe68.min.js",
-        "staticwebassets/scripts/dropdownsbase-ffbe68.min.js",
-        "staticwebassets/scripts/dropdowntree-ffbe68.min.js",
-        "staticwebassets/scripts/excelexport-ffbe68.min.js",
-        "staticwebassets/scripts/filemanager-ffbe68.min.js",
-        "staticwebassets/scripts/fileutils-ffbe68.min.js",
-        "staticwebassets/scripts/formvalidator-ffbe68.min.js",
-        "staticwebassets/scripts/gantt-ffbe68.min.js",
-        "staticwebassets/scripts/grid-ffbe68.min.js",
-        "staticwebassets/scripts/heatmap-ffbe68.min.js",
-        "staticwebassets/scripts/inplaceeditor-ffbe68.min.js",
-        "staticwebassets/scripts/inputsbase-ffbe68.min.js",
-        "staticwebassets/scripts/kanban-ffbe68.min.js",
-        "staticwebassets/scripts/lineargauge-ffbe68.min.js",
-        "staticwebassets/scripts/listbox-ffbe68.min.js",
-        "staticwebassets/scripts/listsbase-ffbe68.min.js",
-        "staticwebassets/scripts/listview-ffbe68.min.js",
-        "staticwebassets/scripts/maps-ffbe68.min.js",
-        "staticwebassets/scripts/maskedtextbox-ffbe68.min.js",
-        "staticwebassets/scripts/menu-ffbe68.min.js",
-        "staticwebassets/scripts/multiselect-ffbe68.min.js",
-        "staticwebassets/scripts/navigationsbase-ffbe68.min.js",
-        "staticwebassets/scripts/numerictextbox-ffbe68.min.js",
-        "staticwebassets/scripts/officechart-ffbe68.min.js",
-        "staticwebassets/scripts/pager-ffbe68.min.js",
-        "staticwebassets/scripts/pdfexport-ffbe68.min.js",
-        "staticwebassets/scripts/pdfviewer-ffbe68.min.js",
-        "staticwebassets/scripts/pdfviewerbase-ffbe68.min.js",
-        "staticwebassets/scripts/pivotview-ffbe68.min.js",
-        "staticwebassets/scripts/popup-ffbe68.min.js",
-        "staticwebassets/scripts/popupsbase-ffbe68.min.js",
-        "staticwebassets/scripts/progressbar-ffbe68.min.js",
-        "staticwebassets/scripts/progressbutton-ffbe68.min.js",
-        "staticwebassets/scripts/querybuilder-ffbe68.min.js",
-        "staticwebassets/scripts/radiobutton-ffbe68.min.js",
-        "staticwebassets/scripts/rangenavigator-ffbe68.min.js",
-        "staticwebassets/scripts/richtexteditor-ffbe68.min.js",
-        "staticwebassets/scripts/schedule-ffbe68.min.js",
-        "staticwebassets/scripts/sf-barcode-ffbe68.min.js",
-        "staticwebassets/scripts/sf-calendarbase-ffbe68.min.js",
-        "staticwebassets/scripts/sf-chart-ffbe68.min.js",
-        "staticwebassets/scripts/sf-contextmenu-ffbe68.min.js",
-        "staticwebassets/scripts/sf-datepicker-ffbe68.min.js",
-        "staticwebassets/scripts/sf-dialog-ffbe68.min.js",
-        "staticwebassets/scripts/sf-drop-down-button-ffbe68.min.js",
-        "staticwebassets/scripts/sf-grid-ffbe68.min.js",
-        "staticwebassets/scripts/sf-numerictextbox-ffbe68.min.js",
-        "staticwebassets/scripts/sf-splitter-ffbe68.min.js",
-        "staticwebassets/scripts/sf-tab-ffbe68.min.js",
-        "staticwebassets/scripts/sf-textbox-ffbe68.min.js",
-        "staticwebassets/scripts/sf-toolbar-ffbe68.min.js",
-        "staticwebassets/scripts/sf-tooltip-ffbe68.min.js",
-        "staticwebassets/scripts/sf-treegrid-ffbe68.min.js",
-        "staticwebassets/scripts/sidebar-ffbe68.min.js",
-        "staticwebassets/scripts/slider-ffbe68.min.js",
-        "staticwebassets/scripts/smithchart-ffbe68.min.js",
-        "staticwebassets/scripts/sparkline-ffbe68.min.js",
-        "staticwebassets/scripts/spinner-ffbe68.min.js",
-        "staticwebassets/scripts/splitbutton-ffbe68.min.js",
-        "staticwebassets/scripts/splitbuttonsbase-ffbe68.min.js",
-        "staticwebassets/scripts/splitter-ffbe68.min.js",
-        "staticwebassets/scripts/stockchart-ffbe68.min.js",
-        "staticwebassets/scripts/svgbase-ffbe68.min.js",
-        "staticwebassets/scripts/switch-ffbe68.min.js",
+        "staticwebassets/scripts/accordion-ecff47.min.js",
+        "staticwebassets/scripts/accumulationchart-ecff47.min.js",
+        "staticwebassets/scripts/autocomplete-ecff47.min.js",
+        "staticwebassets/scripts/bulletchart-ecff47.min.js",
+        "staticwebassets/scripts/button-ecff47.min.js",
+        "staticwebassets/scripts/buttonsbase-ecff47.min.js",
+        "staticwebassets/scripts/calendar-ecff47.min.js",
+        "staticwebassets/scripts/chart-ecff47.min.js",
+        "staticwebassets/scripts/charts-ecff47.min.js",
+        "staticwebassets/scripts/chartsbase-ecff47.min.js",
+        "staticwebassets/scripts/checkbox-ecff47.min.js",
+        "staticwebassets/scripts/colorpicker-ecff47.min.js",
+        "staticwebassets/scripts/combobox-ecff47.min.js",
+        "staticwebassets/scripts/compression-ecff47.min.js",
+        "staticwebassets/scripts/contextmenu-ecff47.min.js",
+        "staticwebassets/scripts/dashboardlayout-ecff47.min.js",
+        "staticwebassets/scripts/data-ecff47.min.js",
+        "staticwebassets/scripts/datepicker-ecff47.min.js",
+        "staticwebassets/scripts/daterangepicker-ecff47.min.js",
+        "staticwebassets/scripts/datetimepicker-ecff47.min.js",
+        "staticwebassets/scripts/diagrams-ecff47.min.js",
+        "staticwebassets/scripts/dialog-ecff47.min.js",
+        "staticwebassets/scripts/documenteditor-ecff47.min.js",
+        "staticwebassets/scripts/documenteditorbase-ecff47.min.js",
+        "staticwebassets/scripts/documenteditorcontainer-ecff47.min.js",
+        "staticwebassets/scripts/drawings-ecff47.min.js",
+        "staticwebassets/scripts/dropdownbutton-ecff47.min.js",
+        "staticwebassets/scripts/dropdownlist-ecff47.min.js",
+        "staticwebassets/scripts/dropdownsbase-ecff47.min.js",
+        "staticwebassets/scripts/dropdowntree-ecff47.min.js",
+        "staticwebassets/scripts/excelexport-ecff47.min.js",
+        "staticwebassets/scripts/filemanager-ecff47.min.js",
+        "staticwebassets/scripts/fileutils-ecff47.min.js",
+        "staticwebassets/scripts/formvalidator-ecff47.min.js",
+        "staticwebassets/scripts/gantt-ecff47.min.js",
+        "staticwebassets/scripts/grid-ecff47.min.js",
+        "staticwebassets/scripts/heatmap-ecff47.min.js",
+        "staticwebassets/scripts/inplaceeditor-ecff47.min.js",
+        "staticwebassets/scripts/inputsbase-ecff47.min.js",
+        "staticwebassets/scripts/listsbase-ecff47.min.js",
+        "staticwebassets/scripts/listview-ecff47.min.js",
+        "staticwebassets/scripts/maps-ecff47.min.js",
+        "staticwebassets/scripts/maskedtextbox-ecff47.min.js",
+        "staticwebassets/scripts/menu-ecff47.min.js",
+        "staticwebassets/scripts/multiselect-ecff47.min.js",
+        "staticwebassets/scripts/navigationsbase-ecff47.min.js",
+        "staticwebassets/scripts/numerictextbox-ecff47.min.js",
+        "staticwebassets/scripts/officechart-ecff47.min.js",
+        "staticwebassets/scripts/pager-ecff47.min.js",
+        "staticwebassets/scripts/pdfexport-ecff47.min.js",
+        "staticwebassets/scripts/pdfviewer-ecff47.min.js",
+        "staticwebassets/scripts/pivotview-ecff47.min.js",
+        "staticwebassets/scripts/popup-ecff47.min.js",
+        "staticwebassets/scripts/popupsbase-ecff47.min.js",
+        "staticwebassets/scripts/progressbar-ecff47.min.js",
+        "staticwebassets/scripts/radiobutton-ecff47.min.js",
+        "staticwebassets/scripts/rangenavigator-ecff47.min.js",
+        "staticwebassets/scripts/richtexteditor-ecff47.min.js",
+        "staticwebassets/scripts/sf-accordion-ecff47.min.js",
+        "staticwebassets/scripts/sf-barcode-ecff47.min.js",
+        "staticwebassets/scripts/sf-calendarbase-ecff47.min.js",
+        "staticwebassets/scripts/sf-circulargauge-ecff47.min.js",
+        "staticwebassets/scripts/sf-contextmenu-ecff47.min.js",
+        "staticwebassets/scripts/sf-datepicker-ecff47.min.js",
+        "staticwebassets/scripts/sf-dialog-ecff47.min.js",
+        "staticwebassets/scripts/sf-drop-down-button-ecff47.min.js",
+        "staticwebassets/scripts/sf-dropdownlist-ecff47.min.js",
+        "staticwebassets/scripts/sf-grid-ecff47.min.js",
+        "staticwebassets/scripts/sf-kanban-ecff47.min.js",
+        "staticwebassets/scripts/sf-lineargauge-ecff47.min.js",
+        "staticwebassets/scripts/sf-listbox-ecff47.min.js",
+        "staticwebassets/scripts/sf-listview-ecff47.min.js",
+        "staticwebassets/scripts/sf-menu-ecff47.min.js",
+        "staticwebassets/scripts/sf-numerictextbox-ecff47.min.js",
+        "staticwebassets/scripts/sf-richtexteditor-ecff47.min.js",
+        "staticwebassets/scripts/sf-schedule-ecff47.min.js",
+        "staticwebassets/scripts/sf-sidebar-ecff47.min.js",
+        "staticwebassets/scripts/sf-spinner-ecff47.min.js",
+        "staticwebassets/scripts/sf-splitter-ecff47.min.js",
+        "staticwebassets/scripts/sf-spreadsheet-ecff47.min.js",
+        "staticwebassets/scripts/sf-svg-export-ecff47.min.js",
+        "staticwebassets/scripts/sf-tab-ecff47.min.js",
+        "staticwebassets/scripts/sf-textbox-ecff47.min.js",
+        "staticwebassets/scripts/sf-timepicker-ecff47.min.js",
+        "staticwebassets/scripts/sf-toast-ecff47.min.js",
+        "staticwebassets/scripts/sf-toolbar-ecff47.min.js",
+        "staticwebassets/scripts/sf-tooltip-ecff47.min.js",
+        "staticwebassets/scripts/sf-treegrid-ecff47.min.js",
+        "staticwebassets/scripts/sf-treemap-ecff47.min.js",
+        "staticwebassets/scripts/sf-treeview-ecff47.min.js",
+        "staticwebassets/scripts/slider-ecff47.min.js",
+        "staticwebassets/scripts/smithchart-ecff47.min.js",
+        "staticwebassets/scripts/sparkline-ecff47.min.js",
+        "staticwebassets/scripts/spinner-ecff47.min.js",
+        "staticwebassets/scripts/splitbutton-ecff47.min.js",
+        "staticwebassets/scripts/splitbuttonsbase-ecff47.min.js",
+        "staticwebassets/scripts/splitter-ecff47.min.js",
+        "staticwebassets/scripts/spreadsheet-ecff47.min.js",
+        "staticwebassets/scripts/stockchart-ecff47.min.js",
+        "staticwebassets/scripts/svgbase-ecff47.min.js",
         "staticwebassets/scripts/syncfusion-blazor.min.js",
-        "staticwebassets/scripts/tab-ffbe68.min.js",
-        "staticwebassets/scripts/textbox-ffbe68.min.js",
-        "staticwebassets/scripts/timepicker-ffbe68.min.js",
-        "staticwebassets/scripts/toast-ffbe68.min.js",
-        "staticwebassets/scripts/toolbar-ffbe68.min.js",
-        "staticwebassets/scripts/tooltip-ffbe68.min.js",
-        "staticwebassets/scripts/treegrid-ffbe68.min.js",
-        "staticwebassets/scripts/treemap-ffbe68.min.js",
-        "staticwebassets/scripts/treeview-ffbe68.min.js",
-        "staticwebassets/scripts/uploader-ffbe68.min.js",
+        "staticwebassets/scripts/tab-ecff47.min.js",
+        "staticwebassets/scripts/textbox-ecff47.min.js",
+        "staticwebassets/scripts/timepicker-ecff47.min.js",
+        "staticwebassets/scripts/toast-ecff47.min.js",
+        "staticwebassets/scripts/toolbar-ecff47.min.js",
+        "staticwebassets/scripts/tooltip-ecff47.min.js",
+        "staticwebassets/scripts/treegrid-ecff47.min.js",
+        "staticwebassets/scripts/treeview-ecff47.min.js",
+        "staticwebassets/scripts/uploader-ecff47.min.js",
         "staticwebassets/styles/bootstrap-dark.css",
         "staticwebassets/styles/bootstrap.css",
         "staticwebassets/styles/bootstrap4.css",
@@ -2896,31 +2903,32 @@
         "staticwebassets/styles/highcontrast.css",
         "staticwebassets/styles/material-dark.css",
         "staticwebassets/styles/material.css",
-        "syncfusion.blazor.18.2.0.57.nupkg.sha512",
+        "syncfusion.blazor.18.3.0.38.nupkg.sha512",
         "syncfusion.blazor.nuspec"
       ]
     },
-    "Syncfusion.ExcelExport.Net.Core/18.2.0.57": {
-      "sha512": "PYWvc6gPwyVxsFdW88df+5nxeE2k4kqkLBGaUcYTJWnAgh92xtXmxWdNTUv2fjLr2XGnZBzNbKO504+duOJsow==",
+    "Syncfusion.ExcelExport.Net.Core/18.3.0.38": {
+      "sha512": "X1b/OQB/CgFOazg23PJJaDg+3apuALeBGQVneVnDgPWsW/hBqOlx4JbEPLGM4V4BRpG99n/dlIt25CZ1ISnqEg==",
       "type": "package",
-      "path": "syncfusion.excelexport.net.core/18.2.0.57",
+      "path": "syncfusion.excelexport.net.core/18.3.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Syncfusion.ExcelExport.Net.dll",
         "lib/netstandard2.0/Syncfusion.ExcelExport.Net.xml",
-        "syncfusion.excelexport.net.core.18.2.0.57.nupkg.sha512",
+        "syncfusion.excelexport.net.core.18.3.0.38.nupkg.sha512",
         "syncfusion.excelexport.net.core.nuspec"
       ]
     },
-    "Syncfusion.Licensing/18.2.0.57": {
-      "sha512": "FLNvydR2jg9DtxgEhaLJaI/9lW7Be14HGr6X9el5GbUUqnUcQyxWERRx6RSeLesOl/hBXsnaMuI6fcQYczQ6lw==",
+    "Syncfusion.Licensing/18.3.0.38": {
+      "sha512": "Q+4ARtDcdUjpkDnR20u2Z+00uRgX0KitETRoezqpo3okQL3ZABoTF7tQ6qo8XMz86RaUedxeLVbD94nppIeEtw==",
       "type": "package",
-      "path": "syncfusion.licensing/18.2.0.57",
+      "path": "syncfusion.licensing/18.3.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Licensing.dll",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
         "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
         "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
         "lib/net20/Syncfusion.Licensing.dll",
@@ -2937,20 +2945,20 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.18.2.0.57.nupkg.sha512",
+        "syncfusion.licensing.18.3.0.38.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.PdfExport.Net.Core/18.2.0.57": {
-      "sha512": "FD+T8umdJntkqqN3CxmygOtDs+6o9PaQ4/7gaa01zmwy2slOivlA+0zyb5ZKBwmrUsTh5msJWv/38uXBAQi6NQ==",
+    "Syncfusion.PdfExport.Net.Core/18.3.0.38": {
+      "sha512": "K30iwKfKR1wgHZjJfeY9r+muo14ZVY+KnlAAzrhVJbLa3TpmbwphuFRp2Wh7EP6xmnz7hAP9peP7thu/6zhRnA==",
       "type": "package",
-      "path": "syncfusion.pdfexport.net.core/18.2.0.57",
+      "path": "syncfusion.pdfexport.net.core/18.3.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Syncfusion.PdfExport.Net.dll",
         "lib/netstandard2.0/Syncfusion.PdfExport.Net.xml",
-        "syncfusion.pdfexport.net.core.18.2.0.57.nupkg.sha512",
+        "syncfusion.pdfexport.net.core.18.3.0.38.nupkg.sha512",
         "syncfusion.pdfexport.net.core.nuspec"
       ]
     },
@@ -6202,7 +6210,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.8",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.8",
-      "Syncfusion.Blazor >= 18.2.0.57",
+      "Syncfusion.Blazor >= 18.3.0.38",
       "System.ComponentModel.Annotations >= 4.7.0",
       "System.Net.Http.Json >= 3.2.1"
     ]
@@ -6213,11 +6221,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
+      "projectUniqueName": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj",
       "projectName": "SupplyChain",
-      "projectPath": "C:\\Users\\Administrador\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
+      "projectPath": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj",
       "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrador\\Desktop\\SupplyChain\\SUPPLYCHAIN\\obj\\",
+      "outputPath": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6256,7 +6264,7 @@
           },
           "Syncfusion.Blazor": {
             "target": "Package",
-            "version": "[18.2.0.57, )"
+            "version": "[18.3.0.38, )"
           },
           "System.ComponentModel.Annotations": {
             "target": "Package",

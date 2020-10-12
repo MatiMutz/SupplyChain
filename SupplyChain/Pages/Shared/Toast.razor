@@ -1,0 +1,19 @@
+﻿@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Notifications
+@inherits SupplyChain.Client.Shared.ToastBase
+
+
+<SfToast @ref="ToastObj" ID="toastApi" Title="@ToastTitle" Content="@ToastContent"
+         ShowCloseButton="@ShowCloseBtn" ShowProgressBar="@ShowProgressBtn" NewestOnTop="@ShowNewestOnTop" Timeout="@ToastTimeout">
+    <ToastPosition X="Right" Y="Bottom"></ToastPosition>
+    <ToastAnimationSettings>
+        <ToastShowAnimationSettings Effect="@ShowEffect" Easing="@ShowEasing" Duration="@ShowDuration"></ToastShowAnimationSettings>
+        <ToastHideAnimationSettings Effect="@HideEffect" Easing="@HideEasing" Duration="@HideDuration"></ToastHideAnimationSettings>
+    </ToastAnimationSettings>
+    @if (this.EnableButtons)
+    {
+        <ToastButtons>
+            <ToastButton Content="Click Here"></ToastButton>
+        </ToastButtons>
+    }
+</SfToast>

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SupplyChain.Client.HelperService;
 
 namespace SupplyChain
 {
@@ -24,5 +26,11 @@ namespace SupplyChain
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+        private static void ConfigureServices(IServiceCollection services)
+        {
+            services.AddOptions();//Sistema de Autorizacion
+            services.AddSingleton<ToastService>();
+        }
     }
 }

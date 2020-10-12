@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrador\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {}
+    "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrador\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {
+    "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
+        "projectUniqueName": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj",
         "projectName": "SupplyChain",
-        "projectPath": "C:\\Users\\Administrador\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
+        "projectPath": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj",
         "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\Desktop\\SupplyChain\\SUPPLYCHAIN\\obj\\",
+        "outputPath": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,7 +50,7 @@
             },
             "Syncfusion.Blazor": {
               "target": "Package",
-              "version": "[18.2.0.57, )"
+              "version": "[18.3.0.38, )"
             },
             "System.ComponentModel.Annotations": {
               "target": "Package",

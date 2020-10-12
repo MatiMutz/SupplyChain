@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Net.Http.Json;
 
 namespace SupplyChain
 {
@@ -47,6 +48,6 @@ namespace SupplyChain
             var response = await httpClient.DeleteAsync(serverUri + requestUri);
             httpClient.Dispose();
             return response;
-        }
+        }   
     }
 }
