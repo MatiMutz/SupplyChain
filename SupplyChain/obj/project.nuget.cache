@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "POy9iDMBU+q81QhlyjX+gyAN37RjuZJsfVum2uLh1qx3GgQKUsN8CdJ/2VBbepqPRt8oq3MLtje9ErVlN1N87g==",
+  "dgSpecHash": "EVcWSqnC6Gy0IweRNhw0fsrbScjq9L4AwUqVjsxAP0JVu+AaAJDfOX1C3dlF15Oqks5hluj9ApBTNB5LkVeU9g==",
   "success": true,
-  "projectFilePath": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj",
+  "projectFilePath": "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.8\\microsoft.aspnetcore.authorization.3.1.8.nupkg.sha512",
     "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.8\\microsoft.aspnetcore.components.3.1.8.nupkg.sha512",

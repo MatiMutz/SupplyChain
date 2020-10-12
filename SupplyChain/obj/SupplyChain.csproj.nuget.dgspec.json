@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj": {}
+    "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {}
   },
   "projects": {
-    "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj": {
+    "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj",
+        "projectUniqueName": "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
         "projectName": "SupplyChain",
-        "projectPath": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\SupplyChain.csproj",
+        "projectPath": "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
         "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "E:\\SupplyChainMarcelo\\SupplyChainMatias-SERVER-SIDE\\SUPPLYCHAIN\\obj\\",
+        "outputPath": "E:\\SupplyChain\\SupplyChain\\SUPPLYCHAIN\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
