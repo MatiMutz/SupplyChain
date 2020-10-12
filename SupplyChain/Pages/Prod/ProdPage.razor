@@ -1,0 +1,169 @@
+﻿@page "/operario/list"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using System.Configuration;
+@using System.Data.SqlClient;
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.BarcodeGenerator
+@using System.Text.Json
+@using System.Linq
+@inject IJSRuntime JsRuntime
+@using SupplyChain.Shared.Models
+@using SupplyChain.Extensions
+@using System.Net.Http.Json
+@inject CustomHttpClient Http
+
+@inject NavigationManager NavManager
+@inherits ListOperarioPageBase
+
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div class="row">
+            <SfGrid AllowReordering="true" ShowColumnChooser="true" ShowColumnMenu="true" AllowResizing="true" EnablePersistence="true"
+                    @ref="Grid" DataSource="@operarios" AllowExcelExport="true" AllowRowDragAndDrop="true" AllowGrouping="true"
+                    AllowSorting="true" AllowPaging="true" AllowFiltering="true" Toolbar="@Toolbaritems">
+                <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+                <GridEvents OnToolbarClick="@ClickHandler" OnActionBegin="ActionBegin" TValue="OperarioEntity"></GridEvents>
+                <GridFilterSettings Type="@Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
+                <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
+                <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
+                    <Template>
+                        @{
+                            var operario = (context as OperarioEntity);
+                            <div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Id:</label>
+                                        <SfNumericTextBox ID="CG_OPER" @bind-Value="@(operario.CG_OPER)" Enabled="@Disabled"></SfNumericTextBox>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Nombre:</label>
+                                        <SfTextBox CssClass="customClass" ID="DES_OPER" @bind-Value="@(operario.DES_OPER)"></SfTextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Turno:</label>
+                                        <SfDropDownList CssClass="customClass" ID="CG_TURNO" TItem="TurnosEntity" @bind-Value="@(operario.CG_TURNO)" TValue="int" Placeholder="Seleccione el Turno" DataSource="@turnos">
+                                            <DropDownListFieldSettings Value="CG_TURNO" Text="TURNO"></DropDownListFieldSettings>
+                                        </SfDropDownList>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Rendimiento:</label>
+                                        <SfNumericTextBox ID="RENDIM" @bind-Value="@(operario.RENDIM)" TValue="decimal"></SfNumericTextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Horas Finales:</label>
+                                        <SfNumericTextBox ID="HS_FINAL" @bind-Value="@(operario.HS_FINAL)"></SfNumericTextBox>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Categoria:</label>
+                                        <SfDropDownList CssClass="customClass" ID="CG_CATEOP" TItem="CatOpeEntity" @bind-Value="@(operario.CG_CATEOP)" TValue="string" Placeholder="Seleccione la Categoria" DataSource="@categorias">
+                                            <DropDownListFieldSettings Value="DES_CATEOP" Text="DES_CATEOP"></DropDownListFieldSettings>
+                                        </SfDropDownList>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Valor Por Hora:</label>
+                                        <SfNumericTextBox ID="VALOR_HORA" @bind-Value="@(operario.VALOR_HORA)"></SfNumericTextBox>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Moneda:</label>
+                                        <SfDropDownList CssClass="customClass" ID="MONEDA" TItem="MonedasEntity" @bind-Value="@(operario.MONEDA)" TValue="string" Placeholder="Seleccione la Moneda" DataSource="@monedas">
+                                            <DropDownListFieldSettings Value="MONEDA" Text="SIMBOLO"></DropDownListFieldSettings>
+                                        </SfDropDownList>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Activo:</label>
+                                        <SfDropDownList CssClass="customClass" ID="ACTIVO" TItem="EstaActivo" @bind-Value="@(operario.ACTIVO)" TValue="bool" Placeholder="Esta Activo?" 
+                                                        DataSource="@ActivoData">
+                                            <DropDownListFieldSettings Value="BActivo" Text="Text"></DropDownListFieldSettings>
+                                        </SfDropDownList>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Fecha Final:</label>
+                                        <SfDatePicker ID="FE_FINAL" @bind-Value="@(operario.FE_FINAL)"></SfDatePicker>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label class="e-float-text e-label-top">Usuario:</label>
+                                        <SfDropDownList CssClass="customClass" ID="USUARIO" TItem="UsuarioEntity" @bind-Value="@(operario.USUARIO)" TValue="string" Placeholder="Seleccione el usuario" DataSource="@usuarios">
+                                            <DropDownListFieldSettings Value="Usuario" Text="Usuario"></DropDownListFieldSettings>
+                                        </SfDropDownList>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label class="e-float-text e-label-top">Empresa:</label>
+                                        <SfDropDownList CssClass="customClass" ID="CG_CIA" TItem="Cliente" @bind-Value="@(operario.CG_CIA)" TValue="int" Placeholder="Seleccione el Cliente" DataSource="@clientes">
+                                            <DropDownListFieldSettings Value="CG_CLI" Text="DES_CLI"></DropDownListFieldSettings>
+                                        </SfDropDownList>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </Template>
+                </GridEditSettings>
+                <GridColumns>
+                    <GridColumn Field=@nameof(OperarioEntity.CG_OPER) HeaderText="Id" TextAlign="TextAlign.Left" IsPrimaryKey="true"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.DES_OPER) HeaderText="Nombre" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.CG_TURNO) HeaderText="Turno" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.RENDIM) HeaderText="Rendimiento" TextAlign="TextAlign.Left" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.FE_FINAL) HeaderText="Fecha" TextAlign="TextAlign.Left" Type="ColumnType.Date"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.HS_FINAL) HeaderText="Horas Finales" TextAlign="TextAlign.Left" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.CG_CATEOP) HeaderText="Categoria" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.VALOR_HORA) HeaderText="Valor x Hora" TextAlign="TextAlign.Left" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.MONEDA) HeaderText="Moneda" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.ACTIVO) HeaderText="Activo" DisplayAsCheckBox="true" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.CG_CIA) HeaderText="Empresa" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(OperarioEntity.USUARIO) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                </GridColumns>
+            </SfGrid>
+        </div>
+    </div>
+</div>
+<style>
+    .form-group.col-md-6 {
+        width: 200px;
+    }
+
+    label.e-float-text {
+        position: relative;
+        padding-left: 0;
+        top: 10%;
+    }
+
+    .e-input-group.e-control-wrapper.customClass {
+        color: black;
+        background-color: lightblue;
+    }
+</style>
+
+@*<SfQRCodeGenerator Width="200px" Height="150px" Value="http://www.aerre.com.ar/">
+        <QRCodeGeneratorDisplayText text=" "></QRCodeGeneratorDisplayText>
+    </SfQRCodeGenerator>*@
+
+@code {
+    
+}
