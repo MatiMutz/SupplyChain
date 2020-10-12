@@ -22,15 +22,15 @@ namespace SupplyChain
 
         // GET: api/Prod
         [HttpGet]
-        public IEnumerable<Prod> Get()
+        public IEnumerable<ProdPage> Get()
         {
-            var xitem = _context.Prod.ToList();
+            var xitem = _context.ProdPage.ToList();
             return xitem;
         }
 
-        // PUT: api/Operario/{id}
+        // PUT: api/Prod/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Prod xitem)
+        public async Task<IActionResult> Put(int id, ProdPage xitem)
         {
             if (id != xitem.CG_PROD)
             {
@@ -60,12 +60,12 @@ namespace SupplyChain
 
         // POST: api/Prod                                                                                                                                                                   
         [HttpPost]
-        public async Task<ActionResult<Prod>> Post(Prod xitem)
+        public async Task<ActionResult<ProdPage>> Post(ProdPage xitem)
         {
             try
             {
                 xitem.CG_PROD = 0;
-                _context.Prod.Add(xitem);
+                _context.ProdPage.Add(xitem);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -76,15 +76,15 @@ namespace SupplyChain
 
         // DELETE: api/Prod/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Prod>> Delete(int id)
+        public async Task<ActionResult<ProdPage>> Delete(int id)
         {
-            var xitem = await _context.Prod.FindAsync(id);
+            var xitem = await _context.ProdPage.FindAsync(id);
             if (xitem == null)
             {
                 return NotFound();
             }
 
-            _context.Prod.Remove(xitem);
+            _context.ProdPage.Remove(xitem);
             await _context.SaveChangesAsync();
 
             return xitem;
@@ -92,7 +92,7 @@ namespace SupplyChain
 
         private bool Existe(int id)
         {
-            return _context.Prod.Any(e => e.CG_PROD == id);
+            return _context.ProdPage.Any(e => e.CG_PROD == id);
         }
     }
 }
