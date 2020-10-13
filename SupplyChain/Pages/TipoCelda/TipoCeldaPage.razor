@@ -1,0 +1,98 @@
+﻿@page "/tipocelda/list"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using System.Configuration;
+@using System.Data.SqlClient;
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.BarcodeGenerator
+@using System.Text.Json
+@using System.Linq
+@inject IJSRuntime JsRuntime
+@using SupplyChain.Shared.Models
+@using SupplyChain.Extensions
+@using System.Net.Http.Json
+@inject CustomHttpClient Http
+
+@inject NavigationManager NavManager
+@inherits TipoCeldaPageBase
+
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div class="row">
+            <SfGrid AllowReordering="true" ShowColumnChooser="true" ShowColumnMenu="true" AllowResizing="true" EnablePersistence="true"
+                    @ref="Grid" DataSource="@tipoceldas" AllowExcelExport="true" AllowRowDragAndDrop="true" AllowGrouping="true"
+                    AllowSorting="true" AllowPaging="true" AllowFiltering="true" Toolbar="@Toolbaritems">
+                <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+                <GridEvents OnToolbarClick="@ClickHandler" OnActionBegin="ActionBegin" TValue="Tip"></GridEvents>
+                <GridFilterSettings Type="@Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
+                <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
+                <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
+                    <Template>
+                        @{
+                            var tipcelda = (context as TipCelda);
+                            <div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">Id:</label>
+                                        <SfNumericTextBox ID="CG_TIPOCELDA" @bind-Value="@(tipcelda.CG_TIPOCELDA)" Enabled="@Disabled"></SfNumericTextBox>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label class="e-float-text e-label-top">DES_TIPOCELDA</label>
+                                        <SfTextBox CssClass="customClass" ID="DES_TIPOCELDA" @bind-Value="@(tipcelda.DES_TIPOCELDA)"></SfTextBox>
+                                    </div>
+
+                                       <div class="form-group col-md-6">
+                                           <label class="e-float-text e-label-top">CG_CIA</label>
+                                        <SfTextBox CssClass="customClass" ID="CG_CIA" @bind-Value="@(tipcelda.CG_CIA)"></SfTextBox>
+                                    </div>
+                                </div>
+
+                      
+
+                              
+
+                           
+                            </div>
+                        }
+                    </Template>
+                </GridEditSettings>
+                <GridColumns>
+                    <GridColumn Field=@nameof(TipCelda.CG_TIPOCELDA) HeaderText="Id" TextAlign="TextAlign.Left" IsPrimaryKey="true"></GridColumn>
+                    <GridColumn Field=@nameof(TipCelda.DES_TIPOCELDA) HeaderText="Tipo" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(TipCelda.CG_CIA) HeaderText="Tipo" TextAlign="TextAlign.Left"></GridColumn>
+
+                </GridColumns>
+            </SfGrid>
+        </div>
+    </div>
+</div>
+<style>
+    .form-group.col-md-6 {
+        width: 200px;
+    }
+
+    label.e-float-text {
+        position: relative;
+        padding-left: 0;
+        top: 10%;
+    }
+
+    .e-input-group.e-control-wrapper.customClass {
+        color: black;
+        background-color: lightblue;
+    }
+</style>
+
+@*<SfQRCodeGenerator Width="200px" Height="150px" Value="http://www.aerre.com.ar/">
+        <QRCodeGeneratorDisplayText text=" "></QRCodeGeneratorDisplayText>
+    </SfQRCodeGenerator>*@
+
+@code {
+    
+}

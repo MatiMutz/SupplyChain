@@ -32,6 +32,12 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Sobrepres> Sobrepresion { get; set; }
         public DbSet<Tip> Tipo { get; set; }
         public DbSet<Estado> Estado { get; set; }
+        public DbSet<TipArea> Tiarea { get; set; }
+        public DbSet<TipCelda> Ticelda { get; set; }
+        public DbSet<TipMat> Timat { get; set; }
+        public DbSet<TipNoConf> Tinconf { get; set; }
+
+
         public DbSet<TrabajosEfec> TrabajosEfec { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }

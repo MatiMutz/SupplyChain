@@ -350,3 +350,5 @@ C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDecl
 C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Servicios\ServicioPage.razor.g.cs
 C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\Prod\ProdPage.razor.g.cs
 C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\Servicios\ServicioPage.razor.g.cs
+C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Tipo\TipoPage.razor.g.cs
+C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\Tipo\TipoPage.razor.g.cs
