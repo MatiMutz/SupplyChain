@@ -345,3 +345,8 @@ E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\staticwebassets\S
 E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\staticwebassets\SupplyChain.StaticWebAssets.xml
 E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\SupplyChain.genruntimeconfig.cache
 >>>>>>> 8f1ff9fd7573067a7349a21adf6310b5b75f9b75
+C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\SupplyChain.csprojAssemblyReference.cache
+C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Prod\ProdPage.razor.g.cs
+C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Servicios\ServicioPage.razor.g.cs
+C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\Prod\ProdPage.razor.g.cs
+C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\Servicios\ServicioPage.razor.g.cs

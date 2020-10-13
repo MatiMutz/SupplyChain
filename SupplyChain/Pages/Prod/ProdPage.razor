@@ -48,96 +48,69 @@
                                     </div>
                                 </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label class="e-float-text e-label-top">Turno:</label>
-                                        <SfDropDownList CssClass="customClass" ID="CG_TURNO" TItem="TurnosEntity" @bind-Value="@(prod.CG_TURNO)" TValue="int" Placeholder="Seleccione el Turno" DataSource="@turnos">
-                                            <DropDownListFieldSettings Value="CG_TURNO" Text="TURNO"></DropDownListFieldSettings>
-                                        </SfDropDownList>
-                                    </div>
-
-                                    <div class="form-group col-md-6">
-                                        <label class="e-float-text e-label-top">Rendimiento:</label>
-                                        <SfNumericTextBox ID="RENDIM" @bind-Value="@(operario.RENDIM)" TValue="decimal"></SfNumericTextBox>
-                                    </div>
-                                </div>
+                      
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label class="e-float-text e-label-top">Horas Finales:</label>
-                                        <SfNumericTextBox ID="HS_FINAL" @bind-Value="@(operario.HS_FINAL)"></SfNumericTextBox>
+                                        <SfNumericTextBox ID="HS_FINAL" @bind-Value="@(prod.CG_ORDEN)"></SfNumericTextBox>
                                     </div>
 
-                                    <div class="form-group col-md-6">
-                                        <label class="e-float-text e-label-top">Categoria:</label>
-                                        <SfDropDownList CssClass="customClass" ID="CG_CATEOP" TItem="CatOpeEntity" @bind-Value="@(operario.CG_CATEOP)" TValue="string" Placeholder="Seleccione la Categoria" DataSource="@categorias">
-                                            <DropDownListFieldSettings Value="DES_CATEOP" Text="DES_CATEOP"></DropDownListFieldSettings>
-                                        </SfDropDownList>
-                                    </div>
+                                
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label class="e-float-text e-label-top">Valor Por Hora:</label>
-                                        <SfNumericTextBox ID="VALOR_HORA" @bind-Value="@(operario.VALOR_HORA)"></SfNumericTextBox>
+                                        <SfNumericTextBox ID="VALOR_HORA" @bind-Value="@(prod.CG_CLAS)"></SfNumericTextBox>
                                     </div>
 
-                                    <div class="form-group col-md-6">
-                                        <label class="e-float-text e-label-top">Moneda:</label>
-                                        <SfDropDownList CssClass="customClass" ID="MONEDA" TItem="MonedasEntity" @bind-Value="@(operario.MONEDA)" TValue="string" Placeholder="Seleccione la Moneda" DataSource="@monedas">
-                                            <DropDownListFieldSettings Value="MONEDA" Text="SIMBOLO"></DropDownListFieldSettings>
-                                        </SfDropDownList>
-                                    </div>
+                                
                                 </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label class="e-float-text e-label-top">Activo:</label>
-                                        <SfDropDownList CssClass="customClass" ID="ACTIVO" TItem="EstaActivo" @bind-Value="@(operario.ACTIVO)" TValue="bool" Placeholder="Esta Activo?" 
-                                                        DataSource="@ActivoData">
-                                            <DropDownListFieldSettings Value="BActivo" Text="Text"></DropDownListFieldSettings>
-                                        </SfDropDownList>
-                                    </div>
-
-                                    <div class="form-group col-md-6">
-                                        <label class="e-float-text e-label-top">Fecha Final:</label>
-                                        <SfDatePicker ID="FE_FINAL" @bind-Value="@(operario.FE_FINAL)"></SfDatePicker>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label class="e-float-text e-label-top">Usuario:</label>
-                                        <SfDropDownList CssClass="customClass" ID="USUARIO" TItem="UsuarioEntity" @bind-Value="@(operario.USUARIO)" TValue="string" Placeholder="Seleccione el usuario" DataSource="@usuarios">
-                                            <DropDownListFieldSettings Value="Usuario" Text="Usuario"></DropDownListFieldSettings>
-                                        </SfDropDownList>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label class="e-float-text e-label-top">Empresa:</label>
-                                        <SfDropDownList CssClass="customClass" ID="CG_CIA" TItem="Cliente" @bind-Value="@(operario.CG_CIA)" TValue="int" Placeholder="Seleccione el Cliente" DataSource="@clientes">
-                                            <DropDownListFieldSettings Value="CG_CLI" Text="DES_CLI"></DropDownListFieldSettings>
-                                        </SfDropDownList>
-                                    </div>
-                                </div>
+                           
                             </div>
                         }
                     </Template>
                 </GridEditSettings>
                 <GridColumns>
-                    <GridColumn Field=@nameof(ProdPage.CG_PROD) HeaderText="Id" TextAlign="TextAlign.Left" IsPrimaryKey="true"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.DES_OPER) HeaderText="Nombre" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.CG_TURNO) HeaderText="Turno" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.RENDIM) HeaderText="Rendimiento" TextAlign="TextAlign.Left" Width="100"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.FE_FINAL) HeaderText="Fecha" TextAlign="TextAlign.Left" Type="ColumnType.Date"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.HS_FINAL) HeaderText="Horas Finales" TextAlign="TextAlign.Left" Width="100"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.CG_CATEOP) HeaderText="Categoria" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.VALOR_HORA) HeaderText="Valor x Hora" TextAlign="TextAlign.Left" Width="100"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.MONEDA) HeaderText="Moneda" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.ACTIVO) HeaderText="Activo" DisplayAsCheckBox="true" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.CG_CIA) HeaderText="Empresa" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(OperarioEntity.USUARIO) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_PROD) HeaderText="Id" TextAlign="TextAlign.Left" IsPrimaryKey="true"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.DES_PROD) HeaderText="Nombre" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_ORDEN) HeaderText="Turno" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.TIPO) HeaderText="Rendimiento" TextAlign="TextAlign.Left" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_CLAS) HeaderText="Fecha" TextAlign="TextAlign.Left" Type="ColumnType.Date"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.UNID) HeaderText="Horas Finales" TextAlign="TextAlign.Left" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_DENSEG) HeaderText="Categoria" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.UNIDSEG) HeaderText="Valor x Hora" TextAlign="TextAlign.Left" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.PESO) HeaderText="Moneda" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.UNIDPESO) HeaderText="Activo" DisplayAsCheckBox="true" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.ESPECIF) HeaderText="Empresa" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.NORMA) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.EXIGEDESPACHO) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.EXIGELOTE) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.EXIGESERIE) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.EXIGEOA) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.STOCKMIN) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.LOPTIMO) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_AREA) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_LINEA) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.ACTIVO) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.TIEMPOFAB) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.COSTO) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.COSTOTER) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.MONEDA) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_CELDA) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_TIPOAREA) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_CUENT1) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.UNIDEQUI) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.COSTOUC) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.MONEDAUC) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.COSTOUC1) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.FE_UC) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.USUARIO) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.FE_REG) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                    <GridColumn Field=@nameof(Prodd.CG_CIA) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
+                   
                 </GridColumns>
             </SfGrid>
         </div>

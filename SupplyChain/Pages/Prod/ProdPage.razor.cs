@@ -24,12 +24,7 @@ namespace SupplyChain.Pages.Prod
 
 
         protected List<Prodd> prods = new List<Prodd>();
-        protected List<OperarioEntity> operarios = new List<OperarioEntity>();
-        protected List<CatOpeEntity> categorias = new List<CatOpeEntity>();
-        protected List<UsuarioEntity> usuarios = new List<UsuarioEntity>();
-        protected List<Cliente> clientes = new List<Cliente>();
-        protected List<MonedasEntity> monedas = new List<MonedasEntity>();
-        protected List<TurnosEntity> turnos = new List<TurnosEntity>();
+
 
         protected List<Object> Toolbaritems = new List<Object>(){
         "Search",
@@ -44,11 +39,7 @@ namespace SupplyChain.Pages.Prod
         protected override async Task OnInitializedAsync()
         {
             prods = await Http.GetFromJsonAsync<List<Prodd>>("api/Prod");
-            categorias = await Http.GetFromJsonAsync<List<CatOpeEntity>>("api/CatOpe");
-            usuarios = await Http.GetFromJsonAsync<List<UsuarioEntity>>("api/Usuarios");
-            clientes = await Http.GetFromJsonAsync<List<Cliente>>("api/Cliente");
-            monedas = await Http.GetFromJsonAsync<List<MonedasEntity>>("api/Monedas");
-            turnos = await Http.GetFromJsonAsync<List<TurnosEntity>>("api/Turnos");
+       
 
             await base.OnInitializedAsync();
         }
@@ -141,32 +132,57 @@ namespace SupplyChain.Pages.Prod
             {
                 if (this.Grid.SelectedRecords.Count > 0)
                 {
-                    foreach (ProdPage selectedRecord in this.Grid.SelectedRecords)
+                    foreach (Prodd selectedRecord in this.Grid.SelectedRecords)
                     {
                         bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea copiar el Operario?");
                         if (isConfirmed)
                         {
-                            ProdPage Nuevo = new ProdPage();
+                            Prodd Nuevo = new Prodd();
 
                             //Nuevo.CG_OPER = operarios.Max(s => s.CG_OPER) + 1;
                             Nuevo.DES_PROD = selectedRecord.DES_PROD;
-                            Nuevo.CG_TURNO = selectedRecord.CG_TURNO;
-                            Nuevo.RENDIM = selectedRecord.RENDIM;
-                            Nuevo.FE_FINAL = selectedRecord.FE_FINAL;
-                            Nuevo.HS_FINAL = selectedRecord.HS_FINAL;
-                            Nuevo.CG_CATEOP = selectedRecord.CG_CATEOP;
-                            Nuevo.VALOR_HORA = selectedRecord.VALOR_HORA;
-                            Nuevo.MONEDA = selectedRecord.MONEDA;
+                            Nuevo.CG_ORDEN = selectedRecord.CG_ORDEN;
+                            Nuevo.TIPO = selectedRecord.TIPO;
+                            Nuevo.CG_CLAS = selectedRecord.CG_CLAS;
+                            Nuevo.UNID = selectedRecord.UNID;
+                            Nuevo.CG_DENSEG = selectedRecord.CG_DENSEG;
+                            Nuevo.UNIDSEG = selectedRecord.UNIDSEG;
+                            Nuevo.PESO = selectedRecord.PESO;
+                            Nuevo.UNIDPESO = selectedRecord.UNIDPESO;
+                            Nuevo.ESPECIF = selectedRecord.ESPECIF;
+                            Nuevo.NORMA = selectedRecord.NORMA;
+                            Nuevo.EXIGEDESPACHO = selectedRecord.EXIGEDESPACHO;
+                            Nuevo.EXIGELOTE = selectedRecord.EXIGELOTE;
+                            Nuevo.EXIGESERIE = selectedRecord.EXIGESERIE;
+                            Nuevo.EXIGEOA = selectedRecord.EXIGEOA;
+                            Nuevo.STOCKMIN = selectedRecord.STOCKMIN;
+                            Nuevo.LOPTIMO = selectedRecord.LOPTIMO;
+                            Nuevo.CG_AREA = selectedRecord.CG_AREA;
+                            Nuevo.CG_LINEA = selectedRecord.CG_LINEA;
                             Nuevo.ACTIVO = selectedRecord.ACTIVO;
-                            Nuevo.CG_CIA = selectedRecord.CG_CIA;
+                            Nuevo.TIEMPOFAB = selectedRecord.TIEMPOFAB;
+                            Nuevo.COSTO = selectedRecord.COSTO;
+                            Nuevo.COSTOTER = selectedRecord.COSTOTER;
+                            Nuevo.MONEDA = selectedRecord.MONEDA;
+                            Nuevo.CG_CELDA = selectedRecord.CG_CELDA;
+                            Nuevo.CG_TIPOAREA = selectedRecord.CG_TIPOAREA;
+                            Nuevo.CG_CUENT1 = selectedRecord.CG_CUENT1;
+                            Nuevo.UNIDEQUI = selectedRecord.UNIDEQUI;
+                            Nuevo.COSTOUC = selectedRecord.COSTOUC;
+                            Nuevo.MONEDAUC = selectedRecord.MONEDAUC;
+                            Nuevo.COSTOUC1 = selectedRecord.COSTOUC1;
+                            Nuevo.FE_UC = selectedRecord.FE_UC;
                             Nuevo.USUARIO = selectedRecord.USUARIO;
+                            Nuevo.FE_REG = selectedRecord.FE_REG;
+                            Nuevo.CG_CIA = selectedRecord.CG_CIA;
+                           
 
                             var response = await Http.PostAsJsonAsync("api/Prod", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 Grid.Refresh();
-                                var prod = await response.Content.ReadFromJsonAsync<OperarioEntity>();
+                                var prod = await response.Content.ReadFromJsonAsync<Prodd>();
                                 await InvokeAsync(StateHasChanged);
                                 Nuevo.CG_PROD = prod.CG_PROD;
                                 prods.Add(Nuevo);
