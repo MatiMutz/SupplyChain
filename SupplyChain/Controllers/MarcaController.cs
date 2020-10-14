@@ -23,17 +23,17 @@ namespace SupplyChain
 
         // GET: api/Marca
         [HttpGet]
-        public IEnumerable<Marca> Get()
+        public IEnumerable<Marc> Get()
         {
             var xitem = _context.Marca.ToList();
-            return (IEnumerable<Marca>)xitem;
+            return (IEnumerable<Marc>)xitem;
         }
 
         // PUT: api/Marca/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Marca xitem)
+        public async Task<IActionResult> Put(int id, Marc xitem)
         {
-            if (id != xitem.ID)
+            if (id != xitem.Id)
             {
                 return BadRequest();
             }
@@ -61,23 +61,23 @@ namespace SupplyChain
 
         // POST: api/Marca
         [HttpPost]
-        public async Task<ActionResult<Marca>> Post(Marca xitem)
+        public async Task<ActionResult<Marc>> Post(Marc xitem)
         {
             try
             {
-                xitem.ID = 0;
+                xitem.Id = 0;
                 _context.Marca.Add(xitem);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
             }
-            return CreatedAtAction("Get", new { id = xitem.ID }, xitem);
+            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
         }
 
         // DELETE: api/Marca/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Marca>> Delete(int id)
+        public async Task<ActionResult<Marc>> Delete(int id)
         {
             var xitem = await _context.Marca.FindAsync(id);
             if (xitem == null)
@@ -93,7 +93,7 @@ namespace SupplyChain
 
         private bool Existe(int id)
         {
-            return _context.Marca.Any(e => e.ID == id);
+            return _context.Marca.Any(e => e.Id == id);
         }
     }
 }

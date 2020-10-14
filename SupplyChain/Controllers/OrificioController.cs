@@ -23,17 +23,17 @@ namespace SupplyChain
 
         // GET: api/Orificio
         [HttpGet]
-        public IEnumerable<Orificio> Get()
+        public IEnumerable<Orific> Get()
         {
             var xitem = _context.Orificio.ToList();
-            return (IEnumerable<Orificio>)xitem;
+            return (IEnumerable<Orific>)xitem;
         }
 
         // PUT: api/Orificio/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Orificio xitem)
+        public async Task<IActionResult> Put(int id, Orific xitem)
         {
-            if (id != xitem.ID)
+            if (id != xitem.Id)
             {
                 return BadRequest();
             }
@@ -61,23 +61,23 @@ namespace SupplyChain
 
         // POST: api/Orificio
         [HttpPost]
-        public async Task<ActionResult<Orificio>> Post(Orificio xitem)
+        public async Task<ActionResult<Orific>> Post(Orific xitem)
         {
             try
             {
-                xitem.ID = 0;
+                xitem.Id = 0;
                 _context.Orificio.Add(xitem);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
             }
-            return CreatedAtAction("Get", new { id = xitem.ID }, xitem);
+            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
         }
 
         // DELETE: api/Orificio/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Orificio>> Delete(int id)
+        public async Task<ActionResult<Orific>> Delete(int id)
         {
             var xitem = await _context.Orificio.FindAsync(id);
             if (xitem == null)
@@ -93,7 +93,7 @@ namespace SupplyChain
 
         private bool Existe(int id)
         {
-            return _context.Orificio.Any(e => e.ID == id);
+            return _context.Orificio.Any(e => e.Id == id);
         }
     }
 }

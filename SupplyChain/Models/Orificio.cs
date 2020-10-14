@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SupplyChain.Shared.Models
 {
     [Table("Orificio")]
-	public class Orificio
+	public class Orific
 	{
 
-		public int ID { get; set; }
-		public string ORIFICIO { get; set; }
-		public string AREA { get; set; }
+		public int Id { get; set; }
+		public string Orificio { get; set; }
+		public string Area { get; set; }
 
 	}
 }

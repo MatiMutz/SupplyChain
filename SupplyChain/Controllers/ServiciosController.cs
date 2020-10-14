@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ServiciosController : ControllerBase
+    public class ServiciosController : Controller
     {
         private readonly AppDbContext _context;
 
@@ -23,22 +23,42 @@ namespace SupplyChain
 
         // GET: api/Servicio
         [HttpGet]
-        public IEnumerable<Servicio> Get()
+        public async Task<ActionResult<IEnumerable<Servicio>>> GetServicios()
         {
-            var xitem = _context.Servicios.ToList();
-            return xitem;
+            try
+            {
+                return await _context.Servicios.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        // GET: api/Servicio/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Servicio>> GetServicios(decimal id)
+        {
+            var serv = await _context.Servicios.FindAsync(id);
+
+            if (serv == null)
+            {
+                return NotFound();
+            }
+
+            return serv;
         }
 
         // PUT: api/Servicio/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(string id, Servicio xitem)
+        public async Task<IActionResult> PutServicio(string id, Servicio Serv)
         {
-            if (id != xitem.PEDIDO)
+            if (id != Serv.PEDIDO)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Serv).State = EntityState.Modified;
 
             try
             {
@@ -63,16 +83,10 @@ namespace SupplyChain
         [HttpPost]
         public async Task<ActionResult<Servicio>> Post(Servicio xitem)
         {
-            try
-            {
-                xitem.PEDIDO = "0";
-                _context.Servicios.Add(xitem);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-            }
-            return CreatedAtAction("Get", new { id = xitem.PEDIDO }, xitem);
+            _context.Servicios.Add(xitem);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetServicios", new { id = xitem.PEDIDO }, xitem);
         }
 
         // DELETE: api/Servicio/{id}

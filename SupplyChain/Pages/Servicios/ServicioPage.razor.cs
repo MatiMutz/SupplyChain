@@ -23,15 +23,16 @@ namespace SupplyChain.Pages.Servicios
         public bool Disabled = false;
 
         protected List<Servicio> servicios = new List<Servicio>();
-        protected List<Modelo> modelos = new List<Modelo>();
-        protected List<Medida> medidas = new List<Medida>();
+        protected List<Model> modelos = new List<Model>();
+        protected List<Medid> medidas = new List<Medid>();
         protected List<Serie> series = new List<Serie>();
-        protected List<Orificio> orificios = new List<Orificio>();
+        protected List<Orific> orificios = new List<Orific>();
         protected List<Sobrepres> sobrepresiones = new List<Sobrepres>();
         protected List<Tip> tipos = new List<Tip>();
-        protected List<Estado> estados = new List<Estado>();
+        protected List<Estad> estados = new List<Estad>();
         protected List<TrabajosEfec> trabajosEfectuados = new List<TrabajosEfec>();
-        protected List<Marca> marcas = new List<Marca>();
+        protected List<Marc> marcas = new List<Marc>();
+        protected List<OperarioEntity> operarios = new List<OperarioEntity>();
 
         protected List<Object> Toolbaritems = new List<Object>(){
         "Search",
@@ -45,16 +46,17 @@ namespace SupplyChain.Pages.Servicios
 
         protected override async Task OnInitializedAsync()
         {
-            servicios = await Http.GetFromJsonAsync<List<Servicio>>("api/Servicio");
-            modelos = await Http.GetFromJsonAsync<List<Modelo>>("api/Modelo");
-            medidas = await Http.GetFromJsonAsync<List<Medida>>("api/Medida");
+            servicios = await Http.GetFromJsonAsync<List<Servicio>>("api/Servicios");
+            modelos = await Http.GetFromJsonAsync<List<Model>>("api/Modelo");
+            medidas = await Http.GetFromJsonAsync<List<Medid>>("api/Medida");
             series = await Http.GetFromJsonAsync<List<Serie>>("api/Serie");
-            orificios = await Http.GetFromJsonAsync<List<Orificio>>("api/Orificio");
+            orificios = await Http.GetFromJsonAsync<List<Orific>>("api/Orificio");
             sobrepresiones = await Http.GetFromJsonAsync<List<Sobrepres>>("api/Sobrepresion");
             tipos = await Http.GetFromJsonAsync<List<Tip>>("api/Tipo");
-            estados = await Http.GetFromJsonAsync<List<Estado>>("api/Estado");
+            estados = await Http.GetFromJsonAsync<List<Estad>>("api/Estado");
             trabajosEfectuados = await Http.GetFromJsonAsync<List<TrabajosEfec>>("api/TrabajosEfec");
-            marcas = await Http.GetFromJsonAsync<List<Marca>>("api/Marca");
+            marcas = await Http.GetFromJsonAsync<List<Marc>>("api/Marca");
+            operarios = await Http.GetFromJsonAsync<List<OperarioEntity>>("api/Operario");
 
             await base.OnInitializedAsync();
         }

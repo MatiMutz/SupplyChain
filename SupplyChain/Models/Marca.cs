@@ -5,11 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SupplyChain.Shared.Models
 {
     [Table("Marca")]
-	public class Marca
+	public class Marc
 	{
 
-		public int ID { get; set; }
-		public string MARCA { get; set; }
+		public int Id { get; set; }
+		public string Marca { get; set; }
 
 	}
 }

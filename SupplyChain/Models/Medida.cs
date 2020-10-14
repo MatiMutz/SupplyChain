@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SupplyChain.Shared.Models
 {
     [Table("Medida")]
-	public class Medida
+	public class Medid
 	{
 
-		public int ID { get; set; }
-		public string CODIGO { get; set; }
-		public string MEDIDA { get; set; }
+		public int Id { get; set; }
+		public string Codigo { get; set; }
+		public string Medida { get; set; }
 
 	}
 }

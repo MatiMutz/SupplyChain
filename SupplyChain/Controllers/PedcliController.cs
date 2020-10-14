@@ -12,28 +12,28 @@ namespace SupplyChain
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ModeloController : ControllerBase
+    public class PedcliController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public ModeloController(AppDbContext context)
+        public PedcliController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Modelo
+        // GET: api/Pedcli
         [HttpGet]
-        public IEnumerable<Model> Get()
+        public IEnumerable<Pedcli> Get()
         {
-            var xitem = _context.Modelo.ToList();
-            return (IEnumerable<Model>)xitem;
+            var xitem = _context.Pedcli.ToList();
+            return xitem;
         }
 
-        // PUT: api/Modelo/{id}
+        // PUT: api/Pedcli/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Model xitem)
+        public async Task<IActionResult> Put(int id, Pedcli xitem)
         {
-            if (id != xitem.Id)
+            if (id != xitem.REGISTRO)
             {
                 return BadRequest();
             }
@@ -59,33 +59,33 @@ namespace SupplyChain
             return NoContent();
         }
 
-        // POST: api/Modelo
+        // POST: api/Pedcli
         [HttpPost]
-        public async Task<ActionResult<Model>> Post(Model xitem)
+        public async Task<ActionResult<Pedcli>> Post(Pedcli xitem)
         {
             try
             {
-                xitem.Id = 0;
-                _context.Modelo.Add(xitem);
+                xitem.REGISTRO = 0;
+                _context.Pedcli.Add(xitem);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
             }
-            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
+            return CreatedAtAction("Get", new { id = xitem.REGISTRO }, xitem);
         }
 
-        // DELETE: api/Modelo/{id}
+        // DELETE: api/Pedcli/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Model>> Delete(int id)
+        public async Task<ActionResult<Pedcli>> Delete(int id)
         {
-            var xitem = await _context.Modelo.FindAsync(id);
+            var xitem = await _context.Pedcli.FindAsync(id);
             if (xitem == null)
             {
                 return NotFound();
             }
 
-            _context.Modelo.Remove(xitem);
+            _context.Pedcli.Remove(xitem);
             await _context.SaveChangesAsync();
 
             return xitem;
@@ -93,7 +93,7 @@ namespace SupplyChain
 
         private bool Existe(int id)
         {
-            return _context.Modelo.Any(e => e.Id == id);
+            return _context.Pedcli.Any(e => e.REGISTRO == id);
         }
     }
 }

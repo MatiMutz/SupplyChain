@@ -8,9 +8,9 @@ namespace SupplyChain.Shared.Models
 	public class Serie
 	{
 
-		public int ID { get; set; }
-		public string CODIGO { get; set; }
-		public string MEDIDA { get; set; }
+		public int Id { get; set; }
+		public string Codigo { get; set; }
+		public string Medida { get; set; }
 
 	}
 }

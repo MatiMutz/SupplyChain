@@ -23,7 +23,7 @@ namespace SupplyChain
 
         // GET: api/Estado
         [HttpGet]
-        public IEnumerable<Estado> Get()
+        public IEnumerable<Estad> Get()
         {
             var xitem = _context.Estado.ToList();
             return xitem;
@@ -31,7 +31,7 @@ namespace SupplyChain
 
         // PUT: api/Estado/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Estado xitem)
+        public async Task<IActionResult> Put(int id, Estad xitem)
         {
             if (id != xitem.Id)
             {
@@ -61,7 +61,7 @@ namespace SupplyChain
 
         // POST: api/Estado
         [HttpPost]
-        public async Task<ActionResult<Estado>> Post(Estado xitem)
+        public async Task<ActionResult<Estad>> Post(Estad xitem)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace SupplyChain
 
         // DELETE: api/Estado/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Estado>> Delete(int id)
+        public async Task<ActionResult<Estad>> Delete(int id)
         {
             var xitem = await _context.Estado.FindAsync(id);
             if (xitem == null)

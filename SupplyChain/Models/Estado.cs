@@ -7,10 +7,10 @@ using System.Text;
 namespace SupplyChain.Shared.Models
 {
     [Table("Estado")]
-    public class Estado
+    public class Estad
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Estadoz { get; set; }
+        public string Estado { get; set; }
     }
 }

@@ -33,7 +33,7 @@ namespace SupplyChain
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, Serie xitem)
         {
-            if (id != xitem.ID)
+            if (id != xitem.Id)
             {
                 return BadRequest();
             }
@@ -65,14 +65,14 @@ namespace SupplyChain
         {
             try
             {
-                xitem.ID = 0;
+                xitem.Id = 0;
                 _context.Serie.Add(xitem);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
             }
-            return CreatedAtAction("Get", new { id = xitem.ID }, xitem);
+            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
         }
 
         // DELETE: api/Serie/{id}
@@ -93,7 +93,7 @@ namespace SupplyChain
 
         private bool Existe(int id)
         {
-            return _context.Serie.Any(e => e.ID == id);
+            return _context.Serie.Any(e => e.Id == id);
         }
     }
 }
