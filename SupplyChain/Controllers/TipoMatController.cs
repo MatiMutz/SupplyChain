@@ -31,7 +31,7 @@ namespace SupplyChain
 
         // PUT: api/TipoMat/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, TipMat xitem)
+        public async Task<IActionResult> Put(string id, TipMat xitem)
         {
             if (id != xitem.Tipo)
             {
@@ -65,7 +65,7 @@ namespace SupplyChain
         {
             try
             {
-                xitem.Tipo = 0;
+                xitem.Tipo = "0";
                 _context.Timat.Add(xitem);
                 await _context.SaveChangesAsync();
             }
@@ -91,7 +91,7 @@ namespace SupplyChain
             return xitem;
         }
 
-        private bool Existe(int id)
+        private bool Existe(string id)
         {
             return _context.Timat.Any(e => e.Tipo == id);
         }
