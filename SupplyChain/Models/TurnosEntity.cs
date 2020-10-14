@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SupplyChain
 {
+    [Table("TURNOS")]
     public class TurnosEntity
     {
         [Key]
@@ -14,8 +15,8 @@ namespace SupplyChain
         [StringLength(1)]
         public string TURNO { get; set; }
         [StringLength(1)]
-        public string DESDE { get; set; }
-        [StringLength(1)]
-        public string HASTA { get; set; }
+        public DateTime DESDE { get; set; }
+        
+        public DateTime HASTA { get; set; }
     }
 }
