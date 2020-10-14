@@ -77,7 +77,7 @@ namespace SupplyChain
 
         // DELETE: api/TipoArea/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<TipMat>> Delete(int id)
+        public async Task<ActionResult<TipMat>> Delete(string id)
         {
             var xitem = await _context.Timat.FindAsync(id);
             if (xitem == null)
