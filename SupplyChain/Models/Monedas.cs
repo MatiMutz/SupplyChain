@@ -4,15 +4,15 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace SupplyChain
+namespace SupplyChain.Shared.Models
 {
-    public class MonedasEntity
+    [Table("MONEDAS")]
+    public class Monedas
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [StringLength(1)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [ColumnaGridViewAtributo(Name = "Moneda")]
         public string MONEDA { get; set; }
-        [StringLength(1)]
+        [ColumnaGridViewAtributo(Name = "Simbolo")]
         public string SIMBOLO { get; set; }
     }
 }

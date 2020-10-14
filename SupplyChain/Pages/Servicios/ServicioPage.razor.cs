@@ -17,12 +17,12 @@ namespace SupplyChain.Pages.Servicios
     {
         [Inject] protected CustomHttpClient Http { get; set; }
         [Inject] protected IJSRuntime JsRuntime { get; set; }
-        protected SfGrid<Servicio> Grid;
+        protected SfGrid<SupplyChain.Shared.Models.Servicios> Grid;
 
         public bool Enabled = true;
         public bool Disabled = false;
 
-        protected List<Servicio> servicios = new List<Servicio>();
+        protected List<SupplyChain.Shared.Models.Servicios> servicios = new List<SupplyChain.Shared.Models.Servicios>();
         protected List<Model> modelos = new List<Model>();
         protected List<Medid> medidas = new List<Medid>();
         protected List<Serie> series = new List<Serie>();
@@ -46,7 +46,7 @@ namespace SupplyChain.Pages.Servicios
 
         protected override async Task OnInitializedAsync()
         {
-            servicios = await Http.GetFromJsonAsync<List<Servicio>>("api/Servicios");
+            servicios = await Http.GetFromJsonAsync<List<SupplyChain.Shared.Models.Servicios>>("api/Servicios");
             modelos = await Http.GetFromJsonAsync<List<Model>>("api/Modelo");
             medidas = await Http.GetFromJsonAsync<List<Medid>>("api/Medida");
             series = await Http.GetFromJsonAsync<List<Serie>>("api/Serie");
@@ -61,7 +61,7 @@ namespace SupplyChain.Pages.Servicios
             await base.OnInitializedAsync();
         }
 
-        public void ActionBeginHandler(ActionEventArgs<Servicio> args)
+        public void ActionBeginHandler(ActionEventArgs<SupplyChain.Shared.Models.Servicios> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
             {
@@ -72,13 +72,13 @@ namespace SupplyChain.Pages.Servicios
                 this.Enabled = true;
             }
         }
-        public async Task ActionBegin(ActionEventArgs<Servicio> args)
+        public async Task ActionBegin(ActionEventArgs<SupplyChain.Shared.Models.Servicios> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
             {
                 HttpResponseMessage response;
                 bool found = servicios.Any(o => o.PEDIDO == args.Data.PEDIDO);
-                Servicio ur = new Servicio();
+                SupplyChain.Shared.Models.Servicios ur = new SupplyChain.Shared.Models.Servicios();
 
                 if (!found)
                 {
@@ -103,7 +103,7 @@ namespace SupplyChain.Pages.Servicios
             }
         }
 
-        private async Task EliminarServicio(ActionEventArgs<Servicio> args)
+        private async Task EliminarServicio(ActionEventArgs<SupplyChain.Shared.Models.Servicios> args)
         {
             try
             {
@@ -129,12 +129,12 @@ namespace SupplyChain.Pages.Servicios
             {
                 if (this.Grid.SelectedRecords.Count > 0)
                 {
-                    foreach (Servicio selectedRecord in this.Grid.SelectedRecords)
+                    foreach (SupplyChain.Shared.Models.Servicios selectedRecord in this.Grid.SelectedRecords)
                     {
                         bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea copiar el Servicios / la reparacion?");
                         if (isConfirmed)
                         {
-                            Servicio Nuevo = new Servicio();
+                            SupplyChain.Shared.Models.Servicios Nuevo = new SupplyChain.Shared.Models.Servicios();
 
                             //Nuevo.PEDIDO = operarios.Max(s => s.PEDIDO) + 1;
                             Nuevo.FECHA = selectedRecord.FECHA;
@@ -192,7 +192,7 @@ namespace SupplyChain.Pages.Servicios
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 Grid.Refresh();
-                                var servicio = await response.Content.ReadFromJsonAsync<Servicio>();
+                                var servicio = await response.Content.ReadFromJsonAsync<SupplyChain.Shared.Models.Servicios>();
                                 await InvokeAsync(StateHasChanged);
                                 Nuevo.PEDIDO = servicio.PEDIDO;
                                 servicios.Add(Nuevo);

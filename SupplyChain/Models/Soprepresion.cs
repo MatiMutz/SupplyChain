@@ -6,10 +6,13 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
-    public class Sobrepres
+    [Table("Sobrepresion")]
+    public class Sobrepresion
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-        public string Sobrepresion { get; set; }
+        [ColumnaGridViewAtributo(Name = "Id")]
+        public int Id { get; set; } = 0;
+        [ColumnaGridViewAtributo(Name = "Descripcion")]
+        public string Descripcion { get; set; } = "";
     }
 }

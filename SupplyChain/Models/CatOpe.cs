@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
+    [Table("CateOperarios")]
     public class CatOpe
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -21,6 +22,5 @@ namespace SupplyChain.Shared.Models
         public int CG_CIA { get; set; } = 0;
         [ColumnaGridViewAtributo(Name = "Usuario")]
         public string USUARIO { get; set; } = "";
-
     }
 }

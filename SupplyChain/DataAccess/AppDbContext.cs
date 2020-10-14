@@ -26,7 +26,7 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Serie> Serie { get; set; }
         public DbSet<Orific> Orificio { get; set; }
         public DbSet<Marc> Marca { get; set; }
-        public DbSet<Servicio> Servicios { get; set; }
+        public DbSet<Servicios> Servicios { get; set; }
         public DbSet<Prodd> Prod { get; set; }
         public DbSet<Sobrepres> Sobrepresion { get; set; }
         public DbSet<Tip> Tipo { get; set; }

@@ -7,9 +7,8 @@ namespace SupplyChain.Shared.Models
     [Table("Depos")]
     public class Deposito
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ColumnaGridViewAtributo(Name = "Codigo")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int? CG_DEP { get; set; }
         [ColumnaGridViewAtributo(Name = "Depósito")]
         [Required(ErrorMessage ="Ingresar Deposito")]
@@ -22,7 +21,5 @@ namespace SupplyChain.Shared.Models
         public int? CG_PROVE { get; set; }
         [ColumnaGridViewAtributo(Name = "Compañía")]
         public int? CG_CIA { get; set; }
-
-
     }
 }

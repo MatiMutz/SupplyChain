@@ -23,7 +23,7 @@ namespace SupplyChain.Server.Controllers
 
         // GET: api/Servicio
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Servicio>>> GetServicios()
+        public async Task<ActionResult<IEnumerable<Servicios>>> GetServicios()
         {
             try
             {
@@ -37,7 +37,7 @@ namespace SupplyChain.Server.Controllers
 
         // GET: api/Servicio/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<Servicio>> GetServicios(decimal id)
+        public async Task<ActionResult<Servicios>> GetServicios(decimal id)
         {
             var serv = await _context.Servicios.FindAsync(id);
 
@@ -51,7 +51,7 @@ namespace SupplyChain.Server.Controllers
 
         // PUT: api/Servicio/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutServicio(string id, Servicio Serv)
+        public async Task<IActionResult> PutServicio(string id, Servicios Serv)
         {
             if (id != Serv.PEDIDO)
             {
@@ -81,7 +81,7 @@ namespace SupplyChain.Server.Controllers
 
         // POST: api/Servicio
         [HttpPost]
-        public async Task<ActionResult<Servicio>> Post(Servicio xitem)
+        public async Task<ActionResult<Servicios>> Post(Servicios xitem)
         {
             _context.Servicios.Add(xitem);
             await _context.SaveChangesAsync();
@@ -91,7 +91,7 @@ namespace SupplyChain.Server.Controllers
 
         // DELETE: api/Servicio/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Servicio>> Delete(int id)
+        public async Task<ActionResult<Servicios>> Delete(int id)
         {
             var xitem = await _context.Servicios.FindAsync(id);
             if (xitem == null)

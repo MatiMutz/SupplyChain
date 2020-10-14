@@ -5,11 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SupplyChain.Shared.Models
 {
     [Table("Modelo")]
-	public class Model
+	public class Modelo
 	{
-
-		public int Id { get; set; }
-		public string Modelo { get; set; }
-
+		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		[ColumnaGridViewAtributo(Name = "Id")]
+		public int Id { get; set; } = 0;
+		[ColumnaGridViewAtributo(Name = "Descripcion")]
+		public string Descripcion { get; set; } = "";
 	}
 }
