@@ -12,9 +12,9 @@ namespace SupplyChain.Server.DataAccess
     {
         public DbSet<MonedasEntity> Monedas { get; set; }
         public DbSet<TurnosEntity> Turnos { get; set; }
-        public DbSet<OperarioEntity> Operario { get; set; }
-        public DbSet<CatOpeEntity> CateOperarios { get; set; }
-        public DbSet<UsuarioEntity> Usuarios { get; set; }
+        public DbSet<Operario> Operario { get; set; }
+        public DbSet<CatOpe> CateOperarios { get; set; }
+        public DbSet<User> Usuarios { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Compra> Compras { get; set; }
         public virtual DbSet<Deposito> Depositos { get; set; }
@@ -35,8 +35,6 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<TipCelda> Ticelda { get; set; }
         public DbSet<TipMat> Timat { get; set; }
         public DbSet<TipNoConf> Tinconf { get; set; }
-
-
         public DbSet<TrabajosEfec> TrabajosEfec { get; set; }
         public DbSet<Pedcli> Pedcli { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

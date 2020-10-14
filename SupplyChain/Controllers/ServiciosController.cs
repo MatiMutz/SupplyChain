@@ -35,7 +35,7 @@ namespace SupplyChain.Server.Controllers
             }
         }
 
-        // GET: api/Servicio/5
+        // GET: api/Servicio/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Servicio>> GetServicios(decimal id)
         {

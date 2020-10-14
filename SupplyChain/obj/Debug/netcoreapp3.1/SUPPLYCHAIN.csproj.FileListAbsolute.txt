@@ -354,8 +354,21 @@ E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\
 E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Servicios\ServicioPage.razor.g.cs
 E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\Prod\ProdPage.razor.g.cs
 E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\Servicios\ServicioPage.razor.g.cs
+<<<<<<< HEAD
 C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TipoArea\TipoAreaPage.razor.g.cs
 C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TipoCelda\TipoCeldaPage.razor.g.cs
 C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TipoMat\TipoMatPage.razor.g.cs
 C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TiposNoConf\TiposNoConfPage.razor.g.cs
 C:\Users\a4344\Desktop\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Tipo\TipoPage.razor.g.cs
+=======
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TipoArea\TipoAreaPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TipoCelda\TipoCeldaPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TipoMat\TipoMatPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TiposNoConf\TiposNoConfPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Tipo\TipoPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\TipoArea\TipoAreaPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\TipoCelda\TipoCeldaPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\TipoMat\TipoMatPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\TiposNoConf\TiposNoConfPage.razor.g.cs
+E:\SupplyChain\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\Tipo\TipoPage.razor.g.cs
+>>>>>>> ee9ee9493e80c1cae3305744faeea7e8b82cfe47

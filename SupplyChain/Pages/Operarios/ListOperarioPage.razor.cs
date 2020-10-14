@@ -24,7 +24,7 @@ namespace SupplyChain.Pages.Operarios
 
         protected List<OperarioEntity> operarios = new List<OperarioEntity>();
         protected List<CatOpeEntity> categorias = new List<CatOpeEntity>();
-        protected List<UsuarioEntity> usuarios = new List<UsuarioEntity>();
+        protected List<Usuario> usuarios = new List<Usuario>();
         protected List<Cliente> clientes = new List<Cliente>();
         protected List<MonedasEntity> monedas = new List<MonedasEntity>();
         protected List<TurnosEntity> turnos = new List<TurnosEntity>();
@@ -44,7 +44,7 @@ namespace SupplyChain.Pages.Operarios
             operarios = await Http.GetFromJsonAsync<List<OperarioEntity>>("api/Operario");
             operarios = operarios.OrderByDescending(s => s.CG_OPER).ToList();
             categorias = await Http.GetFromJsonAsync<List<CatOpeEntity>>("api/CatOpe");
-            usuarios = await Http.GetFromJsonAsync<List<UsuarioEntity>>("api/Usuarios");
+            usuarios = await Http.GetFromJsonAsync<List<Usuario>>("api/Usuarios");
             clientes = await Http.GetFromJsonAsync<List<Cliente>>("api/Cliente");
             monedas = await Http.GetFromJsonAsync<List<MonedasEntity>>("api/Monedas");
             turnos = await Http.GetFromJsonAsync<List<TurnosEntity>>("api/Turnos");

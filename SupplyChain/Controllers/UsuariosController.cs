@@ -21,7 +21,7 @@ namespace SupplyChain
 
         // GET: api/Usuarios
         [HttpGet]
-        public IEnumerable<UsuarioEntity> Get()
+        public IEnumerable<Usuario> Get()
         {
             var xitem = _context.Usuarios.ToList();
             return xitem;
