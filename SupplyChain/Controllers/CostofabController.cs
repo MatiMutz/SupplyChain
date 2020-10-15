@@ -12,48 +12,48 @@ namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OperarioController : ControllerBase
+    public class CostofabController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public OperarioController(AppDbContext context)
+        public CostofabController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Operario
+        // GET: api/Costofab
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Operario>>> GetOperario()
+        public async Task<ActionResult<IEnumerable<Costofab>>> GetCostofab()
         {
-            return await _context.Operario.ToListAsync();
+            return await _context.Costofab.ToListAsync();
         }
 
-        // GET: api/Operario/5
+        // GET: api/Costofab/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Operario>> GetOperario(int id)
+        public async Task<ActionResult<Costofab>> GetCostofab(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
+            var Costofab = await _context.Costofab.FindAsync(id);
 
-            if (Operario == null)
+            if (Costofab == null)
             {
                 return NotFound();
             }
 
-            return Operario;
+            return Costofab;
         }
 
-        // PUT: api/Operario/5
+        // PUT: api/Costofab/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutOperario(int id, Operario Operario)
+        public async Task<IActionResult> PutCostofab(int id, Costofab Costofab)
         {
-            if (id != Operario.CG_OPER)
+            if (id != Costofab.CG_ORDF)
             {
                 return BadRequest();
             }
 
-            _context.Entry(Operario).State = EntityState.Modified;
+            _context.Entry(Costofab).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +61,7 @@ namespace SupplyChain.Server.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!OperarioExists(id))
+                if (!CostofabExists(id))
                 {
                     return NotFound();
                 }
@@ -74,20 +74,20 @@ namespace SupplyChain.Server.Controllers
             return NoContent();
         }
 
-        // POST: api/Operario
+        // POST: api/Costofab
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Operario>> PostOperario(Operario Operario)
+        public async Task<ActionResult<Costofab>> PostCostofab(Costofab Costofab)
         {
-            _context.Operario.Add(Operario);
+            _context.Costofab.Add(Costofab);
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (OperarioExists(Operario.CG_OPER))
+                if (CostofabExists(Costofab.CG_ORDF))
                 {
                     return Conflict();
                 }
@@ -97,28 +97,28 @@ namespace SupplyChain.Server.Controllers
                 }
             }
 
-            return CreatedAtAction("GetOperario", new { id = Operario.CG_OPER }, Operario);
+            return CreatedAtAction("GetCostofab", new { id = Costofab.CG_ORDF }, Costofab);
         }
 
-        // DELETE: api/Operario/5
+        // DELETE: api/Costofab/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Operario>> DeleteOperario(int id)
+        public async Task<ActionResult<Costofab>> DeleteCostofab(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
-            if (Operario == null)
+            var Costofab = await _context.Costofab.FindAsync(id);
+            if (Costofab == null)
             {
                 return NotFound();
             }
 
-            _context.Operario.Remove(Operario);
+            _context.Costofab.Remove(Costofab);
             await _context.SaveChangesAsync();
 
-            return Operario;
+            return Costofab;
         }
 
-        private bool OperarioExists(int id)
+        private bool CostofabExists(int id)
         {
-            return _context.Operario.Any(e => e.CG_OPER == id);
+            return _context.Costofab.Any(e => e.CG_ORDF == id);
         }
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,24 +21,39 @@ namespace SupplyChain
             _context = context;
         }
 
-        // GET: api/TrabajosEfec
+        // GET: api/Trabajosefec
         [HttpGet]
-        public IEnumerable<TrabajosEfec> Get()
+        public async Task<ActionResult<IEnumerable<Trabajosefec>>> GetTrabajosefec()
         {
-            var xitem = _context.TrabajosEfec.ToList();
-            return xitem;
+            return await _context.Trabajosefec.ToListAsync();
         }
 
-        // PUT: api/TrabajosEfec/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, TrabajosEfec xitem)
+        // GET: api/Trabajosefec/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Trabajosefec>> GetTrabajosefec(int id)
         {
-            if (id != xitem.Id)
+            var Trabajosefec = await _context.Trabajosefec.FindAsync(id);
+
+            if (Trabajosefec == null)
+            {
+                return NotFound();
+            }
+
+            return Trabajosefec;
+        }
+
+        // PUT: api/Trabajosefec/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutTrabajosefec(int id, Trabajosefec Trabajosefec)
+        {
+            if (id != Trabajosefec.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Trabajosefec).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!TrabajosefecExists(id))
                 {
                     return NotFound();
                 }
@@ -59,41 +74,51 @@ namespace SupplyChain
             return NoContent();
         }
 
-        // POST: api/TrabajosEfec
+        // POST: api/Trabajosefec
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<TrabajosEfec>> Post(TrabajosEfec xitem)
+        public async Task<ActionResult<Trabajosefec>> PostTrabajosefec(Trabajosefec Trabajosefec)
         {
+            _context.Trabajosefec.Add(Trabajosefec);
             try
             {
-                xitem.Id = 0;
-                _context.TrabajosEfec.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (TrabajosefecExists(Trabajosefec.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
+
+            return CreatedAtAction("GetTrabajosefec", new { id = Trabajosefec.Id }, Trabajosefec);
         }
 
-        // DELETE: api/TrabajosEfec/{id}
+        // DELETE: api/Trabajosefec/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<TrabajosEfec>> Delete(int id)
+        public async Task<ActionResult<Trabajosefec>> DeleteTrabajosefec(int id)
         {
-            var xitem = await _context.TrabajosEfec.FindAsync(id);
-            if (xitem == null)
+            var Trabajosefec = await _context.Trabajosefec.FindAsync(id);
+            if (Trabajosefec == null)
             {
                 return NotFound();
             }
 
-            _context.TrabajosEfec.Remove(xitem);
+            _context.Trabajosefec.Remove(Trabajosefec);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Trabajosefec;
         }
 
-        private bool Existe(int id)
+        private bool TrabajosefecExists(int id)
         {
-            return _context.TrabajosEfec.Any(e => e.Id == id);
+            return _context.Trabajosefec.Any(e => e.Id == id);
         }
     }
 }

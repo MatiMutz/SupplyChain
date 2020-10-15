@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/Orificio
         [HttpGet]
-        public IEnumerable<Orific> Get()
+        public async Task<ActionResult<IEnumerable<Orificio>>> GetOrificio()
         {
-            var xitem = _context.Orificio.ToList();
-            return (IEnumerable<Orific>)xitem;
+            return await _context.Orificio.ToListAsync();
         }
 
-        // PUT: api/Orificio/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Orific xitem)
+        // GET: api/Orificio/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Orificio>> GetOrificio(int id)
         {
-            if (id != xitem.Id)
+            var Orificio = await _context.Orificio.FindAsync(id);
+
+            if (Orificio == null)
+            {
+                return NotFound();
+            }
+
+            return Orificio;
+        }
+
+        // PUT: api/Orificio/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutOrificio(int id, Orificio Orificio)
+        {
+            if (id != Orificio.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Orificio).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!OrificioExists(id))
                 {
                     return NotFound();
                 }
@@ -60,38 +75,48 @@ namespace SupplyChain
         }
 
         // POST: api/Orificio
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Orific>> Post(Orific xitem)
+        public async Task<ActionResult<Orificio>> PostOrificio(Orificio Orificio)
         {
+            _context.Orificio.Add(Orificio);
             try
             {
-                xitem.Id = 0;
-                _context.Orificio.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (OrificioExists(Orificio.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
+
+            return CreatedAtAction("GetOrificio", new { id = Orificio.Id }, Orificio);
         }
 
-        // DELETE: api/Orificio/{id}
+        // DELETE: api/Orificio/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Orific>> Delete(int id)
+        public async Task<ActionResult<Orificio>> DeleteOrificio(int id)
         {
-            var xitem = await _context.Orificio.FindAsync(id);
-            if (xitem == null)
+            var Orificio = await _context.Orificio.FindAsync(id);
+            if (Orificio == null)
             {
                 return NotFound();
             }
 
-            _context.Orificio.Remove(xitem);
+            _context.Orificio.Remove(Orificio);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Orificio;
         }
 
-        private bool Existe(int id)
+        private bool OrificioExists(int id)
         {
             return _context.Orificio.Any(e => e.Id == id);
         }

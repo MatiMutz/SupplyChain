@@ -31,14 +31,15 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Sobrepresion> Sobrepresion { get; set; }
         public DbSet<Tipo> Tipo { get; set; }
         public DbSet<Estado> Estado { get; set; }
-        public DbSet<TipoArea> Tiarea { get; set; }
-        public DbSet<TipoCelda> Ticelda { get; set; }
-        public DbSet<TipoMat> Timat { get; set; }
-        public DbSet<TiposNoConf> Tinconf { get; set; }
-        public DbSet<Trabajosefec> TrabajosEfec { get; set; }
+        public DbSet<TipoArea> TipoArea { get; set; }
+        public DbSet<TipoCelda> TipoCelda { get; set; }
+        public DbSet<TipoMat> TipoMat { get; set; }
+        public DbSet<TiposNoConf> TiposNoConf { get; set; }
+        public DbSet<Trabajosefec> Trabajosefec { get; set; }
         public DbSet<Pedcli> Pedcli { get; set; }
         public DbSet<EstadosCargaMaquinas> EstadosCargaMaquinass { get; set; }
         public DbSet<Unidad> Unidades { get; set; }
+<<<<<<< HEAD
         public DbSet<Area> Areas { get; set; }
         public DbSet<Cia> Cias { get; set; }
         public DbSet<Vende> Vendes { get; set; }
@@ -47,6 +48,14 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Indic> Indics { get; set; }
         public DbSet<ItemsAbastecimiento> ItemsAbastecimientos { get; set; }
         public DbSet<Celda> Celdas { get; set; }
+=======
+        public DbSet<Scrap> Scrap { get; set; }
+        public DbSet<Paradas> Paradas { get; set; }
+        public DbSet<Lineas> Lineas { get; set; }
+        public DbSet<Clases> Clases { get; set; }
+        public DbSet<CalendarioFestivos> CalendarioFestivos { get; set; }
+        public DbSet<Costofab> Costofab { get; set; }
+>>>>>>> 48529239c8b28f6c7d988b4387ec283da422d4a9
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }
 

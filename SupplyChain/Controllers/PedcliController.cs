@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/Pedcli
         [HttpGet]
-        public IEnumerable<Pedcli> Get()
+        public async Task<ActionResult<IEnumerable<Pedcli>>> GetPedcli()
         {
-            var xitem = _context.Pedcli.ToList();
-            return xitem;
+            return await _context.Pedcli.ToListAsync();
         }
 
-        // PUT: api/Pedcli/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Pedcli xitem)
+        // GET: api/Pedcli/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Pedcli>> GetPedcli(int id)
         {
-            if (id != xitem.REGISTRO)
+            var Pedcli = await _context.Pedcli.FindAsync(id);
+
+            if (Pedcli == null)
+            {
+                return NotFound();
+            }
+
+            return Pedcli;
+        }
+
+        // PUT: api/Pedcli/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutPedcli(int id, Pedcli Pedcli)
+        {
+            if (id != Pedcli.REGISTRO)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Pedcli).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!PedcliExists(id))
                 {
                     return NotFound();
                 }
@@ -60,38 +75,48 @@ namespace SupplyChain
         }
 
         // POST: api/Pedcli
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Pedcli>> Post(Pedcli xitem)
+        public async Task<ActionResult<Pedcli>> PostPedcli(Pedcli Pedcli)
         {
+            _context.Pedcli.Add(Pedcli);
             try
             {
-                xitem.REGISTRO = 0;
-                _context.Pedcli.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (PedcliExists(Pedcli.REGISTRO))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.REGISTRO }, xitem);
+
+            return CreatedAtAction("GetPedcli", new { id = Pedcli.REGISTRO }, Pedcli);
         }
 
-        // DELETE: api/Pedcli/{id}
+        // DELETE: api/Pedcli/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Pedcli>> Delete(int id)
+        public async Task<ActionResult<Pedcli>> DeletePedcli(int id)
         {
-            var xitem = await _context.Pedcli.FindAsync(id);
-            if (xitem == null)
+            var Pedcli = await _context.Pedcli.FindAsync(id);
+            if (Pedcli == null)
             {
                 return NotFound();
             }
 
-            _context.Pedcli.Remove(xitem);
+            _context.Pedcli.Remove(Pedcli);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Pedcli;
         }
 
-        private bool Existe(int id)
+        private bool PedcliExists(int id)
         {
             return _context.Pedcli.Any(e => e.REGISTRO == id);
         }

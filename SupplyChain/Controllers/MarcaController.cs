@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/Marca
         [HttpGet]
-        public IEnumerable<Marc> Get()
+        public async Task<ActionResult<IEnumerable<Marca>>> GetMarca()
         {
-            var xitem = _context.Marca.ToList();
-            return (IEnumerable<Marc>)xitem;
+            return await _context.Marca.ToListAsync();
         }
 
-        // PUT: api/Marca/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Marc xitem)
+        // GET: api/Marca/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Marca>> GetMarca(int id)
         {
-            if (id != xitem.Id)
+            var Marca = await _context.Marca.FindAsync(id);
+
+            if (Marca == null)
+            {
+                return NotFound();
+            }
+
+            return Marca;
+        }
+
+        // PUT: api/Marca/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutMarca(int id, Marca Marca)
+        {
+            if (id != Marca.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Marca).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!MarcaExists(id))
                 {
                     return NotFound();
                 }
@@ -60,38 +75,48 @@ namespace SupplyChain
         }
 
         // POST: api/Marca
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Marc>> Post(Marc xitem)
+        public async Task<ActionResult<Marca>> PostMarca(Marca Marca)
         {
+            _context.Marca.Add(Marca);
             try
             {
-                xitem.Id = 0;
-                _context.Marca.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (MarcaExists(Marca.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
+
+            return CreatedAtAction("GetMarca", new { id = Marca.Id }, Marca);
         }
 
-        // DELETE: api/Marca/{id}
+        // DELETE: api/Marca/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Marc>> Delete(int id)
+        public async Task<ActionResult<Marca>> DeleteMarca(int id)
         {
-            var xitem = await _context.Marca.FindAsync(id);
-            if (xitem == null)
+            var Marca = await _context.Marca.FindAsync(id);
+            if (Marca == null)
             {
                 return NotFound();
             }
 
-            _context.Marca.Remove(xitem);
+            _context.Marca.Remove(Marca);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Marca;
         }
 
-        private bool Existe(int id)
+        private bool MarcaExists(int id)
         {
             return _context.Marca.Any(e => e.Id == id);
         }

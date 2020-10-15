@@ -12,7 +12,7 @@ namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ServiciosController : Controller
+    public class ServiciosController : ControllerBase
     {
         private readonly AppDbContext _context;
 
@@ -21,44 +21,39 @@ namespace SupplyChain.Server.Controllers
             _context = context;
         }
 
-        // GET: api/Servicio
+        // GET: api/Servicios
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Servicios>>> GetServicios()
         {
-            try
-            {
-                return await _context.Servicios.ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            return await _context.Servicios.ToListAsync();
         }
 
-        // GET: api/Servicio/{id}
+        // GET: api/Servicios/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Servicios>> GetServicios(decimal id)
+        public async Task<ActionResult<Servicios>> GetServicios(string id)
         {
-            var serv = await _context.Servicios.FindAsync(id);
+            var Servicios = await _context.Servicios.FindAsync(id);
 
-            if (serv == null)
+            if (Servicios == null)
             {
                 return NotFound();
             }
 
-            return serv;
+            return Servicios;
         }
 
-        // PUT: api/Servicio/{id}
+        // PUT: api/Servicios/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutServicio(string id, Servicios Serv)
+        public async Task<IActionResult> PutServicios(string id, Servicios Servicios)
         {
-            if (id != Serv.PEDIDO)
+            if (id != Servicios.PEDIDO)
             {
                 return BadRequest();
             }
 
-            _context.Entry(Serv).State = EntityState.Modified;
+            _context.Entry(Servicios).State = EntityState.Modified;
 
             try
             {
@@ -66,7 +61,7 @@ namespace SupplyChain.Server.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!ServiciosExists(id))
                 {
                     return NotFound();
                 }
@@ -79,33 +74,49 @@ namespace SupplyChain.Server.Controllers
             return NoContent();
         }
 
-        // POST: api/Servicio
+        // POST: api/Servicios
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Servicios>> Post(Servicios xitem)
+        public async Task<ActionResult<Servicios>> PostServicios(Servicios Servicios)
         {
-            _context.Servicios.Add(xitem);
-            await _context.SaveChangesAsync();
+            _context.Servicios.Add(Servicios);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (ServiciosExists(Servicios.PEDIDO))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
-            return CreatedAtAction("GetServicios", new { id = xitem.PEDIDO }, xitem);
+            return CreatedAtAction("GetServicios", new { id = Servicios.PEDIDO }, Servicios);
         }
 
-        // DELETE: api/Servicio/{id}
+        // DELETE: api/Servicios/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Servicios>> Delete(int id)
+        public async Task<ActionResult<Servicios>> DeleteServicios(int id)
         {
-            var xitem = await _context.Servicios.FindAsync(id);
-            if (xitem == null)
+            var Servicios = await _context.Servicios.FindAsync(id);
+            if (Servicios == null)
             {
                 return NotFound();
             }
 
-            _context.Servicios.Remove(xitem);
+            _context.Servicios.Remove(Servicios);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Servicios;
         }
 
-        private bool Existe(string id)
+        private bool ServiciosExists(string id)
         {
             return _context.Servicios.Any(e => e.PEDIDO == id);
         }

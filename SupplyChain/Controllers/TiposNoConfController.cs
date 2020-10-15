@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,24 +21,39 @@ namespace SupplyChain
             _context = context;
         }
 
-        // GET: api/Tipo
+        // GET: api/TiposNoConf
         [HttpGet]
-        public IEnumerable<TipNoConf> Get()
+        public async Task<ActionResult<IEnumerable<TiposNoConf>>> GetTiposNoConf()
         {
-            var xitem = _context.Tinconf.ToList();
-            return xitem;
+            return await _context.TiposNoConf.ToListAsync();
         }
 
-        // PUT: api/TipoArea/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, TipNoConf xitem)
+        // GET: api/TiposNoConf/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<TiposNoConf>> GetTiposNoConf(int id)
         {
-            if (id != xitem.Cg_TipoNc)
+            var TiposNoConf = await _context.TiposNoConf.FindAsync(id);
+
+            if (TiposNoConf == null)
+            {
+                return NotFound();
+            }
+
+            return TiposNoConf;
+        }
+
+        // PUT: api/TiposNoConf/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutTiposNoConf(int id, TiposNoConf TiposNoConf)
+        {
+            if (id != TiposNoConf.Cg_TipoNc)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(TiposNoConf).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!TiposNoConfExists(id))
                 {
                     return NotFound();
                 }
@@ -59,41 +74,51 @@ namespace SupplyChain
             return NoContent();
         }
 
-        // POST: api/TipoArea
+        // POST: api/TiposNoConf
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<TipNoConf>> Post(TipNoConf xitem)
+        public async Task<ActionResult<TiposNoConf>> PostTiposNoConf(TiposNoConf TiposNoConf)
         {
+            _context.TiposNoConf.Add(TiposNoConf);
             try
             {
-                xitem.Cg_TipoNc = 0;
-                _context.Tinconf.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (TiposNoConfExists(TiposNoConf.Cg_TipoNc))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Cg_TipoNc }, xitem);
+
+            return CreatedAtAction("GetTiposNoConf", new { id = TiposNoConf.Cg_TipoNc }, TiposNoConf);
         }
 
-        // DELETE: api/TipoArea/{id}
+        // DELETE: api/TiposNoConf/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<TipNoConf>> Delete(int id)
+        public async Task<ActionResult<TiposNoConf>> DeleteTiposNoConf(int id)
         {
-            var xitem = await _context.Tinconf.FindAsync(id);
-            if (xitem == null)
+            var TiposNoConf = await _context.TiposNoConf.FindAsync(id);
+            if (TiposNoConf == null)
             {
                 return NotFound();
             }
 
-            _context.Tinconf.Remove(xitem);
+            _context.TiposNoConf.Remove(TiposNoConf);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return TiposNoConf;
         }
 
-        private bool Existe(int id)
+        private bool TiposNoConfExists(int id)
         {
-            return _context.Tinconf.Any(e => e.Cg_TipoNc == id);
+            return _context.TiposNoConf.Any(e => e.Cg_TipoNc == id);
         }
     }
 }
