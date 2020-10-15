@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
+    [Table("Lineas")]
     public class Linea
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -15,6 +16,5 @@ namespace SupplyChain.Shared.Models
         public string DES_LINEA { get; set; } = "";
         [ColumnaGridViewAtributo(Name = "Codigo compañia")]
         public int CG_CIA { get; set; } = 0;
-
     }
 }

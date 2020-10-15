@@ -7,10 +7,12 @@ namespace SupplyChain.Shared.Models
     [Table("Serie")]
 	public class Serie
 	{
-
-		public int Id { get; set; }
-		public string Codigo { get; set; }
-		public string Medida { get; set; }
-
+		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		[ColumnaGridViewAtributo(Name = "Id")]
+		public int Id { get; set; } = 0;
+		[ColumnaGridViewAtributo(Name = "Codigo de serie")]
+		public string Codigo { get; set; } = "";
+		[ColumnaGridViewAtributo(Name = "Medida")]
+		public string Medida { get; set; } = "";
 	}
 }

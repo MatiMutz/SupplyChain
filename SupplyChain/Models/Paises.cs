@@ -7,11 +7,11 @@ using System.Text;
 namespace SupplyChain.Shared.Models
 {
     [Table("Pais")]
-    public class Paises
+    public class Pais
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ColumnaGridViewAtributo (Name = "Codigo")]
         public int Codigo { get; set; } = 0;
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ColumnaGridViewAtributo(Name = "Código de País")]
         public int Cg_Pais { get; set; } = 0;
         [ColumnaGridViewAtributo(Name = "País")]
@@ -20,7 +20,6 @@ namespace SupplyChain.Shared.Models
         public bool Mercosur { get; set; } = false;
         [ColumnaGridViewAtributo(Name = "Cuit")]
         public string Cuit { get; set; } = "";
-
     }
 }
 

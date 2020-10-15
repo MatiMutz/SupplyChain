@@ -6,7 +6,8 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
-    public class User
+    [Table("Usuarios")]
+    public class Usuarios
     {
         [ColumnaGridViewAtributo(Name = "Usuario")]
         public string Usuario { get; set; } = "";

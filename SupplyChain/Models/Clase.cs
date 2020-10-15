@@ -6,13 +6,13 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
-    public class Clas
+    [Table("Clases")]
+    public class Clase
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ColumnaGridViewAtributo(Name = "Codigo Clase")]
         public int CG_CLASE { get; set; } = 0;
         [ColumnaGridViewAtributo(Name = "Descripcion Clase")]
         public string DES_CLASE { get; set; } = "";
-
     }
 }

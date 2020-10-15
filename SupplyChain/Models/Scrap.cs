@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
+    [Table("Scrap")]
     public class Scraps
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -13,6 +14,5 @@ namespace SupplyChain.Shared.Models
         public int CG_SCRAP { get; set; } = 0;
         [ColumnaGridViewAtributo(Name = "Descripcion Scrap")]
         public string DES_SCRAP { get; set; } = "";
-
     }
 }

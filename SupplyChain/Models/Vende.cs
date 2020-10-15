@@ -12,14 +12,12 @@ namespace SupplyChain.Shared.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ColumnaGridViewAtributo (Name = "Codigo Venta")]
         public int CG_VEN { get; set; } = 0;
-        [ColumnaGridViewAtributo(Name = "Despacho VENTA")]
+        [ColumnaGridViewAtributo(Name = "Descripcion venta")]
         public string DES_VEN { get; set; } = "";
-        [ColumnaGridViewAtributo(Name = "USUARIO")]
+        [ColumnaGridViewAtributo(Name = "usuario")]
         public string USUARIO { get; set; } = "";
         [ColumnaGridViewAtributo(Name = "Código de compañía")]
         public int CG_CIA { get; set; } = 0;
-
-
     }
 }
 

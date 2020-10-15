@@ -7,10 +7,12 @@ using System.Text;
 namespace SupplyChain.Shared.Models
 {
     [Table("Tipo")]
-    public class Tip
+    public class Tipo
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-        public string Tipo { get; set; }
+        [ColumnaGridViewAtributo(Name = "Id")]
+        public int Id { get; set; } = 0;
+        [ColumnaGridViewAtributo(Name = "Descripcion")]
+        public string Descripcion { get; set; } = "";
     }
 }
