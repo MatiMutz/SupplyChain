@@ -12,7 +12,7 @@ namespace SupplyChain.Shared.Models
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ColumnaGridViewAtributo(Name = "Codigo")]
-        public int? CG_CLI { get; set; }
+        public int CG_CLI { get; set; } = 0;
         [ColumnaGridViewAtributo(Name = "Nombre del cliente")]
         public string DES_CLI { get; set; }
         [ColumnaGridViewAtributo(Name = "Onservaciones")]

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/Medida
         [HttpGet]
-        public IEnumerable<Medid> Get()
+        public async Task<ActionResult<IEnumerable<Medida>>> GetMedida()
         {
-            var xitem = _context.Medida.ToList();
-            return (IEnumerable<Medid>)xitem;
+            return await _context.Medida.ToListAsync();
         }
 
-        // PUT: api/Medida/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Medid xitem)
+        // GET: api/Medida/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Medida>> GetMedida(int id)
         {
-            if (id != xitem.Id)
+            var Medida = await _context.Medida.FindAsync(id);
+
+            if (Medida == null)
+            {
+                return NotFound();
+            }
+
+            return Medida;
+        }
+
+        // PUT: api/Medida/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutMedida(int id, Medida Medida)
+        {
+            if (id != Medida.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Medida).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!MedidaExists(id))
                 {
                     return NotFound();
                 }
@@ -60,38 +75,48 @@ namespace SupplyChain
         }
 
         // POST: api/Medida
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Medid>> Post(Medid xitem)
+        public async Task<ActionResult<Medida>> PostMedida(Medida Medida)
         {
+            _context.Medida.Add(Medida);
             try
             {
-                xitem.Id = 0;
-                _context.Medida.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (MedidaExists(Medida.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
+
+            return CreatedAtAction("GetMedida", new { id = Medida.Id }, Medida);
         }
 
-        // DELETE: api/Medida/{id}
+        // DELETE: api/Medida/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Medid>> Delete(int id)
+        public async Task<ActionResult<Medida>> DeleteMedida(int id)
         {
-            var xitem = await _context.Medida.FindAsync(id);
-            if (xitem == null)
+            var Medida = await _context.Medida.FindAsync(id);
+            if (Medida == null)
             {
                 return NotFound();
             }
 
-            _context.Medida.Remove(xitem);
+            _context.Medida.Remove(Medida);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Medida;
         }
 
-        private bool Existe(int id)
+        private bool MedidaExists(int id)
         {
             return _context.Medida.Any(e => e.Id == id);
         }

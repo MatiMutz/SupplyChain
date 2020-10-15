@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,24 +21,39 @@ namespace SupplyChain
             _context = context;
         }
 
-        // GET: api/Tipo
+        // GET: api/TipoArea
         [HttpGet]
-        public IEnumerable<TipArea> Get()
+        public async Task<ActionResult<IEnumerable<TipoArea>>> GetTipoArea()
         {
-            var xitem = _context.Tiarea.ToList();
-            return xitem;
+            return await _context.TipoArea.ToListAsync();
         }
 
-        // PUT: api/TipoArea/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, TipArea xitem)
+        // GET: api/TipoArea/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<TipoArea>> GetTipoArea(int id)
         {
-            if (id != xitem.Cg_tipoarea)
+            var TipoArea = await _context.TipoArea.FindAsync(id);
+
+            if (TipoArea == null)
+            {
+                return NotFound();
+            }
+
+            return TipoArea;
+        }
+
+        // PUT: api/TipoArea/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutTipoArea(int id, TipoArea TipoArea)
+        {
+            if (id != TipoArea.CG_TIPOAREA)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(TipoArea).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!TipoAreaExists(id))
                 {
                     return NotFound();
                 }
@@ -60,40 +75,50 @@ namespace SupplyChain
         }
 
         // POST: api/TipoArea
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<TipArea>> Post(TipArea xitem)
+        public async Task<ActionResult<TipoArea>> PostTipoArea(TipoArea TipoArea)
         {
+            _context.TipoArea.Add(TipoArea);
             try
             {
-                xitem.Cg_tipoarea = 0;
-                _context.Tiarea.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (TipoAreaExists(TipoArea.CG_TIPOAREA))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Cg_tipoarea }, xitem);
+
+            return CreatedAtAction("GetTipoArea", new { id = TipoArea.CG_TIPOAREA }, TipoArea);
         }
 
-        // DELETE: api/TipoArea/{id}
+        // DELETE: api/TipoArea/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<TipArea>> Delete(int id)
+        public async Task<ActionResult<TipoArea>> DeleteTipoArea(int id)
         {
-            var xitem = await _context.Tiarea.FindAsync(id);
-            if (xitem == null)
+            var TipoArea = await _context.TipoArea.FindAsync(id);
+            if (TipoArea == null)
             {
                 return NotFound();
             }
 
-            _context.Tiarea.Remove(xitem);
+            _context.TipoArea.Remove(TipoArea);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return TipoArea;
         }
 
-        private bool Existe(int id)
+        private bool TipoAreaExists(int id)
         {
-            return _context.Tiarea.Any(e => e.Cg_tipoarea == id);
+            return _context.TipoArea.Any(e => e.CG_TIPOAREA == id);
         }
     }
 }

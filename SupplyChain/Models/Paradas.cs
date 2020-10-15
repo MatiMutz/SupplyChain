@@ -6,8 +6,8 @@ using System.Text;
 
 namespace SupplyChain.Shared.Models
 {
-    [Table("Parada")]
-    public class Parada
+    [Table("Paradas")]
+    public class Paradas
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ColumnaGridViewAtributo(Name = "Codigo Parada")]

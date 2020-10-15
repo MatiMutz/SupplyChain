@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/Prod
         [HttpGet]
-        public IEnumerable<Prodd> Get()
+        public async Task<ActionResult<IEnumerable<Prod>>> GetProd()
         {
-            var xitem = _context.Prod.ToList();
-            return xitem;
+            return await _context.Prod.ToListAsync();
         }
 
-        // PUT: api/Prod/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Prodd xitem)
+        // GET: api/Prod/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Prod>> GetProd(int id)
         {
-            if (id != xitem.CG_PROD)
+            var Prod = await _context.Prod.FindAsync(id);
+
+            if (Prod == null)
+            {
+                return NotFound();
+            }
+
+            return Prod;
+        }
+
+        // PUT: api/Prod/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutProd(int id, Prod Prod)
+        {
+            if (id != Prod.CG_PROD)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Prod).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!ProdExists(id))
                 {
                     return NotFound();
                 }
@@ -59,39 +74,49 @@ namespace SupplyChain
             return NoContent();
         }
 
-        // POST: api/Prod                                                                                                                                                                   
+        // POST: api/Prod
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Prodd>> Post(Prodd xitem)
+        public async Task<ActionResult<Prod>> PostProd(Prod Prod)
         {
+            _context.Prod.Add(Prod);
             try
             {
-                xitem.CG_PROD = 0;
-                _context.Prod.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (ProdExists(Prod.CG_PROD))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.CG_PROD }, xitem);
+
+            return CreatedAtAction("GetProd", new { id = Prod.CG_PROD }, Prod);
         }
 
-        // DELETE: api/Prod/{id}
+        // DELETE: api/Prod/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Prodd>> Delete(int id)
+        public async Task<ActionResult<Prod>> DeleteProd(int id)
         {
-            var xitem = await _context.Prod.FindAsync(id);
-            if (xitem == null)
+            var Prod = await _context.Prod.FindAsync(id);
+            if (Prod == null)
             {
                 return NotFound();
             }
 
-            _context.Prod.Remove(xitem);
+            _context.Prod.Remove(Prod);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Prod;
         }
 
-        private bool Existe(int id)
+        private bool ProdExists(int id)
         {
             return _context.Prod.Any(e => e.CG_PROD == id);
         }

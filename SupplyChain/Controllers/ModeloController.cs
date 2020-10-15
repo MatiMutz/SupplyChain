@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/Modelo
         [HttpGet]
-        public IEnumerable<Model> Get()
+        public async Task<ActionResult<IEnumerable<Modelo>>> GetModelo()
         {
-            var xitem = _context.Modelo.ToList();
-            return (IEnumerable<Model>)xitem;
+            return await _context.Modelo.ToListAsync();
         }
 
-        // PUT: api/Modelo/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Model xitem)
+        // GET: api/Modelo/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Modelo>> GetModelo(int id)
         {
-            if (id != xitem.Id)
+            var Modelo = await _context.Modelo.FindAsync(id);
+
+            if (Modelo == null)
+            {
+                return NotFound();
+            }
+
+            return Modelo;
+        }
+
+        // PUT: api/Modelo/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutModelo(int id, Modelo Modelo)
+        {
+            if (id != Modelo.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Modelo).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!ModeloExists(id))
                 {
                     return NotFound();
                 }
@@ -60,38 +75,48 @@ namespace SupplyChain
         }
 
         // POST: api/Modelo
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Model>> Post(Model xitem)
+        public async Task<ActionResult<Modelo>> PostModelo(Modelo Modelo)
         {
+            _context.Modelo.Add(Modelo);
             try
             {
-                xitem.Id = 0;
-                _context.Modelo.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (ModeloExists(Modelo.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
+
+            return CreatedAtAction("GetModelo", new { id = Modelo.Id }, Modelo);
         }
 
-        // DELETE: api/Modelo/{id}
+        // DELETE: api/Modelo/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Model>> Delete(int id)
+        public async Task<ActionResult<Modelo>> DeleteModelo(int id)
         {
-            var xitem = await _context.Modelo.FindAsync(id);
-            if (xitem == null)
+            var Modelo = await _context.Modelo.FindAsync(id);
+            if (Modelo == null)
             {
                 return NotFound();
             }
 
-            _context.Modelo.Remove(xitem);
+            _context.Modelo.Remove(Modelo);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Modelo;
         }
 
-        private bool Existe(int id)
+        private bool ModeloExists(int id)
         {
             return _context.Modelo.Any(e => e.Id == id);
         }

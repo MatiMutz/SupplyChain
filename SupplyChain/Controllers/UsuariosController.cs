@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
+using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,10 +23,102 @@ namespace SupplyChain
 
         // GET: api/Usuarios
         [HttpGet]
-        public IEnumerable<Usuario> Get()
+        public async Task<ActionResult<IEnumerable<Usuarios>>> GetUsuarios()
         {
-            var xitem = _context.Usuarios.ToList();
-            return xitem;
+            return await _context.Usuarios.ToListAsync();
+        }
+
+        // GET: api/Usuarios/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Usuarios>> GetUsuarios(int id)
+        {
+            var Usuarios = await _context.Usuarios.FindAsync(id);
+
+            if (Usuarios == null)
+            {
+                return NotFound();
+            }
+
+            return Usuarios;
+        }
+
+        // PUT: api/Usuarios/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutUsuarios(int id, Usuarios Usuarios)
+        {
+            if (id != Usuarios.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(Usuarios).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UsuariosExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // POST: api/Usuarios
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPost]
+        public async Task<ActionResult<Usuarios>> PostUsuarios(Usuarios Usuarios)
+        {
+            _context.Usuarios.Add(Usuarios);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (UsuariosExists(Usuarios.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return CreatedAtAction("GetUsuarios", new { id = Usuarios.Id }, Usuarios);
+        }
+
+        // DELETE: api/Usuarios/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Usuarios>> DeleteUsuarios(int id)
+        {
+            var Usuarios = await _context.Usuarios.FindAsync(id);
+            if (Usuarios == null)
+            {
+                return NotFound();
+            }
+
+            _context.Usuarios.Remove(Usuarios);
+            await _context.SaveChangesAsync();
+
+            return Usuarios;
+        }
+
+        private bool UsuariosExists(int id)
+        {
+            return _context.Usuarios.Any(e => e.Id == id);
         }
     }
 }

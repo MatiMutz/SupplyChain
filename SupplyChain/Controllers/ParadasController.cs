@@ -12,48 +12,48 @@ namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OperarioController : ControllerBase
+    public class ParadasController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public OperarioController(AppDbContext context)
+        public ParadasController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Operario
+        // GET: api/Paradas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Operario>>> GetOperario()
+        public async Task<ActionResult<IEnumerable<Paradas>>> GetParadas()
         {
-            return await _context.Operario.ToListAsync();
+            return await _context.Paradas.ToListAsync();
         }
 
-        // GET: api/Operario/5
+        // GET: api/Paradas/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Operario>> GetOperario(int id)
+        public async Task<ActionResult<Paradas>> GetParadas(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
+            var Paradas = await _context.Paradas.FindAsync(id);
 
-            if (Operario == null)
+            if (Paradas == null)
             {
                 return NotFound();
             }
 
-            return Operario;
+            return Paradas;
         }
 
-        // PUT: api/Operario/5
+        // PUT: api/Paradas/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutOperario(int id, Operario Operario)
+        public async Task<IActionResult> PutParadas(int id, Paradas Paradas)
         {
-            if (id != Operario.CG_OPER)
+            if (id != Paradas.CP)
             {
                 return BadRequest();
             }
 
-            _context.Entry(Operario).State = EntityState.Modified;
+            _context.Entry(Paradas).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +61,7 @@ namespace SupplyChain.Server.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!OperarioExists(id))
+                if (!ParadasExists(id))
                 {
                     return NotFound();
                 }
@@ -74,20 +74,20 @@ namespace SupplyChain.Server.Controllers
             return NoContent();
         }
 
-        // POST: api/Operario
+        // POST: api/Paradas
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Operario>> PostOperario(Operario Operario)
+        public async Task<ActionResult<Paradas>> PostParadas(Paradas Paradas)
         {
-            _context.Operario.Add(Operario);
+            _context.Paradas.Add(Paradas);
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (OperarioExists(Operario.CG_OPER))
+                if (ParadasExists(Paradas.CP))
                 {
                     return Conflict();
                 }
@@ -97,28 +97,28 @@ namespace SupplyChain.Server.Controllers
                 }
             }
 
-            return CreatedAtAction("GetOperario", new { id = Operario.CG_OPER }, Operario);
+            return CreatedAtAction("GetParadas", new { id = Paradas.CP }, Paradas);
         }
 
-        // DELETE: api/Operario/5
+        // DELETE: api/Paradas/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Operario>> DeleteOperario(int id)
+        public async Task<ActionResult<Paradas>> DeleteParadas(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
-            if (Operario == null)
+            var Paradas = await _context.Paradas.FindAsync(id);
+            if (Paradas == null)
             {
                 return NotFound();
             }
 
-            _context.Operario.Remove(Operario);
+            _context.Paradas.Remove(Paradas);
             await _context.SaveChangesAsync();
 
-            return Operario;
+            return Paradas;
         }
 
-        private bool OperarioExists(int id)
+        private bool ParadasExists(int id)
         {
-            return _context.Operario.Any(e => e.CG_OPER == id);
+            return _context.Paradas.Any(e => e.CP == id);
         }
     }
 }

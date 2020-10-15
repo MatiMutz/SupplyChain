@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/Sobrepresion
         [HttpGet]
-        public IEnumerable<Sobrepres> Get()
+        public async Task<ActionResult<IEnumerable<Sobrepresion>>> GetSobrepresion()
         {
-            var xitem = _context.Sobrepresion.ToList();
-            return xitem;
+            return await _context.Sobrepresion.ToListAsync();
         }
 
-        // PUT: api/Sobrepresion/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Sobrepres xitem)
+        // GET: api/Sobrepresion/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Sobrepresion>> GetSobrepresion(int id)
         {
-            if (id != xitem.Id)
+            var Sobrepresion = await _context.Sobrepresion.FindAsync(id);
+
+            if (Sobrepresion == null)
+            {
+                return NotFound();
+            }
+
+            return Sobrepresion;
+        }
+
+        // PUT: api/Sobrepresion/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutSobrepresion(int id, Sobrepresion Sobrepresion)
+        {
+            if (id != Sobrepresion.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Sobrepresion).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!SobrepresionExists(id))
                 {
                     return NotFound();
                 }
@@ -60,38 +75,48 @@ namespace SupplyChain
         }
 
         // POST: api/Sobrepresion
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Sobrepres>> Post(Sobrepres xitem)
+        public async Task<ActionResult<Sobrepresion>> PostSobrepresion(Sobrepresion Sobrepresion)
         {
+            _context.Sobrepresion.Add(Sobrepresion);
             try
             {
-                xitem.Id = 0;
-                _context.Sobrepresion.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (SobrepresionExists(Sobrepresion.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
+
+            return CreatedAtAction("GetSobrepresion", new { id = Sobrepresion.Id }, Sobrepresion);
         }
 
-        // DELETE: api/Sobrepresion/{id}
+        // DELETE: api/Sobrepresion/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Sobrepres>> Delete(int id)
+        public async Task<ActionResult<Sobrepresion>> DeleteSobrepresion(int id)
         {
-            var xitem = await _context.Sobrepresion.FindAsync(id);
-            if (xitem == null)
+            var Sobrepresion = await _context.Sobrepresion.FindAsync(id);
+            if (Sobrepresion == null)
             {
                 return NotFound();
             }
 
-            _context.Sobrepresion.Remove(xitem);
+            _context.Sobrepresion.Remove(Sobrepresion);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Sobrepresion;
         }
 
-        private bool Existe(int id)
+        private bool SobrepresionExists(int id)
         {
             return _context.Sobrepresion.Any(e => e.Id == id);
         }

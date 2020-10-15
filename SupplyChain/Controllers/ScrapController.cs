@@ -12,48 +12,48 @@ namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OperarioController : ControllerBase
+    public class ScrapController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public OperarioController(AppDbContext context)
+        public ScrapController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Operario
+        // GET: api/Scrap
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Operario>>> GetOperario()
+        public async Task<ActionResult<IEnumerable<Scrap>>> GetScrap()
         {
-            return await _context.Operario.ToListAsync();
+            return await _context.Scrap.ToListAsync();
         }
 
-        // GET: api/Operario/5
+        // GET: api/Scrap/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Operario>> GetOperario(int id)
+        public async Task<ActionResult<Scrap>> GetScrap(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
+            var Scrap = await _context.Scrap.FindAsync(id);
 
-            if (Operario == null)
+            if (Scrap == null)
             {
                 return NotFound();
             }
 
-            return Operario;
+            return Scrap;
         }
 
-        // PUT: api/Operario/5
+        // PUT: api/Scrap/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutOperario(int id, Operario Operario)
+        public async Task<IActionResult> PutScrap(int id, Scrap Scrap)
         {
-            if (id != Operario.CG_OPER)
+            if (id != Scrap.CG_SCRAP)
             {
                 return BadRequest();
             }
 
-            _context.Entry(Operario).State = EntityState.Modified;
+            _context.Entry(Scrap).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +61,7 @@ namespace SupplyChain.Server.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!OperarioExists(id))
+                if (!ScrapExists(id))
                 {
                     return NotFound();
                 }
@@ -74,20 +74,20 @@ namespace SupplyChain.Server.Controllers
             return NoContent();
         }
 
-        // POST: api/Operario
+        // POST: api/Scrap
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Operario>> PostOperario(Operario Operario)
+        public async Task<ActionResult<Scrap>> PostScrap(Scrap Scrap)
         {
-            _context.Operario.Add(Operario);
+            _context.Scrap.Add(Scrap);
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (OperarioExists(Operario.CG_OPER))
+                if (ScrapExists(Scrap.CG_SCRAP))
                 {
                     return Conflict();
                 }
@@ -97,28 +97,28 @@ namespace SupplyChain.Server.Controllers
                 }
             }
 
-            return CreatedAtAction("GetOperario", new { id = Operario.CG_OPER }, Operario);
+            return CreatedAtAction("GetScrap", new { id = Scrap.CG_SCRAP }, Scrap);
         }
 
-        // DELETE: api/Operario/5
+        // DELETE: api/Scrap/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Operario>> DeleteOperario(int id)
+        public async Task<ActionResult<Scrap>> DeleteScrap(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
-            if (Operario == null)
+            var Scrap = await _context.Scrap.FindAsync(id);
+            if (Scrap == null)
             {
                 return NotFound();
             }
 
-            _context.Operario.Remove(Operario);
+            _context.Scrap.Remove(Scrap);
             await _context.SaveChangesAsync();
 
-            return Operario;
+            return Scrap;
         }
 
-        private bool OperarioExists(int id)
+        private bool ScrapExists(int id)
         {
-            return _context.Operario.Any(e => e.CG_OPER == id);
+            return _context.Scrap.Any(e => e.CG_SCRAP == id);
         }
     }
 }

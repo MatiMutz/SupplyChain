@@ -12,48 +12,48 @@ namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OperarioController : ControllerBase
+    public class LineasController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public OperarioController(AppDbContext context)
+        public LineasController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Operario
+        // GET: api/Lineas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Operario>>> GetOperario()
+        public async Task<ActionResult<IEnumerable<Lineas>>> GetLineas()
         {
-            return await _context.Operario.ToListAsync();
+            return await _context.Lineas.ToListAsync();
         }
 
-        // GET: api/Operario/5
+        // GET: api/Lineas/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Operario>> GetOperario(int id)
+        public async Task<ActionResult<Lineas>> GetLineas(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
+            var Lineas = await _context.Lineas.FindAsync(id);
 
-            if (Operario == null)
+            if (Lineas == null)
             {
                 return NotFound();
             }
 
-            return Operario;
+            return Lineas;
         }
 
-        // PUT: api/Operario/5
+        // PUT: api/Lineas/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutOperario(int id, Operario Operario)
+        public async Task<IActionResult> PutLineas(int id, Lineas Lineas)
         {
-            if (id != Operario.CG_OPER)
+            if (id != Lineas.CG_LINEA)
             {
                 return BadRequest();
             }
 
-            _context.Entry(Operario).State = EntityState.Modified;
+            _context.Entry(Lineas).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +61,7 @@ namespace SupplyChain.Server.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!OperarioExists(id))
+                if (!LineasExists(id))
                 {
                     return NotFound();
                 }
@@ -74,20 +74,20 @@ namespace SupplyChain.Server.Controllers
             return NoContent();
         }
 
-        // POST: api/Operario
+        // POST: api/Lineas
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Operario>> PostOperario(Operario Operario)
+        public async Task<ActionResult<Lineas>> PostLineas(Lineas Lineas)
         {
-            _context.Operario.Add(Operario);
+            _context.Lineas.Add(Lineas);
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (OperarioExists(Operario.CG_OPER))
+                if (LineasExists(Lineas.CG_LINEA))
                 {
                     return Conflict();
                 }
@@ -97,28 +97,28 @@ namespace SupplyChain.Server.Controllers
                 }
             }
 
-            return CreatedAtAction("GetOperario", new { id = Operario.CG_OPER }, Operario);
+            return CreatedAtAction("GetLineas", new { id = Lineas.CG_LINEA }, Lineas);
         }
 
-        // DELETE: api/Operario/5
+        // DELETE: api/Lineas/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Operario>> DeleteOperario(int id)
+        public async Task<ActionResult<Lineas>> DeleteLineas(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
-            if (Operario == null)
+            var Lineas = await _context.Lineas.FindAsync(id);
+            if (Lineas == null)
             {
                 return NotFound();
             }
 
-            _context.Operario.Remove(Operario);
+            _context.Lineas.Remove(Lineas);
             await _context.SaveChangesAsync();
 
-            return Operario;
+            return Lineas;
         }
 
-        private bool OperarioExists(int id)
+        private bool LineasExists(int id)
         {
-            return _context.Operario.Any(e => e.CG_OPER == id);
+            return _context.Lineas.Any(e => e.CG_LINEA == id);
         }
     }
 }

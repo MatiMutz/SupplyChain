@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/Serie
         [HttpGet]
-        public IEnumerable<Serie> Get()
+        public async Task<ActionResult<IEnumerable<Serie>>> GetSerie()
         {
-            var xitem = _context.Serie.ToList();
-            return (IEnumerable<Serie>)xitem;
+            return await _context.Serie.ToListAsync();
         }
 
-        // PUT: api/Serie/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Serie xitem)
+        // GET: api/Serie/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Serie>> GetSerie(int id)
         {
-            if (id != xitem.Id)
+            var Serie = await _context.Serie.FindAsync(id);
+
+            if (Serie == null)
+            {
+                return NotFound();
+            }
+
+            return Serie;
+        }
+
+        // PUT: api/Serie/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutSerie(int id, Serie Serie)
+        {
+            if (id != Serie.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(Serie).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!SerieExists(id))
                 {
                     return NotFound();
                 }
@@ -60,38 +75,48 @@ namespace SupplyChain
         }
 
         // POST: api/Serie
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Serie>> Post(Serie xitem)
+        public async Task<ActionResult<Serie>> PostSerie(Serie Serie)
         {
+            _context.Serie.Add(Serie);
             try
             {
-                xitem.Id = 0;
-                _context.Serie.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (SerieExists(Serie.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Id }, xitem);
+
+            return CreatedAtAction("GetSerie", new { id = Serie.Id }, Serie);
         }
 
-        // DELETE: api/Serie/{id}
+        // DELETE: api/Serie/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Serie>> Delete(int id)
+        public async Task<ActionResult<Serie>> DeleteSerie(int id)
         {
-            var xitem = await _context.Serie.FindAsync(id);
-            if (xitem == null)
+            var Serie = await _context.Serie.FindAsync(id);
+            if (Serie == null)
             {
                 return NotFound();
             }
 
-            _context.Serie.Remove(xitem);
+            _context.Serie.Remove(Serie);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return Serie;
         }
 
-        private bool Existe(int id)
+        private bool SerieExists(int id)
         {
             return _context.Serie.Any(e => e.Id == id);
         }

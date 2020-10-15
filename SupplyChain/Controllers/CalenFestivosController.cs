@@ -12,48 +12,48 @@ namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OperarioController : ControllerBase
+    public class CalendarioFestivosController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public OperarioController(AppDbContext context)
+        public CalendarioFestivosController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Operario
+        // GET: api/CalendarioFestivos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Operario>>> GetOperario()
+        public async Task<ActionResult<IEnumerable<CalendarioFestivos>>> GetCalendarioFestivos()
         {
-            return await _context.Operario.ToListAsync();
+            return await _context.CalendarioFestivos.ToListAsync();
         }
 
-        // GET: api/Operario/5
+        // GET: api/CalendarioFestivos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Operario>> GetOperario(int id)
+        public async Task<ActionResult<CalendarioFestivos>> GetCalendarioFestivos(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
+            var CalendarioFestivos = await _context.CalendarioFestivos.FindAsync(id);
 
-            if (Operario == null)
+            if (CalendarioFestivos == null)
             {
                 return NotFound();
             }
 
-            return Operario;
+            return CalendarioFestivos;
         }
 
-        // PUT: api/Operario/5
+        // PUT: api/CalendarioFestivos/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutOperario(int id, Operario Operario)
+        public async Task<IActionResult> PutCalendarioFestivos(int id, CalendarioFestivos CalendarioFestivos)
         {
-            if (id != Operario.CG_OPER)
+            if (id != CalendarioFestivos.Registro)
             {
                 return BadRequest();
             }
 
-            _context.Entry(Operario).State = EntityState.Modified;
+            _context.Entry(CalendarioFestivos).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +61,7 @@ namespace SupplyChain.Server.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!OperarioExists(id))
+                if (!CalendarioFestivosExists(id))
                 {
                     return NotFound();
                 }
@@ -74,20 +74,20 @@ namespace SupplyChain.Server.Controllers
             return NoContent();
         }
 
-        // POST: api/Operario
+        // POST: api/CalendarioFestivos
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Operario>> PostOperario(Operario Operario)
+        public async Task<ActionResult<CalendarioFestivos>> PostCalendarioFestivos(CalendarioFestivos CalendarioFestivos)
         {
-            _context.Operario.Add(Operario);
+            _context.CalendarioFestivos.Add(CalendarioFestivos);
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (OperarioExists(Operario.CG_OPER))
+                if (CalendarioFestivosExists(CalendarioFestivos.Registro))
                 {
                     return Conflict();
                 }
@@ -97,28 +97,28 @@ namespace SupplyChain.Server.Controllers
                 }
             }
 
-            return CreatedAtAction("GetOperario", new { id = Operario.CG_OPER }, Operario);
+            return CreatedAtAction("GetCalendarioFestivos", new { id = CalendarioFestivos.Registro }, CalendarioFestivos);
         }
 
-        // DELETE: api/Operario/5
+        // DELETE: api/CalendarioFestivos/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Operario>> DeleteOperario(int id)
+        public async Task<ActionResult<CalendarioFestivos>> DeleteCalendarioFestivos(int id)
         {
-            var Operario = await _context.Operario.FindAsync(id);
-            if (Operario == null)
+            var CalendarioFestivos = await _context.CalendarioFestivos.FindAsync(id);
+            if (CalendarioFestivos == null)
             {
                 return NotFound();
             }
 
-            _context.Operario.Remove(Operario);
+            _context.CalendarioFestivos.Remove(CalendarioFestivos);
             await _context.SaveChangesAsync();
 
-            return Operario;
+            return CalendarioFestivos;
         }
 
-        private bool OperarioExists(int id)
+        private bool CalendarioFestivosExists(int id)
         {
-            return _context.Operario.Any(e => e.CG_OPER == id);
+            return _context.CalendarioFestivos.Any(e => e.Registro == id);
         }
     }
 }

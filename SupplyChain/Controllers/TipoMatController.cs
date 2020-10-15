@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SupplyChain.Server.DataAccess;
 using SupplyChain.Shared.Models;
 
-namespace SupplyChain
+namespace SupplyChain.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,22 +23,37 @@ namespace SupplyChain
 
         // GET: api/TipoMat
         [HttpGet]
-        public IEnumerable<TipMat> Get()
+        public async Task<ActionResult<IEnumerable<TipoMat>>> GetTipoMat()
         {
-            var xitem = _context.Timat.ToList();
-            return xitem;
+            return await _context.TipoMat.ToListAsync();
         }
 
-        // PUT: api/TipoMat/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(string id, TipMat xitem)
+        // GET: api/TipoMat/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<TipoMat>> GetTipoMat(string id)
         {
-            if (id != xitem.Tipo)
+            var TipoMat = await _context.TipoMat.FindAsync(id);
+
+            if (TipoMat == null)
+            {
+                return NotFound();
+            }
+
+            return TipoMat;
+        }
+
+        // PUT: api/TipoMat/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutTipoMat(string id, TipoMat TipoMat)
+        {
+            if (id != TipoMat.TIPO)
             {
                 return BadRequest();
             }
 
-            _context.Entry(xitem).State = EntityState.Modified;
+            _context.Entry(TipoMat).State = EntityState.Modified;
 
             try
             {
@@ -46,7 +61,7 @@ namespace SupplyChain
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Existe(id))
+                if (!TipoMatExists(id))
                 {
                     return NotFound();
                 }
@@ -59,41 +74,51 @@ namespace SupplyChain
             return NoContent();
         }
 
-        // POST: api/TipoArea
+        // POST: api/TipoMat
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<TipMat>> Post(TipMat xitem)
+        public async Task<ActionResult<TipoMat>> PostTipoMat(TipoMat TipoMat)
         {
+            _context.TipoMat.Add(TipoMat);
             try
             {
-                xitem.Tipo = "0";
-                _context.Timat.Add(xitem);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
+                if (TipoMatExists(TipoMat.TIPO))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return CreatedAtAction("Get", new { id = xitem.Tipo }, xitem);
+
+            return CreatedAtAction("GetTipoMat", new { id = TipoMat.TIPO }, TipoMat);
         }
 
-        // DELETE: api/TipoArea/{id}
+        // DELETE: api/TipoMat/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<TipMat>> Delete(string id)
+        public async Task<ActionResult<TipoMat>> DeleteTipoMat(int id)
         {
-            var xitem = await _context.Timat.FindAsync(id);
-            if (xitem == null)
+            var TipoMat = await _context.TipoMat.FindAsync(id);
+            if (TipoMat == null)
             {
                 return NotFound();
             }
 
-            _context.Timat.Remove(xitem);
+            _context.TipoMat.Remove(TipoMat);
             await _context.SaveChangesAsync();
 
-            return xitem;
+            return TipoMat;
         }
 
-        private bool Existe(string id)
+        private bool TipoMatExists(string id)
         {
-            return _context.Timat.Any(e => e.Tipo == id);
+            return _context.TipoMat.Any(e => e.TIPO == id);
         }
     }
 }
