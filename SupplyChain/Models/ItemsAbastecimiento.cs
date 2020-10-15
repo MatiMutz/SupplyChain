@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SupplyChain.Shared.Models
 {
 	[Table("ItemsAbastecimiento")]
-	public class ItemAbastecimiento
+	public class ItemsAbastecimiento
 	{
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		[ColumnaGridViewAtributo(Name = "Codigo Artículo")]

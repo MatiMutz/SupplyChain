@@ -37,9 +37,16 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<TiposNoConf> Tinconf { get; set; }
         public DbSet<Trabajosefec> TrabajosEfec { get; set; }
         public DbSet<Pedcli> Pedcli { get; set; }
-        public DbSet<EstadosCargaMaquinas> EstadosCargaMaquinas { get; set; }
+        public DbSet<EstadosCargaMaquinas> EstadosCargaMaquinass { get; set; }
         public DbSet<Unidad> Unidades { get; set; }
-
+        public DbSet<Area> Areas { get; set; }
+        public DbSet<Cia> Cias { get; set; }
+        public DbSet<Vende> Vendes { get; set; }
+        public DbSet<Pais> Paises { get; set; }
+        public DbSet<Iva> Ivas { get; set; }
+        public DbSet<Indic> Indics { get; set; }
+        public DbSet<ItemsAbastecimiento> ItemsAbastecimientos { get; set; }
+        public DbSet<Celda> Celdas { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }
 

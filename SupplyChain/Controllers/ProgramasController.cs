@@ -36,10 +36,10 @@ namespace PCP.Server.Controllers
 
         // GET: api/Programas/GetAbastecimientoByOF/73411
         [HttpGet("GetAbastecimientoByOF/{cg_ordf:int}")]
-        public async Task<ActionResult<IEnumerable<ItemAbastecimiento>>> GetAbastecimientoByOF(int cg_ordf)
+        public async Task<ActionResult<IEnumerable<ItemsAbastecimiento>>> GetAbastecimientoByOF(int cg_ordf)
         {
             var dt = new DataTable();
-            List<ItemAbastecimiento> itemAbastecimiento;
+            List<ItemsAbastecimiento> itemAbastecimiento;
             var usuario = "user";
 
             
@@ -66,7 +66,7 @@ namespace PCP.Server.Controllers
 
             //El modelo esta seteado en context
             var of = new SqlParameter("of", cg_ordf);
-            itemAbastecimiento = await _context.Set<ItemAbastecimiento>()
+            itemAbastecimiento = await _context.Set<ItemsAbastecimiento>()
                 .FromSqlRaw("Exec dbo.NET_PCP_TraerAbast  @Cg_Ordf=@of", of)
                 .ToListAsync();
 

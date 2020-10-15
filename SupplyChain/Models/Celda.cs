@@ -7,7 +7,7 @@ using System.Text;
 namespace SupplyChain.Shared.Models
 {
     [Table("Celdas")]
-    public class Celdas
+    public class Celda
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ColumnaGridViewAtributo (Name = "Codigo Celda")]
