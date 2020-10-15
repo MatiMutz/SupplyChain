@@ -38,6 +38,7 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Trabajosefec> TrabajosEfec { get; set; }
         public DbSet<Pedcli> Pedcli { get; set; }
         public DbSet<EstadosCargaMaquinas> EstadosCargaMaquinas { get; set; }
+        public DbSet<Unidad> Unidades { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }
