@@ -23,14 +23,14 @@ namespace SupplyChain.Server.Controllers
 
         // GET: api/Clases
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Clases>>> GetClases()
+        public async Task<ActionResult<IEnumerable<Clase>>> GetClases()
         {
             return await _context.Clases.ToListAsync();
         }
 
         // GET: api/Clases/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Clases>> GetClases(int id)
+        public async Task<ActionResult<Clase>> GetClases(int id)
         {
             var Clases = await _context.Clases.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace SupplyChain.Server.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutClases(int id, Clases Clases)
+        public async Task<IActionResult> PutClases(int id, Clase Clases)
         {
             if (id != Clases.CG_CLASE)
             {
@@ -78,7 +78,7 @@ namespace SupplyChain.Server.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Clases>> PostClases(Clases Clases)
+        public async Task<ActionResult<Clase>> PostClases(Clase Clases)
         {
             _context.Clases.Add(Clases);
             try
@@ -102,7 +102,7 @@ namespace SupplyChain.Server.Controllers
 
         // DELETE: api/Clases/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Clases>> DeleteClases(int id)
+        public async Task<ActionResult<Clase>> DeleteClases(int id)
         {
             var Clases = await _context.Clases.FindAsync(id);
             if (Clases == null)

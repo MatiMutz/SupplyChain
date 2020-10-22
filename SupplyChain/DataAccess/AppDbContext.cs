@@ -39,7 +39,6 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Pedcli> Pedcli { get; set; }
         public DbSet<EstadosCargaMaquinas> EstadosCargaMaquinass { get; set; }
         public DbSet<Unidad> Unidades { get; set; }
-<<<<<<< HEAD
         public DbSet<Area> Areas { get; set; }
         public DbSet<Cia> Cias { get; set; }
         public DbSet<Vende> Vendes { get; set; }
@@ -48,14 +47,12 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Indic> Indics { get; set; }
         public DbSet<ItemsAbastecimiento> ItemsAbastecimientos { get; set; }
         public DbSet<Celda> Celdas { get; set; }
-=======
         public DbSet<Scrap> Scrap { get; set; }
         public DbSet<Paradas> Paradas { get; set; }
         public DbSet<Lineas> Lineas { get; set; }
-        public DbSet<Clases> Clases { get; set; }
+        public DbSet<Clase> Clases { get; set; }
         public DbSet<CalendarioFestivos> CalendarioFestivos { get; set; }
         public DbSet<Costofab> Costofab { get; set; }
->>>>>>> 48529239c8b28f6c7d988b4387ec283da422d4a9
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }
 
