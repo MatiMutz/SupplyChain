@@ -11,19 +11,19 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace SupplyChain.Pages.TipoArea
+namespace SupplyChain.Pages.Scraps
 {
-    public class TipoAreaPageBase : ComponentBase
+    public class ScrapPageBase : ComponentBase
     {
         [Inject] protected CustomHttpClient Http { get; set; }
         [Inject] protected IJSRuntime JsRuntime { get; set; }
-        protected SfGrid<TipArea> Grid;
+        protected SfGrid<Scrap> Grid;
 
         public bool Enabled = true;
         public bool Disabled = false;
 
 
-        protected List<TipArea> tipoareas = new List<TipArea>();
+        protected List<Scrap> scraps = new List<Scrap>();
 
 
         protected List<Object> Toolbaritems = new List<Object>(){
@@ -38,13 +38,13 @@ namespace SupplyChain.Pages.TipoArea
 
         protected override async Task OnInitializedAsync()
         {
-            tipoareas = await Http.GetFromJsonAsync<List<TipArea>>("api/TipoArea");
+            scraps = await Http.GetFromJsonAsync<List<Scrap>>("api/Scrap");
        
 
             await base.OnInitializedAsync();
         }
 
-        public void ActionBeginHandler(ActionEventArgs<TipArea> args)
+        public void ActionBeginHandler(ActionEventArgs<Scrap> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
             {
@@ -75,23 +75,23 @@ namespace SupplyChain.Pages.TipoArea
             new EstaActivo() { BActivo= true, Text= "SI"},
             new EstaActivo() { BActivo= false, Text= "NO"}};
 
-        public async Task ActionBegin(ActionEventArgs<TipArea> args)
+        public async Task ActionBegin(ActionEventArgs<Scrap> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
             {
                 HttpResponseMessage response;
-                bool found = tipoareas.Any(p => p.Cg_tipoarea == args.Data.Cg_tipoarea);
-                TipArea ur = new TipArea();
+                bool found = scraps.Any(p => p.CG_SCRAP == args.Data.CG_SCRAP);
+                Scrap ur = new Scrap();
 
                 if (!found)
                 {
-                    response = await Http.PostAsJsonAsync("api/TipoArea", args.Data);
+                    response = await Http.PostAsJsonAsync("api/Scrap", args.Data);
 
                 }
                 else
                 {
 
-                    response = await Http.PutAsJsonAsync($"api/TipoArea/{args.Data.Cg_tipoarea}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/Scrap/{args.Data.CG_SCRAP}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -106,17 +106,17 @@ namespace SupplyChain.Pages.TipoArea
             }
         }
 
-        private async Task EliminarOperario(ActionEventArgs<TipArea> args)
+        private async Task EliminarOperario(ActionEventArgs<Scrap> args)
         {
             try
             {
                 if (args.Data != null)
                 {
-                    bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea eliminar el Operario?");
+                    bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea eliminar la clase?");
                     if (isConfirmed)
                     {
                         //operarios.Remove(operarios.Find(m => m.CG_OPER == args.Data.CG_OPER));
-                        await Http.DeleteAsync($"api/TipoArea/{args.Data.Cg_tipoarea}");
+                        await Http.DeleteAsync($"api/Clases/{args.Data.CG_SCRAP}");
                     }
                 }
             }
@@ -132,30 +132,31 @@ namespace SupplyChain.Pages.TipoArea
             {
                 if (this.Grid.SelectedRecords.Count > 0)
                 {
-                    foreach (TipArea selectedRecord in this.Grid.SelectedRecords)
+                    foreach (Scrap selectedRecord in this.Grid.SelectedRecords)
                     {
-                        bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea copiar el Operario?");
+                        bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea copiar la Clase?");
                         if (isConfirmed)
                         {
-                            TipArea Nuevo = new TipArea();
+                            Scrap Nuevo = new Scrap();
 
                             //Nuevo.CG_OPER = operarios.Max(s => s.CG_OPER) + 1;
-                            Nuevo.Des_tipoarea = selectedRecord.Des_tipoarea;
-                   
+                            Nuevo.DES_SCRAP = selectedRecord.DES_SCRAP;
+                           
 
-                            var response = await Http.PostAsJsonAsync("api/TipoArea", Nuevo);
+
+                            var response = await Http.PostAsJsonAsync("api/Clases", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 Grid.Refresh();
-                                var tipoarea = await response.Content.ReadFromJsonAsync<TipArea>();
+                                var scrap = await response.Content.ReadFromJsonAsync<Scrap>();
                                 await InvokeAsync(StateHasChanged);
-                                Nuevo.Cg_tipoarea = tipoarea.Cg_tipoarea;
-                                tipoareas.Add(Nuevo);
-                                var itemsJson = JsonSerializer.Serialize(tipoarea);
+                                Nuevo.CG_SCRAP = scrap.CG_SCRAP;
+                                scraps.Add(Nuevo);
+                                var itemsJson = JsonSerializer.Serialize(scrap);
                                 Console.WriteLine(itemsJson);
                                 //toastService.ShowToast($"Registrado Correctemente.Vale {StockGuardado.VALE}", TipoAlerta.Success);
-                                tipoareas.OrderByDescending(p => p.Cg_tipoarea);
+                                scraps.OrderByDescending(p => p.CG_SCRAP);
                             }
 
                         }

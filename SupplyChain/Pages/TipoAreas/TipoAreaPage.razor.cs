@@ -11,23 +11,20 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace SupplyChain.Pages.Operarios
+namespace SupplyChain.Pages.TipoAreas
 {
-    public class ListOperarioPageBase : ComponentBase
+    public class TipoAreaPageBase : ComponentBase
     {
         [Inject] protected CustomHttpClient Http { get; set; }
         [Inject] protected IJSRuntime JsRuntime { get; set; }
-        protected SfGrid<Operario> Grid;
+        protected SfGrid<TipoArea> Grid;
 
         public bool Enabled = true;
         public bool Disabled = false;
 
-        protected List<Operario> operarios = new List<Operario>();
-        protected List<CatOpe> categorias = new List<CatOpe>();
-        protected List<Usuarios> usuarios = new List<Usuarios>();
-        protected List<Cliente> clientes = new List<Cliente>();
-        protected List<Monedas> monedas = new List<Monedas>();
-        protected List<Turnos> turnos = new List<Turnos>();
+
+        protected List<TipoArea> tipoareas = new List<TipoArea>();
+
 
         protected List<Object> Toolbaritems = new List<Object>(){
         "Search",
@@ -41,18 +38,13 @@ namespace SupplyChain.Pages.Operarios
 
         protected override async Task OnInitializedAsync()
         {
-            operarios = await Http.GetFromJsonAsync<List<Operario>>("api/Operario");
-            operarios = operarios.OrderByDescending(s => s.CG_OPER).ToList();
-            categorias = await Http.GetFromJsonAsync<List<CatOpe>>("api/CatOpe");
-            usuarios = await Http.GetFromJsonAsync<List<Usuarios>>("api/Usuarios");
-            clientes = await Http.GetFromJsonAsync<List<Cliente>>("api/Cliente");
-            monedas = await Http.GetFromJsonAsync<List<Monedas>>("api/Monedas");
-            turnos = await Http.GetFromJsonAsync<List<Turnos>>("api/Turnos");
+            tipoareas = await Http.GetFromJsonAsync<List<TipoArea>>("api/TipoArea");
+       
 
             await base.OnInitializedAsync();
         }
 
-        public void ActionBeginHandler(ActionEventArgs<Operario> args)
+        public void ActionBeginHandler(ActionEventArgs<TipArea> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
             {
@@ -83,23 +75,23 @@ namespace SupplyChain.Pages.Operarios
             new EstaActivo() { BActivo= true, Text= "SI"},
             new EstaActivo() { BActivo= false, Text= "NO"}};
 
-        public async Task ActionBegin(ActionEventArgs<Operario> args)
+        public async Task ActionBegin(ActionEventArgs<TipArea> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
             {
                 HttpResponseMessage response;
-                bool found = operarios.Any(o => o.CG_OPER == args.Data.CG_OPER);
-                Operario ur = new Operario();
+                bool found = tipoareas.Any(p => p.Cg_tipoarea == args.Data.Cg_tipoarea);
+                TipArea ur = new TipArea();
 
                 if (!found)
                 {
-                    response = await Http.PostAsJsonAsync("api/Operario", args.Data);
+                    response = await Http.PostAsJsonAsync("api/TipoArea", args.Data);
 
                 }
                 else
                 {
 
-                    response = await Http.PutAsJsonAsync($"api/Operario/{args.Data.CG_OPER}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/TipoArea/{args.Data.Cg_tipoarea}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -114,7 +106,7 @@ namespace SupplyChain.Pages.Operarios
             }
         }
 
-        private async Task EliminarOperario(ActionEventArgs<Operario> args)
+        private async Task EliminarOperario(ActionEventArgs<TipArea> args)
         {
             try
             {
@@ -124,7 +116,7 @@ namespace SupplyChain.Pages.Operarios
                     if (isConfirmed)
                     {
                         //operarios.Remove(operarios.Find(m => m.CG_OPER == args.Data.CG_OPER));
-                        await Http.DeleteAsync($"api/Operario/{args.Data.CG_OPER}");
+                        await Http.DeleteAsync($"api/TipoArea/{args.Data.Cg_tipoarea}");
                     }
                 }
             }
@@ -140,39 +132,30 @@ namespace SupplyChain.Pages.Operarios
             {
                 if (this.Grid.SelectedRecords.Count > 0)
                 {
-                    foreach (Operario selectedRecord in this.Grid.SelectedRecords)
+                    foreach (TipArea selectedRecord in this.Grid.SelectedRecords)
                     {
                         bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea copiar el Operario?");
                         if (isConfirmed)
                         {
-                            Operario Nuevo = new Operario();
+                            TipArea Nuevo = new TipArea();
 
                             //Nuevo.CG_OPER = operarios.Max(s => s.CG_OPER) + 1;
-                            Nuevo.DES_OPER = selectedRecord.DES_OPER;
-                            Nuevo.CG_TURNO = selectedRecord.CG_TURNO;
-                            Nuevo.RENDIM = selectedRecord.RENDIM;
-                            Nuevo.FE_FINAL = selectedRecord.FE_FINAL;
-                            Nuevo.HS_FINAL = selectedRecord.HS_FINAL;
-                            Nuevo.CG_CATEOP = selectedRecord.CG_CATEOP;
-                            Nuevo.VALOR_HORA = selectedRecord.VALOR_HORA;
-                            Nuevo.MONEDA = selectedRecord.MONEDA;
-                            Nuevo.ACTIVO = selectedRecord.ACTIVO;
-                            Nuevo.CG_CIA = selectedRecord.CG_CIA;
-                            Nuevo.USUARIO = selectedRecord.USUARIO;
+                            Nuevo.Des_tipoarea = selectedRecord.Des_tipoarea;
+                   
 
-                            var response = await Http.PostAsJsonAsync("api/Operario", Nuevo);
+                            var response = await Http.PostAsJsonAsync("api/TipoArea", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 Grid.Refresh();
-                                var operario = await response.Content.ReadFromJsonAsync<Operario>();
+                                var tipoarea = await response.Content.ReadFromJsonAsync<TipArea>();
                                 await InvokeAsync(StateHasChanged);
-                                Nuevo.CG_OPER = operario.CG_OPER;
-                                operarios.Add(Nuevo);
-                                var itemsJson = JsonSerializer.Serialize(operario);
+                                Nuevo.Cg_tipoarea = tipoarea.Cg_tipoarea;
+                                tipoareas.Add(Nuevo);
+                                var itemsJson = JsonSerializer.Serialize(tipoarea);
                                 Console.WriteLine(itemsJson);
                                 //toastService.ShowToast($"Registrado Correctemente.Vale {StockGuardado.VALE}", TipoAlerta.Success);
-                                operarios.OrderByDescending(o => o.CG_OPER);
+                                tipoareas.OrderByDescending(p => p.Cg_tipoarea);
                             }
 
                         }

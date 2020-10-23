@@ -31,7 +31,7 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Sobrepresion> Sobrepresion { get; set; }
         public DbSet<Tipo> Tipo { get; set; }
         public DbSet<Estado> Estado { get; set; }
-        public DbSet<TipoArea> TipoArea { get; set; }
+        public DbSet<TipoArea> TipoAre { get; set; }
         public DbSet<TipoCelda> TipoCelda { get; set; }
         public DbSet<TipoMat> TipoMat { get; set; }
         public DbSet<TiposNoConf> TiposNoConf { get; set; }
