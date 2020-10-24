@@ -17,13 +17,15 @@ namespace SupplyChain.Pages.Lineas
     {
         [Inject] protected CustomHttpClient Http { get; set; }
         [Inject] protected IJSRuntime JsRuntime { get; set; }
-        protected SfGrid<Lineas> Grid;
+        protected SfGrid<SupplyChain.Shared.Models.Lineas> Grid;
 
         public bool Enabled = true;
         public bool Disabled = false;
 
 
-        protected List<Scrap> scraps = new List<Lineas>();
+        protected List<
+SupplyChain.Shared.Models.Lineas> lineas = new List<
+SupplyChain.Shared.Models.Lineas>();
 
 
         protected List<Object> Toolbaritems = new List<Object>(){
@@ -38,7 +40,7 @@ namespace SupplyChain.Pages.Lineas
 
         protected override async Task OnInitializedAsync()
         {
-            scraps = await Http.GetFromJsonAsync<List<Lineas>>("api/Lineas");
+            lineas = await Http.GetFromJsonAsync<List<SupplyChain.Shared.Models.Lineas>>("api/Lineas");
        
 
             await base.OnInitializedAsync();
