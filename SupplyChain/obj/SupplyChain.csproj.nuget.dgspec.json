@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {}
+    "E:\\Aerre\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {
+    "E:\\Aerre\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
+        "projectUniqueName": "E:\\Aerre\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
         "projectName": "SupplyChain",
-        "projectPath": "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
-        "packagesPath": "C:\\Users\\a4344\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a4344\\Desktop\\SupplyChain\\SUPPLYCHAIN\\obj\\",
+        "projectPath": "E:\\Aerre\\SupplyChain\\SUPPLYCHAIN\\SupplyChain.csproj",
+        "packagesPath": "C:\\Users\\gonza\\.nuget\\packages\\",
+        "outputPath": "E:\\Aerre\\SupplyChain\\SUPPLYCHAIN\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\a4344\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\gonza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -30,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -83,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
