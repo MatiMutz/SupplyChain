@@ -17,13 +17,14 @@ namespace SupplyChain.Pages.TipoMat
     {
         [Inject] protected CustomHttpClient Http { get; set; }
         [Inject] protected IJSRuntime JsRuntime { get; set; }
-        protected SfGrid<TipMat> Grid;
+        protected SfGrid<SupplyChain.Shared.Models.TipoMat> Grid;
+        
 
         public bool Enabled = true;
         public bool Disabled = false;
 
 
-        protected List<TipMat> tipomats = new List<TipMat>();
+        protected List<SupplyChain.Shared.Models.TipoMat> tipomats = new List<SupplyChain.Shared.Models.TipoMat>();
 
 
         protected List<Object> Toolbaritems = new List<Object>(){
@@ -38,13 +39,13 @@ namespace SupplyChain.Pages.TipoMat
 
         protected override async Task OnInitializedAsync()
         {
-            tipomats = await Http.GetFromJsonAsync<List<TipMat>>("api/TipoMat");
+            tipomats = await Http.GetFromJsonAsync<List<SupplyChain.Shared.Models.TipoMat>>("api/TipoMat");
        
 
             await base.OnInitializedAsync();
         }
 
-        public void ActionBeginHandler(ActionEventArgs<TipMat> args)
+        public void ActionBeginHandler(ActionEventArgs<SupplyChain.Shared.Models.TipoMat> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
             {
@@ -75,13 +76,13 @@ namespace SupplyChain.Pages.TipoMat
             new EstaActivo() { BActivo= true, Text= "SI"},
             new EstaActivo() { BActivo= false, Text= "NO"}};
 
-        public async Task ActionBegin(ActionEventArgs<TipMat> args)
+        public async Task ActionBegin(ActionEventArgs<SupplyChain.Shared.Models.TipoMat> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
             {
                 HttpResponseMessage response;
-                bool found = tipomats.Any(p => p.Tipo == args.Data.Tipo);
-                TipMat ur = new TipMat();
+                bool found = tipomats.Any(p => p.TIPO == args.Data.TIPO);
+                SupplyChain.Shared.Models.TipoMat ur = new SupplyChain.Shared.Models.TipoMat();
 
                 if (!found)
                 {
@@ -91,7 +92,7 @@ namespace SupplyChain.Pages.TipoMat
                 else
                 {
 
-                    response = await Http.PutAsJsonAsync($"api/TipoMat/{args.Data.Tipo}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/TipoMat/{args.Data.TIPO}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -106,7 +107,7 @@ namespace SupplyChain.Pages.TipoMat
             }
         }
 
-        private async Task EliminarOperario(ActionEventArgs<TipMat> args)
+        private async Task EliminarOperario(ActionEventArgs<SupplyChain.Shared.Models.TipoMat> args)
         {
             try
             {
@@ -116,7 +117,7 @@ namespace SupplyChain.Pages.TipoMat
                     if (isConfirmed)
                     {
                         //operarios.Remove(operarios.Find(m => m.CG_OPER == args.Data.CG_OPER));
-                        await Http.DeleteAsync($"api/TipoMat/{args.Data.Tipo}");
+                        await Http.DeleteAsync($"api/TipoMat/{args.Data.TIPO}");
                     }
                 }
             }
@@ -132,30 +133,33 @@ namespace SupplyChain.Pages.TipoMat
             {
                 if (this.Grid.SelectedRecords.Count > 0)
                 {
-                    foreach (TipMat selectedRecord in this.Grid.SelectedRecords)
+                    foreach (SupplyChain.Shared.Models.TipoMat selectedRecord in this.Grid.SelectedRecords)
                     {
                         bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea copiar el Operario?");
                         if (isConfirmed)
                         {
-                            TipMat Nuevo = new TipMat();
+                            SupplyChain.Shared.Models.TipoMat Nuevo = new SupplyChain.Shared.Models.TipoMat();
 
-                            //Nuevo.CG_OPER = operarios.Max(s => s.CG_OPER) + 1;
-                            Nuevo.Cg_cia = selectedRecord.Cg_cia;
-                   
+                            Nuevo.TIPO = tipomats.Max(s => s.TIPO) + 1;
+                            Nuevo.CG_CIA = selectedRecord.CG_CIA;
+                            Nuevo.USUARIO = selectedRecord.USUARIO;
+
+                            
+
 
                             var response = await Http.PostAsJsonAsync("api/TipoArea", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 Grid.Refresh();
-                                var tipomat = await response.Content.ReadFromJsonAsync<TipMat>();
+                                var tipomat = await response.Content.ReadFromJsonAsync<SupplyChain.Shared.Models.TipoMat>();
                                 await InvokeAsync(StateHasChanged);
-                                Nuevo.Tipo = tipomat.Tipo;
+                                Nuevo.TIPO = tipomat.TIPO;
                                 tipomats.Add(Nuevo);
                                 var itemsJson = JsonSerializer.Serialize(tipomat);
                                 Console.WriteLine(itemsJson);
                                 //toastService.ShowToast($"Registrado Correctemente.Vale {StockGuardado.VALE}", TipoAlerta.Success);
-                                tipomats.OrderByDescending(p => p.Tipo);
+                                tipomats.OrderByDescending(p => p.TIPO);
                             }
 
                         }

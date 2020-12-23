@@ -49,7 +49,7 @@ namespace SupplyChain.Server.DataAccess
         public DbSet<Celda> Celdas { get; set; }
         public DbSet<Scrap> Scrap { get; set; }
         public DbSet<Paradas> Paradas { get; set; }
-        public DbSet<Lineas> Lineas { get; set; }
+        public DbSet<Lineas> Linea { get; set; }
         public DbSet<Clase> Clases { get; set; }
         public DbSet<CalendarioFestivos> CalendarioFestivos { get; set; }
         public DbSet<Costofab> Costofab { get; set; }

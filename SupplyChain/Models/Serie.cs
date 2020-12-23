@@ -10,9 +10,10 @@ namespace SupplyChain.Shared.Models
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		[ColumnaGridViewAtributo(Name = "Id")]
 		public int Id { get; set; } = 0;
-		[ColumnaGridViewAtributo(Name = "Codigo de serie")]
+		[ColumnaGridViewAtributo(Name = "Codigo")]
 		public string Codigo { get; set; } = "";
 		[ColumnaGridViewAtributo(Name = "Medida")]
 		public string Medida { get; set; } = "";
+
 	}
 }

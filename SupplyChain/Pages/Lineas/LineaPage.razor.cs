@@ -11,9 +11,10 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace SupplyChain.Pages.Lineas
+
+namespace SupplyChain.Pages.Lineasx
 {
-    public class ScrapPageBase : ComponentBase
+    public class LineasxPageBase : ComponentBase
     {
         [Inject] protected CustomHttpClient Http { get; set; }
         [Inject] protected IJSRuntime JsRuntime { get; set; }
@@ -23,9 +24,7 @@ namespace SupplyChain.Pages.Lineas
         public bool Disabled = false;
 
 
-        protected List<
-SupplyChain.Shared.Models.Lineas> lineas = new List<
-SupplyChain.Shared.Models.Lineas>();
+        protected List<SupplyChain.Shared.Models.Lineas> lineas = new List<SupplyChain.Shared.Models.Lineas>();
 
 
         protected List<Object> Toolbaritems = new List<Object>(){
@@ -46,7 +45,7 @@ SupplyChain.Shared.Models.Lineas>();
             await base.OnInitializedAsync();
         }
 
-        public void ActionBeginHandler(ActionEventArgs<Lineas> args)
+        public void ActionBeginHandler(ActionEventArgs<SupplyChain.Shared.Models.Lineas> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
             {
@@ -77,13 +76,13 @@ SupplyChain.Shared.Models.Lineas>();
             new EstaActivo() { BActivo= true, Text= "SI"},
             new EstaActivo() { BActivo= false, Text= "NO"}};
 
-        public async Task ActionBegin(ActionEventArgs<Lineas> args)
+        public async Task ActionBegin(ActionEventArgs<SupplyChain.Shared.Models.Lineas> args)
         {
             if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
             {
                 HttpResponseMessage response;
-                bool found = scraps.Any(p => p.CG_SCRAP == args.Data.CG_SCRAP);
-                Lineas ur = new Lineas();
+                bool found = lineas.Any(p => p.CG_LINEA == args.Data.CG_LINEA);
+                SupplyChain.Shared.Models.Lineas ur = new SupplyChain.Shared.Models.Lineas();
 
                 if (!found)
                 {
@@ -93,7 +92,7 @@ SupplyChain.Shared.Models.Lineas>();
                 else
                 {
 
-                    response = await Http.PutAsJsonAsync($"api/Lineas/{args.Data.CG_SCRAP}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/Lineas/{args.Data.CG_LINEA}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -108,7 +107,7 @@ SupplyChain.Shared.Models.Lineas>();
             }
         }
 
-        private async Task EliminarOperario(ActionEventArgs<Lineas> args)
+        private async Task EliminarOperario(ActionEventArgs<SupplyChain.Shared.Models.Lineas> args)
         {
             try
             {
@@ -118,7 +117,7 @@ SupplyChain.Shared.Models.Lineas>();
                     if (isConfirmed)
                     {
                         //operarios.Remove(operarios.Find(m => m.CG_OPER == args.Data.CG_OPER));
-                        await Http.DeleteAsync($"api/Lineas/{args.Data.CG_SCRAP}");
+                        await Http.DeleteAsync($"api/Lineas/{args.Data.CG_LINEA}");
                     }
                 }
             }
@@ -134,16 +133,17 @@ SupplyChain.Shared.Models.Lineas>();
             {
                 if (this.Grid.SelectedRecords.Count > 0)
                 {
-                    foreach (Lineas selectedRecord in this.Grid.SelectedRecords)
+                    foreach (SupplyChain.Shared.Models.Lineas selectedRecord in this.Grid.SelectedRecords)
                     {
                         bool isConfirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Seguro de que desea copiar la Clase?");
                         if (isConfirmed)
                         {
-                            Lineas Nuevo = new Lineas();
+                            SupplyChain.Shared.Models.Lineas Nuevo = new SupplyChain.Shared.Models.Lineas();
 
-                            //Nuevo.CG_OPER = operarios.Max(s => s.CG_OPER) + 1;
-                            Nuevo.DES_SCRAP = selectedRecord.DES_SCRAP;
-                           
+                            Nuevo.CG_LINEA = lineas.Max(s => s.CG_LINEA) + 1;
+                            Nuevo.DES_LINEA = selectedRecord.DES_LINEA;
+                            Nuevo.CG_CIA = selectedRecord.CG_CIA;
+                            Nuevo.USUARIO = selectedRecord.USUARIO;
 
 
                             var response = await Http.PostAsJsonAsync("api/Lineas", Nuevo);
@@ -151,14 +151,14 @@ SupplyChain.Shared.Models.Lineas>();
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 Grid.Refresh();
-                                var scrap = await response.Content.ReadFromJsonAsync<Scrap>();
+                                var scrap = await response.Content.ReadFromJsonAsync<SupplyChain.Shared.Models.Lineas>();
                                 await InvokeAsync(StateHasChanged);
-                                Nuevo.CG_SCRAP = scrap.CG_SCRAP;
-                                scraps.Add(Nuevo);
+                                Nuevo.CG_LINEA = scrap.CG_LINEA;
+                                lineas.Add(Nuevo);
                                 var itemsJson = JsonSerializer.Serialize(scrap);
                                 Console.WriteLine(itemsJson);
                                 //toastService.ShowToast($"Registrado Correctemente.Vale {StockGuardado.VALE}", TipoAlerta.Success);
-                                scraps.OrderByDescending(p => p.CG_SCRAP);
+                                lineas.OrderByDescending(p => p.CG_LINEA);
                             }
 
                         }
