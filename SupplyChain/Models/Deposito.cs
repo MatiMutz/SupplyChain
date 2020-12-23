@@ -23,8 +23,7 @@ namespace SupplyChain
         public int CG_CLI { get; set; }//
         public int CG_PROVE { get; set; }//
         public int CG_CIA { get; set; }//
-      //  public bool ACTS { get; set; }
-        //public int CG_PROV { get; set; }
-        //public int CG_VEN { get; set; }
+                                       
+        public string USUARIO { get; set; } = "";
     }
 }

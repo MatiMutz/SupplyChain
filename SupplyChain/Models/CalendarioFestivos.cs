@@ -18,5 +18,7 @@ namespace SupplyChain.Shared.Models
         public DateTime? Fecha { get; set; }
         [ColumnaGridViewAtributo(Name = "Descripcion")]
         public string Descripcion { get; set; } = "";
+        public int CG_CIA { get; set; } = 0;//
+        public string USUARIO { get; set; } = "";
     }
 }

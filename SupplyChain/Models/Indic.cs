@@ -21,7 +21,8 @@ namespace SupplyChain.Shared.Models
         [ColumnaGridViewAtributo(Name = "Descripcion ind")] // revisar nombre 
         public string DES_IND { get; set; } = "";
         [ColumnaGridViewAtributo(Name = "Fecha")] // revisar nombre 
-        public DateTime FE_IND { get; set; } 
+        public DateTime FE_IND { get; set; }
+        public string USUARIO { get; set; } = "";
     }
 }
 

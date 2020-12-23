@@ -82,5 +82,6 @@ namespace SupplyChain.Shared.Models
         public DateTime FE_REG { get; set; }
         [ColumnaGridViewAtributo(Name = "codigo de compañia")]
         public int CG_CIA { get; set; } = 0;
+        
     }
 }

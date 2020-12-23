@@ -15,6 +15,7 @@ namespace SupplyChain
         public decimal VALOR_HORA { get; set; } = 0;
         public string MONEDA { get; set; } = "";
 
-        //cg_cia
+        public int CG_CIA { get; set; } = 0;//
+        public string USUARIO { get; set; } = "";
     }
 }

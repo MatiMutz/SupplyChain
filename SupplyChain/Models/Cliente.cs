@@ -66,6 +66,7 @@ namespace SupplyChain.Shared.Models
         [ColumnaGridViewAtributo(Name = "LEY19640")]
         public int? LEY19640 { get; set; }
         [ColumnaGridViewAtributo(Name = "Compañía")]
-        public int? CG_CIA { get; set; }
+        public int CG_CIA { get; set; } = 0;//
+        public string USUARIO { get; set; } = "";
     }
 }

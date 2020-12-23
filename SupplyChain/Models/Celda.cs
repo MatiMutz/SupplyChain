@@ -49,7 +49,8 @@ namespace SupplyChain.Shared.Models
         [ColumnaGridViewAtributo(Name = "Código de depósito Material")]
         public int CG_DEPOSM { get; set; } = 0;
         [ColumnaGridViewAtributo(Name = "Código de compañia")]
-        public int CG_CIA { get; set; } = 0;
+        public int CG_CIA { get; set; } = 0;//
+        public string USUARIO { get; set; } = "";
     }
 }
 

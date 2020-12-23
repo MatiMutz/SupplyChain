@@ -9,9 +9,14 @@ namespace SupplyChain.Shared.Models
     {
         [ColumnaGridViewAtributo(Name = "Número")]
         public int NUMERO { get; set; }
+        
         [ColumnaGridViewAtributo(Name = "Fecha emisión")]
         public DateTime FE_EMIT { get; set; }
-        [ColumnaGridViewAtributo(Name = "Código")]
+        [ColumnaGridViewAtributo(Name = "Codigo de prep")]
+        public string CG_PREP { get; set; }
+        [ColumnaGridViewAtributo(Name = "Codigo de orden")]
+        public int CG_ORDEN { get; set; }
+        [ColumnaGridViewAtributo(Name = "Código mat")]
         public string CG_MAT { get; set; }
         [ColumnaGridViewAtributo(Name = "Nombre producto")]
         public string DES_MAT { get; set; }

@@ -16,5 +16,6 @@ namespace SupplyChain.Shared.Models
         public string DESCRIP { get; set; } = "";
         [ColumnaGridViewAtributo(Name = "Codigo compañia")]
         public int CG_CIA { get; set; } = 0;
+        public string USUARIO { get; set; }
     }
 }
