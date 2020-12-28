@@ -10,5 +10,7 @@ namespace SupplyChain
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int CG_TIPOAREA { get; set; } = 0;
 		public string DES_TIPOAREA { get; set; } = "";
+		public int CG_CIA { get; set; } = 0;
+		public string USUARIO { get; set; }
 	}
 }

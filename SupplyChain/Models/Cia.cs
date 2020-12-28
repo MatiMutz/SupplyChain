@@ -44,7 +44,6 @@ namespace SupplyChain.Shared.Models
         public DateTime FE_CIERRE { get; set; }
         [ColumnaGridViewAtributo(Name = "AVISO")]
         public string AVISO { get; set; } = "";
-        public int CG_CIA { get; set; } = 0;//
         public string USUARIO { get; set; } = "";
     }
 }

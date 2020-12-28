@@ -10,8 +10,8 @@ namespace SupplyChain
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Cg_TipoNc { get; set; } = 0;//
         public string Des_TipoNc { get; set; } = "";//
-        public int CG_CIA { get; set; } = 0;//
-
+        public int CG_CIA { get; set; } = 0;
+        public string USUARIO { get; set; }
         //   public bool TipoNoconf { get; set; } = false;
         //   public string Origen { get; set; } = "";
         //   public string? Datos { get; set; } = "";
