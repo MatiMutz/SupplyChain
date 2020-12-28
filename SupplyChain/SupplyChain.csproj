@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repositorios\**" />
+    <Content Remove="Repositorios\**" />
+    <EmbeddedResource Remove="Repositorios\**" />
+    <None Remove="Repositorios\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
       <PrivateAssets>all</PrivateAssets>
@@ -13,10 +20,6 @@
     <PackageReference Include="Syncfusion.Blazor" Version="18.3.0.38" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
     <PackageReference Include="System.Net.Http.Json" Version="3.2.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repositorios\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
