@@ -54,19 +54,9 @@
                                                             <SfNumericTextBox ID="VALOR_HORA" @bind-Value="@(protab.OBSERVAC)"></SfNumericTextBox>
                                                         </div>
 
-                                                        <div class="form-group col-md-6">
-                                                            <label class="e-float-text e-label-top">CG CIA:</label>
-                                                            <SfNumericTextBox ID="MONEDA" @bind-Value="@(protab.CG_CIA)"></SfNumericTextBox>
-                                                        </div>
+                                                   
                                                     </div>
-                                                    <div class="form-row">
-                                                        
-
-                                                        <div class="form-group col-md-6">
-                                                            <label class="e-float-text e-label-top">Usuario:</label>
-                                                            <SfTextBox ID="MONEDA" @bind-Value="@(protab.USUARIO)"></SfTextBox>
-                                                        </div>
-                                                    </div>
+                                                   
                                                 </div>
                         }
                     </Template>
@@ -75,8 +65,6 @@
                     <GridColumn Field=@nameof(Protab.PROCESO) HeaderText="PROCESO" TextAlign="TextAlign.Left" IsPrimaryKey="true"></GridColumn>
                     <GridColumn Field=@nameof(Protab.DESCRIP) HeaderText="DESCRIPCION" TextAlign="TextAlign.Left"></GridColumn>
                     <GridColumn Field=@nameof(Protab.OBSERVAC) HeaderText="OBSERVACIONES" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(Protab.CG_CIA) HeaderText="CG_CIA" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(Protab.USUARIO) HeaderText="USUARIO" TextAlign="TextAlign.Left"></GridColumn>
 
                 </GridColumns>
             </SfGrid>
