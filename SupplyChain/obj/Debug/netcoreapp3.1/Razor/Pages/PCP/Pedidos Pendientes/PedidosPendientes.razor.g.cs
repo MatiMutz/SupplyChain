@@ -191,14 +191,11 @@ using System.Net.Http.Json;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "col-lg-12 control-section");
-            __builder.AddMarkupContent(2, "\r\n    ");
-            __builder.OpenElement(3, "div");
-            __builder.AddAttribute(4, "class", "content-wrapper");
-            __builder.AddMarkupContent(5, "\r\n        ");
-            __builder.OpenElement(6, "div");
-            __builder.AddAttribute(7, "class", "row");
-            __builder.AddMarkupContent(8, "\r\n            ");
-            __Blazor.SupplyChain.Pages.PCP.Pedidos_Pendientes.PedidosPendientes.TypeInference.CreateSfGrid_0(__builder, 9, 10, 
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "content-wrapper");
+            __builder.OpenElement(4, "div");
+            __builder.AddAttribute(5, "class", "row");
+            __Blazor.SupplyChain.Pages.PCP.Pedidos_Pendientes.PedidosPendientes.TypeInference.CreateSfGrid_0(__builder, 6, 7, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                      true
@@ -206,7 +203,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 11, 
+            , 8, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                               true
@@ -214,7 +211,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 12, 
+            , 9, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                     true
@@ -222,7 +219,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 13, 
+            , 10, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                          true
@@ -230,7 +227,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 14, 
+            , 11, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                              listaPedPend
@@ -238,7 +235,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 15, 
+            , 12, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                              true
@@ -246,7 +243,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 16, 
+            , 13, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                   true
@@ -254,7 +251,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 17, 
+            , 14, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                   true
@@ -262,7 +259,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 18, 
+            , 15, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                      true
@@ -270,7 +267,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 19, 
+            , 16, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                            true
@@ -278,7 +275,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 20, 
+            , 17, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                            Toolbaritems
@@ -286,10 +283,9 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 21, (__builder2) => {
-                __builder2.AddMarkupContent(22, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(23);
-                __builder2.AddAttribute(24, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
+            , 18, (__builder2) => {
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(19);
+                __builder2.AddAttribute(20, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
 #nullable restore
 #line 30 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                              Syncfusion.Blazor.Grids.SelectionType.Multiple
@@ -299,9 +295,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(25, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<ModeloPedidosPendientes>>(26);
-                __builder2.AddAttribute(27, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
+                __builder2.AddMarkupContent(21, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<ModeloPedidosPendientes>>(22);
+                __builder2.AddAttribute(23, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                              ClickHandler
@@ -311,9 +307,9 @@ using System.Net.Http.Json;
 #nullable disable
                 )));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(28, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(29);
-                __builder2.AddAttribute(30, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
+                __builder2.AddMarkupContent(24, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(25);
+                __builder2.AddAttribute(26, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
 #nullable restore
 #line 32 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                            Syncfusion.Blazor.Grids.FilterType.CheckBox
@@ -323,9 +319,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(31, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(32);
-                __builder2.AddAttribute(33, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(27, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(28);
+                __builder2.AddAttribute(29, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 33 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                       true
@@ -335,12 +331,11 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(34, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(35);
-                __builder2.AddAttribute(36, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
-                    __builder3.AddMarkupContent(37, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(38);
-                    __builder3.AddAttribute(39, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(30, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(31);
+                __builder2.AddAttribute(32, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(33);
+                    __builder3.AddAttribute(34, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 35 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.PEDIDO)
@@ -349,8 +344,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(40, "HeaderText", "Pedido");
-                    __builder3.AddAttribute(41, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(35, "HeaderText", "Pedido");
+                    __builder3.AddAttribute(36, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 35 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                              TextAlign.Left
@@ -359,7 +354,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(42, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(37, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 35 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                       Enabled
@@ -368,11 +363,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(43, "Width", "90px");
+                    __builder3.AddAttribute(38, "Width", "90px");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(44, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(45);
-                    __builder3.AddAttribute(46, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(39, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(40);
+                    __builder3.AddAttribute(41, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 36 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.FE_MOV)
@@ -381,10 +376,9 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(47, "HeaderText", "Fecha Pedido");
-                    __builder3.AddAttribute(48, "Width", "130px");
-                    __builder3.AddAttribute(49, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder4) => {
-                        __builder4.AddMarkupContent(50, "\r\n");
+                    __builder3.AddAttribute(42, "HeaderText", "Fecha Pedido");
+                    __builder3.AddAttribute(43, "Width", "130px");
+                    __builder3.AddAttribute(44, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder4) => {
 #nullable restore
 #line 38 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                               
@@ -393,9 +387,8 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                        __builder4.AddContent(51, "                                ");
-                        __builder4.OpenElement(52, "span");
-                        __builder4.AddContent(53, 
+                        __builder4.OpenElement(45, "span");
+                        __builder4.AddContent(46, 
 #nullable restore
 #line 40 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        Value.FE_MOV.ToString("dd/MM/yyyy")
@@ -405,14 +398,12 @@ using System.Net.Http.Json;
 #nullable disable
                         );
                         __builder4.CloseElement();
-                        __builder4.AddMarkupContent(54, "\r\n");
-                        __builder4.AddContent(55, "                        ");
                     }
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(56, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(57);
-                    __builder3.AddAttribute(58, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(47, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(48);
+                    __builder3.AddAttribute(49, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 44 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CG_ORDF)
@@ -421,8 +412,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(59, "HeaderText", "OF");
-                    __builder3.AddAttribute(60, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(50, "HeaderText", "OF");
+                    __builder3.AddAttribute(51, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 44 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                           TextAlign.Left
@@ -431,7 +422,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(61, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(52, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 44 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                    Enabled
@@ -440,11 +431,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(62, "Width", "90px");
+                    __builder3.AddAttribute(53, "Width", "90px");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(63, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(64);
-                    __builder3.AddAttribute(65, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(54, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(55);
+                    __builder3.AddAttribute(56, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 45 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.DES_ESTADOCARGA)
@@ -453,8 +444,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(66, "HeaderText", "Estado");
-                    __builder3.AddAttribute(67, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(57, "HeaderText", "Estado");
+                    __builder3.AddAttribute(58, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 45 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                       TextAlign.Left
@@ -463,7 +454,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(68, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(59, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 45 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                                Enabled
@@ -472,11 +463,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(69, "Width", "110px");
+                    __builder3.AddAttribute(60, "Width", "110px");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(70, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(71);
-                    __builder3.AddAttribute(72, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(61, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(62);
+                    __builder3.AddAttribute(63, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 46 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CG_CLI)
@@ -485,8 +476,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(73, "HeaderText", "Cliente");
-                    __builder3.AddAttribute(74, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(64, "HeaderText", "Cliente");
+                    __builder3.AddAttribute(65, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 46 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                               TextAlign.Left
@@ -495,7 +486,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(75, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(66, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 46 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                        Enabled
@@ -504,11 +495,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(76, "Width", "90px");
+                    __builder3.AddAttribute(67, "Width", "90px");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(77, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(78);
-                    __builder3.AddAttribute(79, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(68, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(69);
+                    __builder3.AddAttribute(70, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 47 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.DES_CLI)
@@ -517,8 +508,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(80, "HeaderText", "Razón social del Cliente");
-                    __builder3.AddAttribute(81, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(71, "HeaderText", "Razón social del Cliente");
+                    __builder3.AddAttribute(72, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 47 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                 TextAlign.Left
@@ -527,7 +518,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(82, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(73, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 47 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                                          Enabled
@@ -536,11 +527,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(83, "Width", "200px");
+                    __builder3.AddAttribute(74, "Width", "200px");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(84, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(85);
-                    __builder3.AddAttribute(86, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(75, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(76);
+                    __builder3.AddAttribute(77, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 48 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CG_ART)
@@ -549,8 +540,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(87, "HeaderText", "Código");
-                    __builder3.AddAttribute(88, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(78, "HeaderText", "Código");
+                    __builder3.AddAttribute(79, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 48 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                              TextAlign.Left
@@ -559,7 +550,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(89, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(80, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 48 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                       Enabled
@@ -568,11 +559,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(90, "Width", "160px");
+                    __builder3.AddAttribute(81, "Width", "160px");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(91, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(92);
-                    __builder3.AddAttribute(93, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(82, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(83);
+                    __builder3.AddAttribute(84, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 49 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.DES_ART)
@@ -581,8 +572,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(94, "HeaderText", "Descripción del producto");
-                    __builder3.AddAttribute(95, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(85, "HeaderText", "Descripción del producto");
+                    __builder3.AddAttribute(86, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 49 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                 TextAlign.Left
@@ -591,7 +582,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(96, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(87, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 49 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                                          Enabled
@@ -600,11 +591,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(97, "Width", "230px");
+                    __builder3.AddAttribute(88, "Width", "230px");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(98, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(99);
-                    __builder3.AddAttribute(100, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(89, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(90);
+                    __builder3.AddAttribute(91, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 50 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CANTPED)
@@ -613,10 +604,9 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(101, "HeaderText", "Cant");
-                    __builder3.AddAttribute(102, "Width", "70px");
-                    __builder3.AddAttribute(103, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder4) => {
-                        __builder4.AddMarkupContent(104, "\r\n");
+                    __builder3.AddAttribute(92, "HeaderText", "Cant");
+                    __builder3.AddAttribute(93, "Width", "70px");
+                    __builder3.AddAttribute(94, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder4) => {
 #nullable restore
 #line 52 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                               
@@ -627,9 +617,8 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                        __builder4.AddContent(105, "                                    ");
-                        __builder4.OpenElement(106, "span");
-                        __builder4.AddContent(107, 
+                        __builder4.OpenElement(95, "span");
+                        __builder4.AddContent(96, 
 #nullable restore
 #line 56 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                            Value.CANTPED.ToString().Substring(0, 1)
@@ -639,7 +628,6 @@ using System.Net.Http.Json;
 #nullable disable
                         );
                         __builder4.CloseElement();
-                        __builder4.AddMarkupContent(108, "\r\n");
 #nullable restore
 #line 57 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                 }
@@ -649,9 +637,8 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                        __builder4.AddContent(109, "                                    ");
-                        __builder4.OpenElement(110, "span");
-                        __builder4.AddContent(111, 
+                        __builder4.OpenElement(97, "span");
+                        __builder4.AddContent(98, 
 #nullable restore
 #line 60 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                            Value.CANTPED.ToString().Substring(0, 2)
@@ -661,7 +648,6 @@ using System.Net.Http.Json;
 #nullable disable
                         );
                         __builder4.CloseElement();
-                        __builder4.AddMarkupContent(112, "\r\n");
 #nullable restore
 #line 61 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                 }
@@ -671,9 +657,8 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                        __builder4.AddContent(113, "                                    ");
-                        __builder4.OpenElement(114, "span");
-                        __builder4.AddContent(115, 
+                        __builder4.OpenElement(99, "span");
+                        __builder4.AddContent(100, 
 #nullable restore
 #line 64 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                            Value.CANTPED.ToString().Substring(0, 3)
@@ -683,7 +668,6 @@ using System.Net.Http.Json;
 #nullable disable
                         );
                         __builder4.CloseElement();
-                        __builder4.AddMarkupContent(116, "\r\n");
 #nullable restore
 #line 65 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                 }
@@ -692,13 +676,12 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                        __builder4.AddContent(117, "                        ");
                     }
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(118, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(119);
-                    __builder3.AddAttribute(120, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(101, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(102);
+                    __builder3.AddAttribute(103, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 69 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.ENTRPREV)
@@ -707,10 +690,9 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(121, "HeaderText", "Fecha Prevista");
-                    __builder3.AddAttribute(122, "Width", "140px");
-                    __builder3.AddAttribute(123, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder4) => {
-                        __builder4.AddMarkupContent(124, "\r\n");
+                    __builder3.AddAttribute(104, "HeaderText", "Fecha Prevista");
+                    __builder3.AddAttribute(105, "Width", "140px");
+                    __builder3.AddAttribute(106, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder4) => {
 #nullable restore
 #line 71 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                               
@@ -719,9 +701,8 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                        __builder4.AddContent(125, "                                ");
-                        __builder4.OpenElement(126, "span");
-                        __builder4.AddContent(127, 
+                        __builder4.OpenElement(107, "span");
+                        __builder4.AddContent(108, 
 #nullable restore
 #line 73 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        Value.ENTRPREV.ToString("dd/MM/yyyy")
@@ -731,14 +712,12 @@ using System.Net.Http.Json;
 #nullable disable
                         );
                         __builder4.CloseElement();
-                        __builder4.AddMarkupContent(128, "\r\n");
-                        __builder4.AddContent(129, "                        ");
                     }
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(130, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(131);
-                    __builder3.AddAttribute(132, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(109, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(110);
+                    __builder3.AddAttribute(111, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 77 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.Obseritem)
@@ -747,8 +726,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(133, "HeaderText", "Observaciones");
-                    __builder3.AddAttribute(134, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(112, "HeaderText", "Observaciones");
+                    __builder3.AddAttribute(113, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 77 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                        TextAlign.Left
@@ -757,7 +736,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(135, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(114, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 77 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                                 Disabled
@@ -767,9 +746,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(136, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(137);
-                    __builder3.AddAttribute(138, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(115, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(116);
+                    __builder3.AddAttribute(117, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 78 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CG_ESTADOCARGA)
@@ -778,8 +757,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(139, "HeaderText", "Código estado");
-                    __builder3.AddAttribute(140, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(118, "HeaderText", "Código estado");
+                    __builder3.AddAttribute(119, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 78 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                             TextAlign.Left
@@ -788,7 +767,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(141, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(120, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 78 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                                      Disabled
@@ -798,9 +777,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(142, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(143);
-                    __builder3.AddAttribute(144, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(121, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(122);
+                    __builder3.AddAttribute(123, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 79 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CAMPOCOM1)
@@ -809,8 +788,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(145, "HeaderText", "COM1");
-                    __builder3.AddAttribute(146, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(124, "HeaderText", "COM1");
+                    __builder3.AddAttribute(125, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 79 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                               TextAlign.Left
@@ -819,7 +798,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(147, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(126, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 79 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                        Disabled
@@ -829,9 +808,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(148, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(149);
-                    __builder3.AddAttribute(150, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(127, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(128);
+                    __builder3.AddAttribute(129, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 80 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CAMPOCOM2)
@@ -840,8 +819,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(151, "HeaderText", "COM2");
-                    __builder3.AddAttribute(152, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(130, "HeaderText", "COM2");
+                    __builder3.AddAttribute(131, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 80 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                               TextAlign.Left
@@ -850,7 +829,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(153, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(132, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 80 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                        Disabled
@@ -860,9 +839,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(154, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(155);
-                    __builder3.AddAttribute(156, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(133, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(134);
+                    __builder3.AddAttribute(135, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 81 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CAMPOCOM3)
@@ -871,8 +850,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(157, "HeaderText", "COM3");
-                    __builder3.AddAttribute(158, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(136, "HeaderText", "COM3");
+                    __builder3.AddAttribute(137, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 81 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                               TextAlign.Left
@@ -881,7 +860,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(159, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(138, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 81 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                        Disabled
@@ -891,9 +870,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(160, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(161);
-                    __builder3.AddAttribute(162, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(139, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(140);
+                    __builder3.AddAttribute(141, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 82 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CAMPOCOM4)
@@ -902,8 +881,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(163, "HeaderText", "COM4");
-                    __builder3.AddAttribute(164, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(142, "HeaderText", "COM4");
+                    __builder3.AddAttribute(143, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 82 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                               TextAlign.Left
@@ -912,7 +891,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(165, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(144, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 82 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                        Disabled
@@ -922,9 +901,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(166, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(167);
-                    __builder3.AddAttribute(168, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(145, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(146);
+                    __builder3.AddAttribute(147, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 83 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CAMPOCOM5)
@@ -933,8 +912,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(169, "HeaderText", "COM5");
-                    __builder3.AddAttribute(170, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(148, "HeaderText", "COM5");
+                    __builder3.AddAttribute(149, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 83 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                               TextAlign.Left
@@ -943,7 +922,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(171, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(150, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 83 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                        Disabled
@@ -953,9 +932,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(172, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(173);
-                    __builder3.AddAttribute(174, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(151, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(152);
+                    __builder3.AddAttribute(153, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 84 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.CAMPOCOM6)
@@ -964,8 +943,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(175, "HeaderText", "COM6");
-                    __builder3.AddAttribute(176, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(154, "HeaderText", "COM6");
+                    __builder3.AddAttribute(155, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 84 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                               TextAlign.Left
@@ -974,7 +953,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(177, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(156, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 84 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                        Disabled
@@ -984,9 +963,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(178, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(179);
-                    __builder3.AddAttribute(180, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(157, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(158);
+                    __builder3.AddAttribute(159, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 85 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.Semana)
@@ -995,8 +974,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(181, "HeaderText", "Semana");
-                    __builder3.AddAttribute(182, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(160, "HeaderText", "Semana");
+                    __builder3.AddAttribute(161, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 85 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                              TextAlign.Left
@@ -1005,7 +984,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(183, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(162, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 85 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                       Disabled
@@ -1015,9 +994,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(184, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(185);
-                    __builder3.AddAttribute(186, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(163, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(164);
+                    __builder3.AddAttribute(165, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 86 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.LOTE)
@@ -1026,8 +1005,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(187, "HeaderText", "Lote");
-                    __builder3.AddAttribute(188, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(166, "HeaderText", "Lote");
+                    __builder3.AddAttribute(167, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 86 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                          TextAlign.Left
@@ -1036,7 +1015,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(189, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(168, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 86 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                   Disabled
@@ -1046,9 +1025,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(190, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(191);
-                    __builder3.AddAttribute(192, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(169, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(170);
+                    __builder3.AddAttribute(171, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 87 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                        nameof(ModeloPedidosPendientes.REGISTRO_PEDCLI)
@@ -1057,8 +1036,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(193, "HeaderText", "Registro Pedcli");
-                    __builder3.AddAttribute(194, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(172, "HeaderText", "Registro Pedcli");
+                    __builder3.AddAttribute(173, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 87 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                TextAlign.Left
@@ -1067,7 +1046,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(195, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(174, "Visible", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 87 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                                                                                                                                                         Disabled
@@ -1077,13 +1056,11 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(196, "\r\n                ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(197, "\r\n            ");
             }
-            , 198, (__value) => {
+            , 175, (__value) => {
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor"
                           Grid = __value;
@@ -1093,14 +1070,11 @@ using System.Net.Http.Json;
 #nullable disable
             }
             );
-            __builder.AddMarkupContent(199, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(200, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(201, "\r\n");
             __builder.CloseElement();
-            __builder.AddMarkupContent(202, "\r\n");
-            __builder.AddMarkupContent(203, @"<style>
+            __builder.AddMarkupContent(176, "\r\n");
+            __builder.AddMarkupContent(177, @"<style>
     .form-group.col-md-6 {
         width: 200px;
     }

@@ -191,14 +191,11 @@ using System.Net.Http.Json;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "col-lg-12 control-section");
-            __builder.AddMarkupContent(2, "\r\n    ");
-            __builder.OpenElement(3, "div");
-            __builder.AddAttribute(4, "class", "content-wrapper");
-            __builder.AddMarkupContent(5, "\r\n        ");
-            __builder.OpenElement(6, "div");
-            __builder.AddAttribute(7, "class", "row");
-            __builder.AddMarkupContent(8, "\r\n            ");
-            __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfGrid_0(__builder, 9, 10, 
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "content-wrapper");
+            __builder.OpenElement(4, "div");
+            __builder.AddAttribute(5, "class", "row");
+            __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfGrid_0(__builder, 6, 7, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                      true
@@ -206,7 +203,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 11, 
+            , 8, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                               true
@@ -214,7 +211,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 12, 
+            , 9, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                     true
@@ -222,7 +219,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 13, 
+            , 10, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                          true
@@ -230,7 +227,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 14, 
+            , 11, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                                   true
@@ -238,7 +235,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 15, 
+            , 12, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                              operarios
@@ -246,7 +243,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 16, 
+            , 13, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                           true
@@ -254,7 +251,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 17, 
+            , 14, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                      true
@@ -262,7 +259,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 18, 
+            , 15, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                           true
@@ -270,7 +267,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 19, 
+            , 16, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                   true
@@ -278,7 +275,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 20, 
+            , 17, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                      true
@@ -286,7 +283,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 21, 
+            , 18, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                            true
@@ -294,7 +291,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 22, 
+            , 19, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                            Toolbaritems
@@ -302,10 +299,9 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 23, (__builder2) => {
-                __builder2.AddMarkupContent(24, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(25);
-                __builder2.AddAttribute(26, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
+            , 20, (__builder2) => {
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(21);
+                __builder2.AddAttribute(22, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
 #nullable restore
 #line 30 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                              Syncfusion.Blazor.Grids.SelectionType.Multiple
@@ -315,9 +311,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(27, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<Operario>>(28);
-                __builder2.AddAttribute(29, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
+                __builder2.AddMarkupContent(23, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<Operario>>(24);
+                __builder2.AddAttribute(25, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                              ClickHandler
@@ -326,7 +322,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 )));
-                __builder2.AddAttribute(30, "OnActionBegin", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Grids.ActionEventArgs<Operario>>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Grids.ActionEventArgs<Operario>>(this, 
+                __builder2.AddAttribute(26, "OnActionBegin", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Grids.ActionEventArgs<Operario>>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Grids.ActionEventArgs<Operario>>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                           ActionBegin
@@ -336,9 +332,9 @@ using System.Net.Http.Json;
 #nullable disable
                 )));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(31, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(32);
-                __builder2.AddAttribute(33, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
+                __builder2.AddMarkupContent(27, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(28);
+                __builder2.AddAttribute(29, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
 #nullable restore
 #line 32 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                            Syncfusion.Blazor.Grids.FilterType.CheckBox
@@ -348,9 +344,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(34, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(35);
-                __builder2.AddAttribute(36, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(30, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(31);
+                __builder2.AddAttribute(32, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 33 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                       true
@@ -360,9 +356,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(37, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEditSettings>(38);
-                __builder2.AddAttribute(39, "AllowAdding", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(33, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEditSettings>(34);
+                __builder2.AddAttribute(35, "AllowAdding", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                true
@@ -371,7 +367,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(40, "AllowEditing", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(36, "AllowEditing", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                    true
@@ -380,7 +376,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(41, "AllowDeleting", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(37, "AllowDeleting", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                         true
@@ -389,7 +385,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(42, "Mode", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.EditMode>(
+                __builder2.AddAttribute(38, "Mode", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.EditMode>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                      EditMode.Dialog
@@ -398,7 +394,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(43, "Dialog", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.DialogSettings>(
+                __builder2.AddAttribute(39, "Dialog", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.DialogSettings>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                               DialogParams
@@ -407,8 +403,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(44, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
-                    __builder3.AddMarkupContent(45, "\r\n");
+                __builder2.AddAttribute(40, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
 #nullable restore
 #line 36 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                           
@@ -417,33 +412,23 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    __builder3.AddContent(46, "                            ");
-                    __builder3.AddMarkupContent(47, @"<ul class=""nav nav-pills mb-3"" id=""pills-tab"" role=""tablist"">
-                                <li class=""nav-item"">
-                                    <a class=""nav-link active"" id=""pills-home-tab"" data-toggle=""pill"" href=""#pills-Generalidades"" role=""tab"" aria-controls=""pills-home"" aria-selected=""true"">Modelos</a>
-                                </li>
-                            </ul>
+                    __builder3.AddMarkupContent(41, @"<ul class=""nav nav-pills mb-3"" id=""pills-tab"" role=""tablist""><li class=""nav-item""><a class=""nav-link active"" id=""pills-home-tab"" data-toggle=""pill"" href=""#pills-Generalidades"" role=""tab"" aria-controls=""pills-home"" aria-selected=""true"">Modelos</a></li></ul>
                             ");
-                    __builder3.OpenElement(48, "div");
-                    __builder3.AddAttribute(49, "class", "tab-content");
-                    __builder3.AddAttribute(50, "id", "pills-tabContent");
-                    __builder3.AddMarkupContent(51, "\r\n                                ");
-                    __builder3.OpenElement(52, "div");
-                    __builder3.AddAttribute(53, "class", "tab-pane fade show active");
-                    __builder3.AddAttribute(54, "id", "pills-Generalidades");
-                    __builder3.AddAttribute(55, "role", "tabpanel");
-                    __builder3.AddAttribute(56, "aria-labelledby", "pills-home-tab");
-                    __builder3.AddMarkupContent(57, "\r\n                                    ");
-                    __builder3.OpenElement(58, "div");
-                    __builder3.AddMarkupContent(59, "\r\n                                        ");
-                    __builder3.OpenElement(60, "div");
-                    __builder3.AddAttribute(61, "class", "form-row");
-                    __builder3.AddMarkupContent(62, "\r\n                                            ");
-                    __builder3.OpenElement(63, "div");
-                    __builder3.AddAttribute(64, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(65, "\r\n                                                ");
-                    __builder3.AddMarkupContent(66, "<label class=\"e-float-text e-label-top\">Id:</label>\r\n                                                ");
-                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_1(__builder3, 67, 68, "CG_OPER", 69, 
+                    __builder3.OpenElement(42, "div");
+                    __builder3.AddAttribute(43, "class", "tab-content");
+                    __builder3.AddAttribute(44, "id", "pills-tabContent");
+                    __builder3.OpenElement(45, "div");
+                    __builder3.AddAttribute(46, "class", "tab-pane fade show active");
+                    __builder3.AddAttribute(47, "id", "pills-Generalidades");
+                    __builder3.AddAttribute(48, "role", "tabpanel");
+                    __builder3.AddAttribute(49, "aria-labelledby", "pills-home-tab");
+                    __builder3.OpenElement(50, "div");
+                    __builder3.OpenElement(51, "div");
+                    __builder3.AddAttribute(52, "class", "form-row");
+                    __builder3.OpenElement(53, "div");
+                    __builder3.AddAttribute(54, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(55, "<label class=\"e-float-text e-label-top\">Id:</label>\r\n                                                ");
+                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_1(__builder3, 56, 57, "CG_OPER", 58, 
 #nullable restore
 #line 49 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                            Disabled
@@ -451,7 +436,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 70, 
+                    , 59, 
 #nullable restore
 #line 49 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                               operario.CG_OPER
@@ -459,17 +444,15 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 71, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.CG_OPER = __value, operario.CG_OPER)), 72, () => operario.CG_OPER);
-                    __builder3.AddMarkupContent(73, "\r\n                                            ");
+                    , 60, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.CG_OPER = __value, operario.CG_OPER)), 61, () => operario.CG_OPER);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(74, "\r\n\r\n                                            ");
-                    __builder3.OpenElement(75, "div");
-                    __builder3.AddAttribute(76, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(77, "\r\n                                                ");
-                    __builder3.AddMarkupContent(78, "<label class=\"e-float-text e-label-top\">Nombre:</label>\r\n                                                ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(79);
-                    __builder3.AddAttribute(80, "ID", "DES_OPER");
-                    __builder3.AddAttribute(81, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(62, "\r\n\r\n                                            ");
+                    __builder3.OpenElement(63, "div");
+                    __builder3.AddAttribute(64, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(65, "<label class=\"e-float-text e-label-top\">Nombre:</label>\r\n                                                ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(66);
+                    __builder3.AddAttribute(67, "ID", "DES_OPER");
+                    __builder3.AddAttribute(68, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 54 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                         operario.DES_OPER
@@ -478,22 +461,18 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(82, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.DES_OPER = __value, operario.DES_OPER))));
-                    __builder3.AddAttribute(83, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => operario.DES_OPER));
+                    __builder3.AddAttribute(69, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.DES_OPER = __value, operario.DES_OPER))));
+                    __builder3.AddAttribute(70, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => operario.DES_OPER));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(84, "\r\n                                            ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(85, "\r\n                                        ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(86, "\r\n\r\n                                        ");
-                    __builder3.OpenElement(87, "div");
-                    __builder3.AddAttribute(88, "class", "form-row");
-                    __builder3.AddMarkupContent(89, "\r\n                                            ");
-                    __builder3.OpenElement(90, "div");
-                    __builder3.AddAttribute(91, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(92, "\r\n                                                ");
-                    __builder3.AddMarkupContent(93, "<label class=\"e-float-text e-label-top\">Turno:</label>\r\n                                                ");
-                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_2(__builder3, 94, 95, "CG_TURNO", 96, 
+                    __builder3.AddMarkupContent(71, "\r\n\r\n                                        ");
+                    __builder3.OpenElement(72, "div");
+                    __builder3.AddAttribute(73, "class", "form-row");
+                    __builder3.OpenElement(74, "div");
+                    __builder3.AddAttribute(75, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(76, "<label class=\"e-float-text e-label-top\">Turno:</label>\r\n                                                ");
+                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_2(__builder3, 77, 78, "CG_TURNO", 79, 
 #nullable restore
 #line 61 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                operario.CG_TURNO
@@ -501,15 +480,13 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 97, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.CG_TURNO = __value, operario.CG_TURNO)), 98, () => operario.CG_TURNO);
-                    __builder3.AddMarkupContent(99, "\r\n                                            ");
+                    , 80, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.CG_TURNO = __value, operario.CG_TURNO)), 81, () => operario.CG_TURNO);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(100, "\r\n\r\n                                            ");
-                    __builder3.OpenElement(101, "div");
-                    __builder3.AddAttribute(102, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(103, "\r\n                                                ");
-                    __builder3.AddMarkupContent(104, "<label class=\"e-float-text e-label-top\">Rendimiento:</label>\r\n                                                ");
-                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_3(__builder3, 105, 106, "RENDIM", 107, 
+                    __builder3.AddMarkupContent(82, "\r\n\r\n                                            ");
+                    __builder3.OpenElement(83, "div");
+                    __builder3.AddAttribute(84, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(85, "<label class=\"e-float-text e-label-top\">Rendimiento:</label>\r\n                                                ");
+                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_3(__builder3, 86, 87, "RENDIM", 88, 
 #nullable restore
 #line 66 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                              operario.RENDIM
@@ -517,20 +494,16 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 108, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.RENDIM = __value, operario.RENDIM)), 109, () => operario.RENDIM);
-                    __builder3.AddMarkupContent(110, "\r\n                                            ");
+                    , 89, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.RENDIM = __value, operario.RENDIM)), 90, () => operario.RENDIM);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(111, "\r\n                                        ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(112, "\r\n\r\n                                        ");
-                    __builder3.OpenElement(113, "div");
-                    __builder3.AddAttribute(114, "class", "form-row");
-                    __builder3.AddMarkupContent(115, "\r\n                                            ");
-                    __builder3.OpenElement(116, "div");
-                    __builder3.AddAttribute(117, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(118, "\r\n                                                ");
-                    __builder3.AddMarkupContent(119, "<label class=\"e-float-text e-label-top\">Fecha Final:</label>\r\n                                                ");
-                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfDateTimePicker_4(__builder3, 120, 121, "FE_FINAL", 122, 
+                    __builder3.AddMarkupContent(91, "\r\n\r\n                                        ");
+                    __builder3.OpenElement(92, "div");
+                    __builder3.AddAttribute(93, "class", "form-row");
+                    __builder3.OpenElement(94, "div");
+                    __builder3.AddAttribute(95, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(96, "<label class=\"e-float-text e-label-top\">Fecha Final:</label>\r\n                                                ");
+                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfDateTimePicker_4(__builder3, 97, 98, "FE_FINAL", 99, 
 #nullable restore
 #line 73 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                operario.FE_FINAL
@@ -538,15 +511,13 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 123, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.FE_FINAL = __value, operario.FE_FINAL)), 124, () => operario.FE_FINAL);
-                    __builder3.AddMarkupContent(125, "\r\n                                            ");
+                    , 100, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.FE_FINAL = __value, operario.FE_FINAL)), 101, () => operario.FE_FINAL);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(126, "\r\n\r\n                                            ");
-                    __builder3.OpenElement(127, "div");
-                    __builder3.AddAttribute(128, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(129, "\r\n                                                ");
-                    __builder3.AddMarkupContent(130, "<label class=\"e-float-text e-label-top\">Horas finales:</label>\r\n                                                ");
-                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_5(__builder3, 131, 132, "HS_FINAL", 133, 
+                    __builder3.AddMarkupContent(102, "\r\n\r\n                                            ");
+                    __builder3.OpenElement(103, "div");
+                    __builder3.AddAttribute(104, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(105, "<label class=\"e-float-text e-label-top\">Horas finales:</label>\r\n                                                ");
+                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_5(__builder3, 106, 107, "HS_FINAL", 108, 
 #nullable restore
 #line 78 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                operario.HS_FINAL
@@ -554,23 +525,19 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 134, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.HS_FINAL = __value, operario.HS_FINAL)), 135, () => operario.HS_FINAL);
-                    __builder3.AddMarkupContent(136, "\r\n                                            ");
+                    , 109, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.HS_FINAL = __value, operario.HS_FINAL)), 110, () => operario.HS_FINAL);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(137, "\r\n                                        ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(138, "\r\n\r\n                                        ");
-                    __builder3.OpenElement(139, "div");
-                    __builder3.AddAttribute(140, "class", "form-row");
-                    __builder3.AddMarkupContent(141, "\r\n                                            ");
-                    __builder3.OpenElement(142, "div");
-                    __builder3.AddAttribute(143, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(144, "\r\n                                                ");
-                    __builder3.AddMarkupContent(145, "<label class=\"e-float-text e-label-top\">Categoria Operario:</label>\r\n                                                ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.DropDowns.SfDropDownList<string, CatOpe>>(146);
-                    __builder3.AddAttribute(147, "CssClass", "customClass");
-                    __builder3.AddAttribute(148, "ID", "CG_CATEOP");
-                    __builder3.AddAttribute(149, "DataSource", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Collections.Generic.IEnumerable<CatOpe>>(
+                    __builder3.AddMarkupContent(111, "\r\n\r\n                                        ");
+                    __builder3.OpenElement(112, "div");
+                    __builder3.AddAttribute(113, "class", "form-row");
+                    __builder3.OpenElement(114, "div");
+                    __builder3.AddAttribute(115, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(116, "<label class=\"e-float-text e-label-top\">Categoria Operario:</label>\r\n                                                ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.DropDowns.SfDropDownList<string, CatOpe>>(117);
+                    __builder3.AddAttribute(118, "CssClass", "customClass");
+                    __builder3.AddAttribute(119, "ID", "CG_CATEOP");
+                    __builder3.AddAttribute(120, "DataSource", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Collections.Generic.IEnumerable<CatOpe>>(
 #nullable restore
 #line 85 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                                                                                       categorias
@@ -579,7 +546,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(150, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<string>(
+                    __builder3.AddAttribute(121, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<string>(
 #nullable restore
 #line 85 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                                                     operario.CG_CATEOP
@@ -588,26 +555,22 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(151, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<string>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<string>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.CG_CATEOP = __value, operario.CG_CATEOP))));
-                    __builder3.AddAttribute(152, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<string>>>(() => operario.CG_CATEOP));
-                    __builder3.AddAttribute(153, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder4) => {
-                        __builder4.AddMarkupContent(154, "\r\n                                                    ");
-                        __builder4.OpenComponent<Syncfusion.Blazor.DropDowns.DropDownListFieldSettings>(155);
-                        __builder4.AddAttribute(156, "Value", "CG_CATEOP");
-                        __builder4.AddAttribute(157, "Text", "DES_CATEOP");
+                    __builder3.AddAttribute(122, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<string>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<string>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.CG_CATEOP = __value, operario.CG_CATEOP))));
+                    __builder3.AddAttribute(123, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<string>>>(() => operario.CG_CATEOP));
+                    __builder3.AddAttribute(124, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder4) => {
+                        __builder4.OpenComponent<Syncfusion.Blazor.DropDowns.DropDownListFieldSettings>(125);
+                        __builder4.AddAttribute(126, "Value", "CG_CATEOP");
+                        __builder4.AddAttribute(127, "Text", "DES_CATEOP");
                         __builder4.CloseComponent();
-                        __builder4.AddMarkupContent(158, "\r\n                                                ");
                     }
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(159, "\r\n                                            ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(160, "\r\n\r\n                                            ");
-                    __builder3.OpenElement(161, "div");
-                    __builder3.AddAttribute(162, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(163, "\r\n                                                ");
-                    __builder3.AddMarkupContent(164, "<label class=\"e-float-text e-label-top\">Valor por Hora:</label>\r\n                                                ");
-                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_6(__builder3, 165, 166, "VALOR_HORA", 167, 
+                    __builder3.AddMarkupContent(128, "\r\n\r\n                                            ");
+                    __builder3.OpenElement(129, "div");
+                    __builder3.AddAttribute(130, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(131, "<label class=\"e-float-text e-label-top\">Valor por Hora:</label>\r\n                                                ");
+                    __Blazor.SupplyChain.Pages.ABM.Operarios.OperarioPage.TypeInference.CreateSfNumericTextBox_6(__builder3, 132, 133, "VALOR_HORA", 134, 
 #nullable restore
 #line 92 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                  operario.VALOR_HORA
@@ -615,22 +578,18 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 168, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.VALOR_HORA = __value, operario.VALOR_HORA)), 169, () => operario.VALOR_HORA);
-                    __builder3.AddMarkupContent(170, "\r\n                                            ");
+                    , 135, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.VALOR_HORA = __value, operario.VALOR_HORA)), 136, () => operario.VALOR_HORA);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(171, "\r\n                                        ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(172, "\r\n                                        ");
-                    __builder3.OpenElement(173, "div");
-                    __builder3.AddAttribute(174, "class", "form-row");
-                    __builder3.AddMarkupContent(175, "\r\n                                            ");
-                    __builder3.OpenElement(176, "div");
-                    __builder3.AddAttribute(177, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(178, "\r\n                                                ");
-                    __builder3.AddMarkupContent(179, "<label class=\"e-float-text e-label-top\">Moneda:</label>\r\n                                                ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(180);
-                    __builder3.AddAttribute(181, "ID", "MONEDA");
-                    __builder3.AddAttribute(182, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(137, "\r\n                                        ");
+                    __builder3.OpenElement(138, "div");
+                    __builder3.AddAttribute(139, "class", "form-row");
+                    __builder3.OpenElement(140, "div");
+                    __builder3.AddAttribute(141, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(142, "<label class=\"e-float-text e-label-top\">Moneda:</label>\r\n                                                ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(143);
+                    __builder3.AddAttribute(144, "ID", "MONEDA");
+                    __builder3.AddAttribute(145, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 98 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                       operario.MONEDA
@@ -639,21 +598,19 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(183, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.MONEDA = __value, operario.MONEDA))));
-                    __builder3.AddAttribute(184, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => operario.MONEDA));
+                    __builder3.AddAttribute(146, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.MONEDA = __value, operario.MONEDA))));
+                    __builder3.AddAttribute(147, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => operario.MONEDA));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(185, "\r\n                                            ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(186, "\r\n                                            \r\n                                            ");
-                    __builder3.OpenElement(187, "div");
-                    __builder3.AddAttribute(188, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(189, "\r\n                                                ");
-                    __builder3.AddMarkupContent(190, "<label class=\"e-float-text e-label-top\">Activo:</label>\r\n                                                ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.DropDowns.SfDropDownList<bool, SIoNO>>(191);
-                    __builder3.AddAttribute(192, "CssClass", "customClass");
-                    __builder3.AddAttribute(193, "ID", "ACTIVO");
-                    __builder3.AddAttribute(194, "Placeholder", "Usuario Activo?");
-                    __builder3.AddAttribute(195, "DataSource", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Collections.Generic.IEnumerable<SIoNO>>(
+                    __builder3.AddMarkupContent(148, "\r\n                                            \r\n                                            ");
+                    __builder3.OpenElement(149, "div");
+                    __builder3.AddAttribute(150, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(151, "<label class=\"e-float-text e-label-top\">Activo:</label>\r\n                                                ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.DropDowns.SfDropDownList<bool, SIoNO>>(152);
+                    __builder3.AddAttribute(153, "CssClass", "customClass");
+                    __builder3.AddAttribute(154, "ID", "ACTIVO");
+                    __builder3.AddAttribute(155, "Placeholder", "Usuario Activo?");
+                    __builder3.AddAttribute(156, "DataSource", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Collections.Generic.IEnumerable<SIoNO>>(
 #nullable restore
 #line 103 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                                                                                                            SIoNOData
@@ -662,7 +619,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(196, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<bool>(
+                    __builder3.AddAttribute(157, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<bool>(
 #nullable restore
 #line 103 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                                 operario.ACTIVO
@@ -671,39 +628,29 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(197, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<bool>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<bool>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.ACTIVO = __value, operario.ACTIVO))));
-                    __builder3.AddAttribute(198, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<bool>>>(() => operario.ACTIVO));
-                    __builder3.AddAttribute(199, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder4) => {
-                        __builder4.AddMarkupContent(200, "\r\n                                                    ");
-                        __builder4.OpenComponent<Syncfusion.Blazor.DropDowns.DropDownListFieldSettings>(201);
-                        __builder4.AddAttribute(202, "Value", "Valor");
-                        __builder4.AddAttribute(203, "Text", "Texto");
+                    __builder3.AddAttribute(158, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<bool>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<bool>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => operario.ACTIVO = __value, operario.ACTIVO))));
+                    __builder3.AddAttribute(159, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<bool>>>(() => operario.ACTIVO));
+                    __builder3.AddAttribute(160, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder4) => {
+                        __builder4.OpenComponent<Syncfusion.Blazor.DropDowns.DropDownListFieldSettings>(161);
+                        __builder4.AddAttribute(162, "Value", "Valor");
+                        __builder4.AddAttribute(163, "Text", "Texto");
                         __builder4.CloseComponent();
-                        __builder4.AddMarkupContent(204, "\r\n                                                ");
                     }
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(205, "\r\n                                            ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(206, "\r\n                                        ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(207, "\r\n                                    ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(208, "\r\n                                ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(209, "\r\n                            ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(210, "\r\n");
-                    __builder3.AddContent(211, "                    ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(212, "\r\n\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(213);
-                __builder2.AddAttribute(214, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
-                    __builder3.AddMarkupContent(215, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(216);
-                    __builder3.AddAttribute(217, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(164, "\r\n\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(165);
+                __builder2.AddAttribute(166, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(167);
+                    __builder3.AddAttribute(168, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 116 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.CG_OPER)
@@ -712,8 +659,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(218, "HeaderText", "Id");
-                    __builder3.AddAttribute(219, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(169, "HeaderText", "Id");
+                    __builder3.AddAttribute(170, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 116 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                            TextAlign.Left
@@ -722,7 +669,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(220, "IsPrimaryKey", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(171, "IsPrimaryKey", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 116 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                                          true
@@ -731,11 +678,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(221, "Width", "200");
+                    __builder3.AddAttribute(172, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(222, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(223);
-                    __builder3.AddAttribute(224, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(173, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(174);
+                    __builder3.AddAttribute(175, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 117 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.DES_OPER)
@@ -744,8 +691,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(225, "HeaderText", "Nombre");
-                    __builder3.AddAttribute(226, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(176, "HeaderText", "Nombre");
+                    __builder3.AddAttribute(177, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 117 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                 TextAlign.Left
@@ -754,11 +701,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(227, "Width", "200");
+                    __builder3.AddAttribute(178, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(228, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(229);
-                    __builder3.AddAttribute(230, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(179, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(180);
+                    __builder3.AddAttribute(181, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 118 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.CG_TURNO)
@@ -767,8 +714,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(231, "HeaderText", "Turno");
-                    __builder3.AddAttribute(232, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(182, "HeaderText", "Turno");
+                    __builder3.AddAttribute(183, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 118 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                TextAlign.Left
@@ -777,11 +724,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(233, "Width", "200");
+                    __builder3.AddAttribute(184, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(234, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(235);
-                    __builder3.AddAttribute(236, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(185, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(186);
+                    __builder3.AddAttribute(187, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 119 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.RENDIM)
@@ -790,8 +737,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(237, "HeaderText", "Rendimiento");
-                    __builder3.AddAttribute(238, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(188, "HeaderText", "Rendimiento");
+                    __builder3.AddAttribute(189, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 119 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                    TextAlign.Left
@@ -800,11 +747,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(239, "Width", "200");
+                    __builder3.AddAttribute(190, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(240, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(241);
-                    __builder3.AddAttribute(242, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(191, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(192);
+                    __builder3.AddAttribute(193, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 120 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.FE_FINAL)
@@ -813,8 +760,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(243, "HeaderText", "Fecha Final");
-                    __builder3.AddAttribute(244, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(194, "HeaderText", "Fecha Final");
+                    __builder3.AddAttribute(195, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 120 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                      TextAlign.Left
@@ -823,11 +770,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(245, "Width", "200");
+                    __builder3.AddAttribute(196, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(246, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(247);
-                    __builder3.AddAttribute(248, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(197, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(198);
+                    __builder3.AddAttribute(199, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 121 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.HS_FINAL)
@@ -836,8 +783,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(249, "HeaderText", "Horas Finales");
-                    __builder3.AddAttribute(250, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(200, "HeaderText", "Horas Finales");
+                    __builder3.AddAttribute(201, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 121 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                        TextAlign.Left
@@ -846,11 +793,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(251, "Width", "200");
+                    __builder3.AddAttribute(202, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(252, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(253);
-                    __builder3.AddAttribute(254, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(203, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(204);
+                    __builder3.AddAttribute(205, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 122 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.CG_CATEOP)
@@ -859,8 +806,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(255, "HeaderText", "Categoria Operario");
-                    __builder3.AddAttribute(256, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(206, "HeaderText", "Categoria Operario");
+                    __builder3.AddAttribute(207, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 122 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                              TextAlign.Left
@@ -869,11 +816,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(257, "Width", "200");
+                    __builder3.AddAttribute(208, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(258, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(259);
-                    __builder3.AddAttribute(260, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(209, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(210);
+                    __builder3.AddAttribute(211, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 123 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.VALOR_HORA)
@@ -882,8 +829,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(261, "HeaderText", "Valor por hora");
-                    __builder3.AddAttribute(262, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(212, "HeaderText", "Valor por hora");
+                    __builder3.AddAttribute(213, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 123 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                                           TextAlign.Left
@@ -892,11 +839,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(263, "Width", "200");
+                    __builder3.AddAttribute(214, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(264, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(265);
-                    __builder3.AddAttribute(266, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(215, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(216);
+                    __builder3.AddAttribute(217, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 124 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.MONEDA)
@@ -905,8 +852,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(267, "HeaderText", "Moneda");
-                    __builder3.AddAttribute(268, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(218, "HeaderText", "Moneda");
+                    __builder3.AddAttribute(219, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 124 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                               TextAlign.Left
@@ -915,11 +862,11 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(269, "Width", "200");
+                    __builder3.AddAttribute(220, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(270, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(271);
-                    __builder3.AddAttribute(272, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(221, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(222);
+                    __builder3.AddAttribute(223, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 125 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                        nameof(Operario.ACTIVO)
@@ -928,8 +875,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(273, "HeaderText", "Activo");
-                    __builder3.AddAttribute(274, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(224, "HeaderText", "Activo");
+                    __builder3.AddAttribute(225, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 125 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                                                                                               TextAlign.Left
@@ -938,15 +885,13 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(275, "Width", "200");
+                    __builder3.AddAttribute(226, "Width", "200");
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(276, "\r\n                ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(277, "\r\n            ");
             }
-            , 278, (__value) => {
+            , 227, (__value) => {
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Operarios\OperarioPage.razor"
                           Grid = __value;
@@ -956,14 +901,11 @@ using System.Net.Http.Json;
 #nullable disable
             }
             );
-            __builder.AddMarkupContent(279, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(280, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(281, "\r\n");
             __builder.CloseElement();
-            __builder.AddMarkupContent(282, "\r\n");
-            __builder.AddMarkupContent(283, @"<style>
+            __builder.AddMarkupContent(228, "\r\n");
+            __builder.AddMarkupContent(229, @"<style>
     .form-group.col-md-6 {
         width: 200px;
     }
@@ -980,7 +922,7 @@ using System.Net.Http.Json;
     }
 </style>
 ");
-            __builder.AddMarkupContent(284, @"<style>
+            __builder.AddMarkupContent(230, @"<style>
     #DropArea {
         padding: 50px 25px;
         margin: 30px auto;
@@ -1008,7 +950,7 @@ using System.Net.Http.Json;
 
 
 ");
-            __builder.AddMarkupContent(285, "<style>\r\n    #target {\r\n        height: 500px;\r\n    }\r\n</style>");
+            __builder.AddMarkupContent(231, "<style>\r\n    #target {\r\n        height: 500px;\r\n    }\r\n</style>");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }

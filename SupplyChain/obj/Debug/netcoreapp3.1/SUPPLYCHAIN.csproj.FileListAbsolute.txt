@@ -1,6 +1,5 @@
 E:\SupplyChain\SUPPLYCHAIN\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\SupplyChain\SUPPLYCHAIN\bin\Debug\netcoreapp3.1\appsettings.json
-E:\SupplyChain\SUPPLYCHAIN\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 E:\SupplyChain\SUPPLYCHAIN\bin\Debug\netcoreapp3.1\SupplyChain.StaticWebAssets.xml
 E:\SupplyChain\SUPPLYCHAIN\bin\Debug\netcoreapp3.1\SupplyChain.exe
 E:\SupplyChain\SUPPLYCHAIN\bin\Debug\netcoreapp3.1\SupplyChain.deps.json
@@ -121,3 +120,5 @@ E:\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\ABM\TipoCeldas\Ti
 E:\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\ABM\TipoMats\TipoMatPage.razor.g.cs
 E:\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\ABM\TiposNoConfs\TiposNoConfPage.razor.g.cs
 E:\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\Razor\Pages\PCP\Pedidos Pendientes\PedidosPendientes.razor.g.cs
+E:\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\SupplyChain.RazorComponent.output.cache
+E:\SupplyChain\SUPPLYCHAIN\obj\Debug\netcoreapp3.1\scopedcss\bundle\SupplyChain.styles.css

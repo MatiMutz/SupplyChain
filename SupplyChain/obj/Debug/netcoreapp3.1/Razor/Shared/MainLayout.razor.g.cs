@@ -142,21 +142,17 @@ using Syncfusion.Blazor.Navigations;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "main");
-            __builder.AddMarkupContent(2, "\r\n    ");
-            __builder.OpenElement(3, "div");
-            __builder.AddAttribute(4, "class", "top-row px-4 fixed-top");
-            __builder.AddAttribute(5, "style", "width:100%;height:50px;position:fixed;justify-content: flex-start;\r\n                                                   background-image: linear-gradient(90deg, rgb(5, 39, 103) 0%, #3a0647 70%)");
-            __builder.AddMarkupContent(6, "\r\n        ");
-            __builder.OpenComponent<SupplyChain.Shared.NavMenu>(7);
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "top-row px-4 fixed-top");
+            __builder.AddAttribute(4, "style", "width:100%;height:50px;position:fixed;justify-content: flex-start;\r\n                                                   background-image: linear-gradient(90deg, rgb(5, 39, 103) 0%, #3a0647 70%)");
+            __builder.OpenComponent<SupplyChain.Shared.NavMenu>(5);
             __builder.CloseComponent();
-            __builder.AddMarkupContent(8, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(9, "\r\n\r\n    ");
-            __builder.OpenElement(10, "div");
-            __builder.AddAttribute(11, "class", "content px-4");
-            __builder.AddAttribute(12, "style", "margin-top:40px");
-            __builder.AddMarkupContent(13, "\r\n        ");
-            __builder.AddContent(14, 
+            __builder.AddMarkupContent(6, "\r\n\r\n    ");
+            __builder.OpenElement(7, "div");
+            __builder.AddAttribute(8, "class", "content px-4");
+            __builder.AddAttribute(9, "style", "margin-top:40px");
+            __builder.AddContent(10, 
 #nullable restore
 #line 25 "E:\SupplyChain\SUPPLYCHAIN\Shared\MainLayout.razor"
          Body
@@ -165,9 +161,7 @@ using Syncfusion.Blazor.Navigations;
 #line hidden
 #nullable disable
             );
-            __builder.AddMarkupContent(15, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(16, "\r\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998

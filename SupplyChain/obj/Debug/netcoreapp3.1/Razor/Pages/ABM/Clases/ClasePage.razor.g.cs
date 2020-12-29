@@ -191,14 +191,11 @@ using System.Net.Http.Json;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "col-lg-12 control-section");
-            __builder.AddMarkupContent(2, "\r\n    ");
-            __builder.OpenElement(3, "div");
-            __builder.AddAttribute(4, "class", "content-wrapper");
-            __builder.AddMarkupContent(5, "\r\n        ");
-            __builder.OpenElement(6, "div");
-            __builder.AddAttribute(7, "class", "row");
-            __builder.AddMarkupContent(8, "\r\n            ");
-            __Blazor.SupplyChain.Pages.ABM.Clases.ClasePage.TypeInference.CreateSfGrid_0(__builder, 9, 10, 
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "content-wrapper");
+            __builder.OpenElement(4, "div");
+            __builder.AddAttribute(5, "class", "row");
+            __Blazor.SupplyChain.Pages.ABM.Clases.ClasePage.TypeInference.CreateSfGrid_0(__builder, 6, 7, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                      true
@@ -206,7 +203,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 11, 
+            , 8, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                               true
@@ -214,7 +211,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 12, 
+            , 9, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                     true
@@ -222,7 +219,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 13, 
+            , 10, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                                          true
@@ -230,7 +227,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 14, 
+            , 11, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                                                                   true
@@ -238,7 +235,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 15, 
+            , 12, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                              clases
@@ -246,7 +243,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 16, 
+            , 13, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                        true
@@ -254,7 +251,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 17, 
+            , 14, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                                   true
@@ -262,7 +259,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 18, 
+            , 15, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                                                        true
@@ -270,7 +267,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 19, 
+            , 16, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                   true
@@ -278,7 +275,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 20, 
+            , 17, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                      true
@@ -286,7 +283,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 21, 
+            , 18, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                            true
@@ -294,7 +291,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 22, 
+            , 19, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                            Toolbaritems
@@ -302,10 +299,9 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 23, (__builder2) => {
-                __builder2.AddMarkupContent(24, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(25);
-                __builder2.AddAttribute(26, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
+            , 20, (__builder2) => {
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(21);
+                __builder2.AddAttribute(22, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
 #nullable restore
 #line 30 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                              Syncfusion.Blazor.Grids.SelectionType.Multiple
@@ -315,9 +311,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(27, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<Clase>>(28);
-                __builder2.AddAttribute(29, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
+                __builder2.AddMarkupContent(23, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<Clase>>(24);
+                __builder2.AddAttribute(25, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                              ClickHandler
@@ -326,7 +322,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 )));
-                __builder2.AddAttribute(30, "OnActionBegin", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Grids.ActionEventArgs<Clase>>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Grids.ActionEventArgs<Clase>>(this, 
+                __builder2.AddAttribute(26, "OnActionBegin", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Grids.ActionEventArgs<Clase>>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Grids.ActionEventArgs<Clase>>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                           ActionBegin
@@ -336,9 +332,9 @@ using System.Net.Http.Json;
 #nullable disable
                 )));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(31, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(32);
-                __builder2.AddAttribute(33, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
+                __builder2.AddMarkupContent(27, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(28);
+                __builder2.AddAttribute(29, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
 #nullable restore
 #line 32 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                            Syncfusion.Blazor.Grids.FilterType.CheckBox
@@ -348,9 +344,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(34, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(35);
-                __builder2.AddAttribute(36, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(30, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(31);
+                __builder2.AddAttribute(32, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 33 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                       true
@@ -360,9 +356,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(37, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEditSettings>(38);
-                __builder2.AddAttribute(39, "AllowAdding", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(33, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEditSettings>(34);
+                __builder2.AddAttribute(35, "AllowAdding", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                true
@@ -371,7 +367,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(40, "AllowEditing", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(36, "AllowEditing", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                    true
@@ -380,7 +376,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(41, "AllowDeleting", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(37, "AllowDeleting", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                         true
@@ -389,7 +385,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(42, "Mode", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.EditMode>(
+                __builder2.AddAttribute(38, "Mode", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.EditMode>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                                      EditMode.Dialog
@@ -398,8 +394,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(43, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
-                    __builder3.AddMarkupContent(44, "\r\n");
+                __builder2.AddAttribute(39, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
 #nullable restore
 #line 36 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                           
@@ -408,17 +403,13 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    __builder3.AddContent(45, "                            ");
-                    __builder3.OpenElement(46, "div");
-                    __builder3.AddMarkupContent(47, "\r\n                                ");
-                    __builder3.OpenElement(48, "div");
-                    __builder3.AddAttribute(49, "class", "form-row");
-                    __builder3.AddMarkupContent(50, "\r\n                                    ");
-                    __builder3.OpenElement(51, "div");
-                    __builder3.AddAttribute(52, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(53, "\r\n                                        ");
-                    __builder3.AddMarkupContent(54, "<label class=\"e-float-text e-label-top\">Código clase:</label>\r\n                                        ");
-                    __Blazor.SupplyChain.Pages.ABM.Clases.ClasePage.TypeInference.CreateSfNumericTextBox_1(__builder3, 55, 56, "CG_CLASE", 57, 
+                    __builder3.OpenElement(40, "div");
+                    __builder3.OpenElement(41, "div");
+                    __builder3.AddAttribute(42, "class", "form-row");
+                    __builder3.OpenElement(43, "div");
+                    __builder3.AddAttribute(44, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(45, "<label class=\"e-float-text e-label-top\">Código clase:</label>\r\n                                        ");
+                    __Blazor.SupplyChain.Pages.ABM.Clases.ClasePage.TypeInference.CreateSfNumericTextBox_1(__builder3, 46, 47, "CG_CLASE", 48, 
 #nullable restore
 #line 42 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                                                   Disabled
@@ -426,7 +417,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 58, 
+                    , 49, 
 #nullable restore
 #line 42 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                        clase.CG_CLASE
@@ -434,17 +425,15 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 59, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => clase.CG_CLASE = __value, clase.CG_CLASE)), 60, () => clase.CG_CLASE);
-                    __builder3.AddMarkupContent(61, "\r\n                                    ");
+                    , 50, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => clase.CG_CLASE = __value, clase.CG_CLASE)), 51, () => clase.CG_CLASE);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(62, "\r\n\r\n                                    ");
-                    __builder3.OpenElement(63, "div");
-                    __builder3.AddAttribute(64, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(65, "\r\n                                        ");
-                    __builder3.AddMarkupContent(66, "<label class=\"e-float-text e-label-top\">Descripción:</label>\r\n                                        ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(67);
-                    __builder3.AddAttribute(68, "ID", "DES_CLAS");
-                    __builder3.AddAttribute(69, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(52, "\r\n\r\n                                    ");
+                    __builder3.OpenElement(53, "div");
+                    __builder3.AddAttribute(54, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(55, "<label class=\"e-float-text e-label-top\">Descripción:</label>\r\n                                        ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(56);
+                    __builder3.AddAttribute(57, "ID", "DES_CLAS");
+                    __builder3.AddAttribute(58, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 47 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                 clase.DES_CLASE
@@ -453,26 +442,20 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(70, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => clase.DES_CLASE = __value, clase.DES_CLASE))));
-                    __builder3.AddAttribute(71, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => clase.DES_CLASE));
+                    __builder3.AddAttribute(59, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => clase.DES_CLASE = __value, clase.DES_CLASE))));
+                    __builder3.AddAttribute(60, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => clase.DES_CLASE));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(72, "\r\n                                    ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(73, "\r\n                                ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(74, "\r\n                            ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(75, "\r\n");
-                    __builder3.AddContent(76, "                    ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(77, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(78);
-                __builder2.AddAttribute(79, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
-                    __builder3.AddMarkupContent(80, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(81);
-                    __builder3.AddAttribute(82, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(61, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(62);
+                __builder2.AddAttribute(63, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(64);
+                    __builder3.AddAttribute(65, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 55 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                        nameof(Clase.CG_CLASE)
@@ -481,8 +464,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(83, "HeaderText", "Id");
-                    __builder3.AddAttribute(84, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(66, "HeaderText", "Id");
+                    __builder3.AddAttribute(67, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 55 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                          TextAlign.Left
@@ -491,7 +474,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(85, "IsPrimaryKey", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(68, "IsPrimaryKey", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 55 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                                                        true
@@ -501,9 +484,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(86, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(87);
-                    __builder3.AddAttribute(88, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(69, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(70);
+                    __builder3.AddAttribute(71, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 56 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                        nameof(Clase.DES_CLASE)
@@ -512,8 +495,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(89, "HeaderText", "Tipo");
-                    __builder3.AddAttribute(90, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(72, "HeaderText", "Tipo");
+                    __builder3.AddAttribute(73, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 56 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                                                                                             TextAlign.Left
@@ -523,13 +506,11 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(91, "\r\n                ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(92, "\r\n            ");
             }
-            , 93, (__value) => {
+            , 74, (__value) => {
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\Clases\ClasePage.razor"
                           Grid = __value;
@@ -539,14 +520,11 @@ using System.Net.Http.Json;
 #nullable disable
             }
             );
-            __builder.AddMarkupContent(94, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(95, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(96, "\r\n");
             __builder.CloseElement();
-            __builder.AddMarkupContent(97, "\r\n");
-            __builder.AddMarkupContent(98, @"<style>
+            __builder.AddMarkupContent(75, "\r\n");
+            __builder.AddMarkupContent(76, @"<style>
     .form-group.col-md-6 {
         width: 200px;
     }

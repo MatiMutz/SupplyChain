@@ -191,14 +191,11 @@ using System.Net.Http.Json;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "col-lg-12 control-section");
-            __builder.AddMarkupContent(2, "\r\n    ");
-            __builder.OpenElement(3, "div");
-            __builder.AddAttribute(4, "class", "content-wrapper");
-            __builder.AddMarkupContent(5, "\r\n        ");
-            __builder.OpenElement(6, "div");
-            __builder.AddAttribute(7, "class", "row");
-            __builder.AddMarkupContent(8, "\r\n            ");
-            __Blazor.SupplyChain.Pages.ABM.TipoMats.TipoMatPage.TypeInference.CreateSfGrid_0(__builder, 9, 10, 
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "content-wrapper");
+            __builder.OpenElement(4, "div");
+            __builder.AddAttribute(5, "class", "row");
+            __Blazor.SupplyChain.Pages.ABM.TipoMats.TipoMatPage.TypeInference.CreateSfGrid_0(__builder, 6, 7, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                      true
@@ -206,7 +203,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 11, 
+            , 8, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                               true
@@ -214,7 +211,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 12, 
+            , 9, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                     true
@@ -222,7 +219,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 13, 
+            , 10, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                                          true
@@ -230,7 +227,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 14, 
+            , 11, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                                                                   true
@@ -238,7 +235,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 15, 
+            , 12, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                              tipomats
@@ -246,7 +243,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 16, 
+            , 13, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                          true
@@ -254,7 +251,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 17, 
+            , 14, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                                     true
@@ -262,7 +259,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 18, 
+            , 15, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                                                          true
@@ -270,7 +267,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 19, 
+            , 16, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                   true
@@ -278,7 +275,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 20, 
+            , 17, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                      true
@@ -286,7 +283,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 21, 
+            , 18, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                            true
@@ -294,7 +291,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 22, 
+            , 19, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                            Toolbaritems
@@ -302,10 +299,9 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 23, (__builder2) => {
-                __builder2.AddMarkupContent(24, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(25);
-                __builder2.AddAttribute(26, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
+            , 20, (__builder2) => {
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(21);
+                __builder2.AddAttribute(22, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
 #nullable restore
 #line 30 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                              Syncfusion.Blazor.Grids.SelectionType.Multiple
@@ -315,9 +311,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(27, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<TipoMat>>(28);
-                __builder2.AddAttribute(29, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
+                __builder2.AddMarkupContent(23, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<TipoMat>>(24);
+                __builder2.AddAttribute(25, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                              ClickHandler
@@ -326,7 +322,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 )));
-                __builder2.AddAttribute(30, "OnActionBegin", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Grids.ActionEventArgs<TipoMat>>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Grids.ActionEventArgs<TipoMat>>(this, 
+                __builder2.AddAttribute(26, "OnActionBegin", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Grids.ActionEventArgs<TipoMat>>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Grids.ActionEventArgs<TipoMat>>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                           ActionBegin
@@ -336,9 +332,9 @@ using System.Net.Http.Json;
 #nullable disable
                 )));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(31, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(32);
-                __builder2.AddAttribute(33, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
+                __builder2.AddMarkupContent(27, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(28);
+                __builder2.AddAttribute(29, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
 #nullable restore
 #line 32 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                            Syncfusion.Blazor.Grids.FilterType.CheckBox
@@ -348,9 +344,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(34, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(35);
-                __builder2.AddAttribute(36, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(30, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(31);
+                __builder2.AddAttribute(32, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 33 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                       true
@@ -360,9 +356,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(37, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEditSettings>(38);
-                __builder2.AddAttribute(39, "AllowAdding", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(33, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEditSettings>(34);
+                __builder2.AddAttribute(35, "AllowAdding", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                true
@@ -371,7 +367,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(40, "AllowEditing", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(36, "AllowEditing", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                    true
@@ -380,7 +376,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(41, "AllowDeleting", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(37, "AllowDeleting", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                         true
@@ -389,7 +385,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(42, "Mode", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.EditMode>(
+                __builder2.AddAttribute(38, "Mode", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.EditMode>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                                      EditMode.Dialog
@@ -398,8 +394,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(43, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
-                    __builder3.AddMarkupContent(44, "\r\n");
+                __builder2.AddAttribute(39, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
 #nullable restore
 #line 36 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                           
@@ -408,19 +403,15 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    __builder3.AddContent(45, "                            ");
-                    __builder3.OpenElement(46, "div");
-                    __builder3.AddMarkupContent(47, "\r\n                                ");
-                    __builder3.OpenElement(48, "div");
-                    __builder3.AddAttribute(49, "class", "form-row");
-                    __builder3.AddMarkupContent(50, "\r\n                                    ");
-                    __builder3.OpenElement(51, "div");
-                    __builder3.AddAttribute(52, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(53, "\r\n                                        ");
-                    __builder3.AddMarkupContent(54, "<label class=\"e-float-text e-label-top\">Tipo:</label>\r\n                                        ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(55);
-                    __builder3.AddAttribute(56, "ID", "TIPO");
-                    __builder3.AddAttribute(57, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.OpenElement(40, "div");
+                    __builder3.OpenElement(41, "div");
+                    __builder3.AddAttribute(42, "class", "form-row");
+                    __builder3.OpenElement(43, "div");
+                    __builder3.AddAttribute(44, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(45, "<label class=\"e-float-text e-label-top\">Tipo:</label>\r\n                                        ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(46);
+                    __builder3.AddAttribute(47, "ID", "TIPO");
+                    __builder3.AddAttribute(48, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 42 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                             tipmat.TIPO
@@ -429,26 +420,20 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(58, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => tipmat.TIPO = __value, tipmat.TIPO))));
-                    __builder3.AddAttribute(59, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => tipmat.TIPO));
+                    __builder3.AddAttribute(49, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => tipmat.TIPO = __value, tipmat.TIPO))));
+                    __builder3.AddAttribute(50, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => tipmat.TIPO));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(60, "\r\n                                    ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(61, "\r\n                                ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(62, "\r\n                            ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(63, "\r\n");
-                    __builder3.AddContent(64, "                    ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(65, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(66);
-                __builder2.AddAttribute(67, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
-                    __builder3.AddMarkupContent(68, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(69);
-                    __builder3.AddAttribute(70, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(51, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(52);
+                __builder2.AddAttribute(53, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(54);
+                    __builder3.AddAttribute(55, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 50 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                        nameof(TipoMat.TIPO)
@@ -457,8 +442,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(71, "HeaderText", "Tipo");
-                    __builder3.AddAttribute(72, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(56, "HeaderText", "Tipo");
+                    __builder3.AddAttribute(57, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 50 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                          TextAlign.Left
@@ -467,7 +452,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(73, "IsPrimaryKey", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(58, "IsPrimaryKey", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 50 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                                                                                                                        true
@@ -477,13 +462,11 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(74, "\r\n                ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(75, "\r\n            ");
             }
-            , 76, (__value) => {
+            , 59, (__value) => {
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\TipoMats\TipoMatPage.razor"
                           Grid = __value;
@@ -493,14 +476,11 @@ using System.Net.Http.Json;
 #nullable disable
             }
             );
-            __builder.AddMarkupContent(77, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(78, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(79, "\r\n");
             __builder.CloseElement();
-            __builder.AddMarkupContent(80, "\r\n");
-            __builder.AddMarkupContent(81, @"<style>
+            __builder.AddMarkupContent(60, "\r\n");
+            __builder.AddMarkupContent(61, @"<style>
     .form-group.col-md-6 {
         width: 200px;
     }

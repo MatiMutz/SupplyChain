@@ -142,14 +142,12 @@ using Syncfusion.Blazor.Navigations;
         {
             __builder.OpenElement(0, "ul");
             __builder.AddAttribute(1, "class", "nav flex-row");
-            __builder.AddMarkupContent(2, "\r\n    ");
-            __builder.OpenElement(3, "li");
-            __builder.AddAttribute(4, "class", "nav-item");
-            __builder.AddMarkupContent(5, "\r\n        ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(6);
-            __builder.AddAttribute(7, "class", "nav-link");
-            __builder.AddAttribute(8, "href", "");
-            __builder.AddAttribute(9, "Match", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.Routing.NavLinkMatch>(
+            __builder.OpenElement(2, "li");
+            __builder.AddAttribute(3, "class", "nav-item");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(4);
+            __builder.AddAttribute(5, "class", "nav-link");
+            __builder.AddAttribute(6, "href", "");
+            __builder.AddAttribute(7, "Match", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.Routing.NavLinkMatch>(
 #nullable restore
 #line 46 "E:\SupplyChain\SUPPLYCHAIN\Shared\NavMenu.razor"
                                                  NavLinkMatch.All
@@ -158,140 +156,120 @@ using Syncfusion.Blazor.Navigations;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(10, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(11, "\r\n            <span aria-hidden=\"true\"></span>Home\r\n        ");
+            __builder.AddAttribute(8, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(9, "<span aria-hidden=\"true\"></span>Home\r\n        ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(12, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(13, "\r\n    ");
-            __builder.OpenElement(14, "li");
-            __builder.AddAttribute(15, "class", "nav-item");
-            __builder.AddMarkupContent(16, "\r\n        ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(17);
-            __builder.AddAttribute(18, "class", "nav-link");
-            __builder.AddAttribute(19, "href", "sc/PedPend/list");
-            __builder.AddAttribute(20, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(21, "\r\n            <span aria-hidden=\"true\"></span>Pendientes de Entrega\r\n        ");
+            __builder.AddMarkupContent(10, "\r\n    ");
+            __builder.OpenElement(11, "li");
+            __builder.AddAttribute(12, "class", "nav-item");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(13);
+            __builder.AddAttribute(14, "class", "nav-link");
+            __builder.AddAttribute(15, "href", "sc/PedPend/list");
+            __builder.AddAttribute(16, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(17, "<span aria-hidden=\"true\"></span>Pendientes de Entrega\r\n        ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(22, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(23, "\r\n    ");
-            __builder.OpenElement(24, "li");
-            __builder.AddAttribute(25, "class", "nav-item");
-            __builder.AddMarkupContent(26, "\r\n        ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(27);
-            __builder.AddAttribute(28, "class", "nav-link");
-            __builder.AddAttribute(29, "href", "sc/cateope/list");
-            __builder.AddAttribute(30, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(31, "\r\n            <span aria-hidden=\"true\"></span>Categoria de Operarios\r\n        ");
+            __builder.AddMarkupContent(18, "\r\n    ");
+            __builder.OpenElement(19, "li");
+            __builder.AddAttribute(20, "class", "nav-item");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(21);
+            __builder.AddAttribute(22, "class", "nav-link");
+            __builder.AddAttribute(23, "href", "sc/cateope/list");
+            __builder.AddAttribute(24, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(25, "<span aria-hidden=\"true\"></span>Categoria de Operarios\r\n        ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(32, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(33, "\r\n    ");
-            __builder.OpenElement(34, "li");
-            __builder.AddAttribute(35, "class", "nav-item");
-            __builder.AddMarkupContent(36, "\r\n        ");
+            __builder.AddMarkupContent(26, "\r\n    ");
+            __builder.OpenElement(27, "li");
+            __builder.AddAttribute(28, "class", "nav-item");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(29);
+            __builder.AddAttribute(30, "class", "nav-link");
+            __builder.AddAttribute(31, "href", "sc/Clase/list");
+            __builder.AddAttribute(32, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(33, "<span aria-hidden=\"true\"></span>Clase\r\n        ");
+            }
+            ));
+            __builder.CloseComponent();
+            __builder.CloseElement();
+            __builder.AddMarkupContent(34, "\r\n    ");
+            __builder.OpenElement(35, "li");
+            __builder.AddAttribute(36, "class", "nav-item");
             __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(37);
             __builder.AddAttribute(38, "class", "nav-link");
-            __builder.AddAttribute(39, "href", "sc/Clase/list");
+            __builder.AddAttribute(39, "href", "sc/Linea/list");
             __builder.AddAttribute(40, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(41, "\r\n            <span aria-hidden=\"true\"></span>Clase\r\n        ");
+                __builder2.AddMarkupContent(41, "<span aria-hidden=\"true\"></span>Linea\r\n        ");
             }
             ));
             __builder.CloseComponent();
+            __builder.CloseElement();
             __builder.AddMarkupContent(42, "\r\n    ");
-            __builder.CloseElement();
-            __builder.AddMarkupContent(43, "\r\n    ");
-            __builder.OpenElement(44, "li");
-            __builder.AddAttribute(45, "class", "nav-item");
-            __builder.AddMarkupContent(46, "\r\n        ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(47);
-            __builder.AddAttribute(48, "class", "nav-link");
-            __builder.AddAttribute(49, "href", "sc/Linea/list");
-            __builder.AddAttribute(50, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(51, "\r\n            <span aria-hidden=\"true\"></span>Linea\r\n        ");
+            __builder.OpenElement(43, "li");
+            __builder.AddAttribute(44, "class", "nav-item");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(45);
+            __builder.AddAttribute(46, "class", "nav-link");
+            __builder.AddAttribute(47, "href", "sc/Operario/list");
+            __builder.AddAttribute(48, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(49, "<span aria-hidden=\"true\"></span>Operario\r\n        ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(52, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(53, "\r\n    ");
-            __builder.OpenElement(54, "li");
-            __builder.AddAttribute(55, "class", "nav-item");
-            __builder.AddMarkupContent(56, "\r\n        ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(57);
-            __builder.AddAttribute(58, "class", "nav-link");
-            __builder.AddAttribute(59, "href", "sc/Operario/list");
-            __builder.AddAttribute(60, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(61, "\r\n            <span aria-hidden=\"true\"></span>Operario\r\n        ");
+            __builder.AddMarkupContent(50, "\r\n    ");
+            __builder.OpenElement(51, "li");
+            __builder.AddAttribute(52, "class", "nav-item");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(53);
+            __builder.AddAttribute(54, "class", "nav-link");
+            __builder.AddAttribute(55, "href", "sc/Scrap/list");
+            __builder.AddAttribute(56, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(57, "<span aria-hidden=\"true\"></span>Scrap\r\n        ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(62, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(63, "\r\n    ");
-            __builder.OpenElement(64, "li");
-            __builder.AddAttribute(65, "class", "nav-item");
-            __builder.AddMarkupContent(66, "\r\n        ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(67);
-            __builder.AddAttribute(68, "class", "nav-link");
-            __builder.AddAttribute(69, "href", "sc/Scrap/list");
-            __builder.AddAttribute(70, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(71, "\r\n            <span aria-hidden=\"true\"></span>Scrap\r\n        ");
+            __builder.AddMarkupContent(58, "\r\n    ");
+            __builder.OpenElement(59, "li");
+            __builder.AddAttribute(60, "class", "nav-item");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(61);
+            __builder.AddAttribute(62, "class", "nav-link");
+            __builder.AddAttribute(63, "href", "sc/tipoarea/list");
+            __builder.AddAttribute(64, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(65, "<span aria-hidden=\"true\"></span>Tipos de Area\r\n        ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(72, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(73, "\r\n    ");
-            __builder.OpenElement(74, "li");
-            __builder.AddAttribute(75, "class", "nav-item");
-            __builder.AddMarkupContent(76, "\r\n        ");
+            __builder.AddMarkupContent(66, "\r\n    ");
+            __builder.OpenElement(67, "li");
+            __builder.AddAttribute(68, "class", "nav-item");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(69);
+            __builder.AddAttribute(70, "class", "nav-link");
+            __builder.AddAttribute(71, "href", "sc/tipoCelda/list");
+            __builder.AddAttribute(72, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(73, "<span aria-hidden=\"true\"></span>Tipos de Celda\r\n        ");
+            }
+            ));
+            __builder.CloseComponent();
+            __builder.CloseElement();
+            __builder.AddMarkupContent(74, "\r\n    ");
+            __builder.OpenElement(75, "li");
+            __builder.AddAttribute(76, "class", "nav-item");
             __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(77);
             __builder.AddAttribute(78, "class", "nav-link");
-            __builder.AddAttribute(79, "href", "sc/tipoarea/list");
+            __builder.AddAttribute(79, "href", "sc/tiposnoconf/list");
             __builder.AddAttribute(80, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(81, "\r\n            <span aria-hidden=\"true\"></span>Tipos de Area\r\n        ");
+                __builder2.AddMarkupContent(81, "<span aria-hidden=\"true\"></span>Tipos no Conformes\r\n        ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(82, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(83, "\r\n    ");
-            __builder.OpenElement(84, "li");
-            __builder.AddAttribute(85, "class", "nav-item");
-            __builder.AddMarkupContent(86, "\r\n        ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(87);
-            __builder.AddAttribute(88, "class", "nav-link");
-            __builder.AddAttribute(89, "href", "sc/tipoCelda/list");
-            __builder.AddAttribute(90, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(91, "\r\n            <span aria-hidden=\"true\"></span>Tipos de Celda\r\n        ");
-            }
-            ));
-            __builder.CloseComponent();
-            __builder.AddMarkupContent(92, "\r\n    ");
-            __builder.CloseElement();
-            __builder.AddMarkupContent(93, "\r\n    ");
-            __builder.OpenElement(94, "li");
-            __builder.AddAttribute(95, "class", "nav-item");
-            __builder.AddMarkupContent(96, "\r\n        ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Routing.NavLink>(97);
-            __builder.AddAttribute(98, "class", "nav-link");
-            __builder.AddAttribute(99, "href", "sc/tiposnoconf/list");
-            __builder.AddAttribute(100, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(101, "\r\n            <span aria-hidden=\"true\"></span>Tipos no Conformes\r\n        ");
-            }
-            ));
-            __builder.CloseComponent();
-            __builder.AddMarkupContent(102, "\r\n    ");
-            __builder.CloseElement();
-            __builder.AddMarkupContent(103, "\r\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998

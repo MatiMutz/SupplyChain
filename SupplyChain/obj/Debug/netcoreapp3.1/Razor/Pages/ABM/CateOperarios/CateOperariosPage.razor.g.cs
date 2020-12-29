@@ -191,14 +191,11 @@ using System.Net.Http.Json;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "col-lg-12 control-section");
-            __builder.AddMarkupContent(2, "\r\n    ");
-            __builder.OpenElement(3, "div");
-            __builder.AddAttribute(4, "class", "content-wrapper");
-            __builder.AddMarkupContent(5, "\r\n        ");
-            __builder.OpenElement(6, "div");
-            __builder.AddAttribute(7, "class", "row");
-            __builder.AddMarkupContent(8, "\r\n            ");
-            __Blazor.SupplyChain.Pages.ABM.CateOperarios.CateOperariosPage.TypeInference.CreateSfGrid_0(__builder, 9, 10, 
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "content-wrapper");
+            __builder.OpenElement(4, "div");
+            __builder.AddAttribute(5, "class", "row");
+            __Blazor.SupplyChain.Pages.ABM.CateOperarios.CateOperariosPage.TypeInference.CreateSfGrid_0(__builder, 6, 7, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                      true
@@ -206,7 +203,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 11, 
+            , 8, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                               true
@@ -214,7 +211,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 12, 
+            , 9, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                     true
@@ -222,7 +219,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 13, 
+            , 10, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                          true
@@ -230,7 +227,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 14, 
+            , 11, 
 #nullable restore
 #line 27 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                                                   true
@@ -238,7 +235,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 15, 
+            , 12, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                              catopes
@@ -246,7 +243,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 16, 
+            , 13, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                         true
@@ -254,7 +251,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 17, 
+            , 14, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                    true
@@ -262,7 +259,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 18, 
+            , 15, 
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                                         true
@@ -270,7 +267,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 19, 
+            , 16, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                   true
@@ -278,7 +275,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 20, 
+            , 17, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                      true
@@ -286,7 +283,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 21, 
+            , 18, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                            true
@@ -294,7 +291,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 22, 
+            , 19, 
 #nullable restore
 #line 29 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                            Toolbaritems
@@ -302,10 +299,9 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-            , 23, (__builder2) => {
-                __builder2.AddMarkupContent(24, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(25);
-                __builder2.AddAttribute(26, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
+            , 20, (__builder2) => {
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridSelectionSettings>(21);
+                __builder2.AddAttribute(22, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.SelectionType>(
 #nullable restore
 #line 30 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                              Syncfusion.Blazor.Grids.SelectionType.Multiple
@@ -315,9 +311,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(27, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<CatOpe>>(28);
-                __builder2.AddAttribute(29, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
+                __builder2.AddMarkupContent(23, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEvents<CatOpe>>(24);
+                __builder2.AddAttribute(25, "OnToolbarClick", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Navigations.ClickEventArgs>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Navigations.ClickEventArgs>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                              ClickHandler
@@ -326,7 +322,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 )));
-                __builder2.AddAttribute(30, "OnActionBegin", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Grids.ActionEventArgs<CatOpe>>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Grids.ActionEventArgs<CatOpe>>(this, 
+                __builder2.AddAttribute(26, "OnActionBegin", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Grids.ActionEventArgs<CatOpe>>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Syncfusion.Blazor.Grids.ActionEventArgs<CatOpe>>(this, 
 #nullable restore
 #line 31 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                           ActionBegin
@@ -336,9 +332,9 @@ using System.Net.Http.Json;
 #nullable disable
                 )));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(31, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(32);
-                __builder2.AddAttribute(33, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
+                __builder2.AddMarkupContent(27, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridFilterSettings>(28);
+                __builder2.AddAttribute(29, "Type", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.FilterType>(
 #nullable restore
 #line 32 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                            Syncfusion.Blazor.Grids.FilterType.CheckBox
@@ -348,9 +344,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(34, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(35);
-                __builder2.AddAttribute(36, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(30, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridGroupSettings>(31);
+                __builder2.AddAttribute(32, "ShowGroupedColumn", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 33 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                       true
@@ -360,9 +356,9 @@ using System.Net.Http.Json;
 #nullable disable
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(37, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEditSettings>(38);
-                __builder2.AddAttribute(39, "AllowAdding", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddMarkupContent(33, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridEditSettings>(34);
+                __builder2.AddAttribute(35, "AllowAdding", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                true
@@ -371,7 +367,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(40, "AllowEditing", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(36, "AllowEditing", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                    true
@@ -380,7 +376,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(41, "AllowDeleting", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(37, "AllowDeleting", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                         true
@@ -389,7 +385,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(42, "Mode", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.EditMode>(
+                __builder2.AddAttribute(38, "Mode", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.EditMode>(
 #nullable restore
 #line 34 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                      EditMode.Dialog
@@ -398,8 +394,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(43, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
-                    __builder3.AddMarkupContent(44, "\r\n");
+                __builder2.AddAttribute(39, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
 #nullable restore
 #line 36 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                           
@@ -408,19 +403,15 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    __builder3.AddContent(45, "                            ");
-                    __builder3.OpenElement(46, "div");
-                    __builder3.AddMarkupContent(47, "\r\n                                ");
-                    __builder3.OpenElement(48, "div");
-                    __builder3.AddAttribute(49, "class", "form-row");
-                    __builder3.AddMarkupContent(50, "\r\n                                    ");
-                    __builder3.OpenElement(51, "div");
-                    __builder3.AddAttribute(52, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(53, "\r\n                                        ");
-                    __builder3.AddMarkupContent(54, "<label class=\"e-float-text e-label-top\">Código:</label>\r\n                                        ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(55);
-                    __builder3.AddAttribute(56, "ID", "CG_CATEOP");
-                    __builder3.AddAttribute(57, "Enabled", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.OpenElement(40, "div");
+                    __builder3.OpenElement(41, "div");
+                    __builder3.AddAttribute(42, "class", "form-row");
+                    __builder3.OpenElement(43, "div");
+                    __builder3.AddAttribute(44, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(45, "<label class=\"e-float-text e-label-top\">Código:</label>\r\n                                        ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(46);
+                    __builder3.AddAttribute(47, "ID", "CG_CATEOP");
+                    __builder3.AddAttribute(48, "Enabled", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 42 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                               Disabled
@@ -429,7 +420,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(58, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddAttribute(49, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 42 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                  catOpe.CG_CATEOP
@@ -438,19 +429,17 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(59, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => catOpe.CG_CATEOP = __value, catOpe.CG_CATEOP))));
-                    __builder3.AddAttribute(60, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => catOpe.CG_CATEOP));
+                    __builder3.AddAttribute(50, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => catOpe.CG_CATEOP = __value, catOpe.CG_CATEOP))));
+                    __builder3.AddAttribute(51, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => catOpe.CG_CATEOP));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(61, "\r\n                                    ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(62, "\r\n\r\n                                    ");
-                    __builder3.OpenElement(63, "div");
-                    __builder3.AddAttribute(64, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(65, "\r\n                                        ");
-                    __builder3.AddMarkupContent(66, "<label class=\"e-float-text e-label-top\">Categoria:</label>\r\n                                        ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(67);
-                    __builder3.AddAttribute(68, "ID", "DES_CATEOP");
-                    __builder3.AddAttribute(69, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(52, "\r\n\r\n                                    ");
+                    __builder3.OpenElement(53, "div");
+                    __builder3.AddAttribute(54, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(55, "<label class=\"e-float-text e-label-top\">Categoria:</label>\r\n                                        ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(56);
+                    __builder3.AddAttribute(57, "ID", "DES_CATEOP");
+                    __builder3.AddAttribute(58, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 47 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                   catOpe.DES_CATEOP
@@ -459,22 +448,18 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(70, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => catOpe.DES_CATEOP = __value, catOpe.DES_CATEOP))));
-                    __builder3.AddAttribute(71, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => catOpe.DES_CATEOP));
+                    __builder3.AddAttribute(59, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => catOpe.DES_CATEOP = __value, catOpe.DES_CATEOP))));
+                    __builder3.AddAttribute(60, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => catOpe.DES_CATEOP));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(72, "\r\n                                    ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(73, "\r\n                                ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(74, "\r\n\r\n                                ");
-                    __builder3.OpenElement(75, "div");
-                    __builder3.AddAttribute(76, "class", "form-row");
-                    __builder3.AddMarkupContent(77, "\r\n                                    ");
-                    __builder3.OpenElement(78, "div");
-                    __builder3.AddAttribute(79, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(80, "\r\n                                        ");
-                    __builder3.AddMarkupContent(81, "<label class=\"e-float-text e-label-top\">VALOR_HORA:</label>\r\n                                        ");
-                    __Blazor.SupplyChain.Pages.ABM.CateOperarios.CateOperariosPage.TypeInference.CreateSfNumericTextBox_1(__builder3, 82, 83, "VALOR_HORA", 84, 
+                    __builder3.AddMarkupContent(61, "\r\n\r\n                                ");
+                    __builder3.OpenElement(62, "div");
+                    __builder3.AddAttribute(63, "class", "form-row");
+                    __builder3.OpenElement(64, "div");
+                    __builder3.AddAttribute(65, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(66, "<label class=\"e-float-text e-label-top\">VALOR_HORA:</label>\r\n                                        ");
+                    __Blazor.SupplyChain.Pages.ABM.CateOperarios.CateOperariosPage.TypeInference.CreateSfNumericTextBox_1(__builder3, 67, 68, "VALOR_HORA", 69, 
 #nullable restore
 #line 54 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                          catOpe.VALOR_HORA
@@ -482,17 +467,15 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-                    , 85, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => catOpe.VALOR_HORA = __value, catOpe.VALOR_HORA)), 86, () => catOpe.VALOR_HORA);
-                    __builder3.AddMarkupContent(87, "\r\n                                    ");
+                    , 70, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => catOpe.VALOR_HORA = __value, catOpe.VALOR_HORA)), 71, () => catOpe.VALOR_HORA);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(88, "\r\n\r\n                                    ");
-                    __builder3.OpenElement(89, "div");
-                    __builder3.AddAttribute(90, "class", "form-group col-md-6");
-                    __builder3.AddMarkupContent(91, "\r\n                                        ");
-                    __builder3.AddMarkupContent(92, "<label class=\"e-float-text e-label-top\">MONEDA:</label>\r\n                                        ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(93);
-                    __builder3.AddAttribute(94, "ID", "MONEDA");
-                    __builder3.AddAttribute(95, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(72, "\r\n\r\n                                    ");
+                    __builder3.OpenElement(73, "div");
+                    __builder3.AddAttribute(74, "class", "form-group col-md-6");
+                    __builder3.AddMarkupContent(75, "<label class=\"e-float-text e-label-top\">MONEDA:</label>\r\n                                        ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Inputs.SfTextBox>(76);
+                    __builder3.AddAttribute(77, "ID", "MONEDA");
+                    __builder3.AddAttribute(78, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 59 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                               catOpe.MONEDA
@@ -501,26 +484,20 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(96, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => catOpe.MONEDA = __value, catOpe.MONEDA))));
-                    __builder3.AddAttribute(97, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => catOpe.MONEDA));
+                    __builder3.AddAttribute(79, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => catOpe.MONEDA = __value, catOpe.MONEDA))));
+                    __builder3.AddAttribute(80, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => catOpe.MONEDA));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(98, "\r\n                                    ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(99, "\r\n                                ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(100, "\r\n                            ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(101, "\r\n");
-                    __builder3.AddContent(102, "                    ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(103, "\r\n                ");
-                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(104);
-                __builder2.AddAttribute(105, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
-                    __builder3.AddMarkupContent(106, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(107);
-                    __builder3.AddAttribute(108, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(81, "\r\n                ");
+                __builder2.OpenComponent<Syncfusion.Blazor.Grids.GridColumns>(82);
+                __builder2.AddAttribute(83, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder3) => {
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(84);
+                    __builder3.AddAttribute(85, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 67 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                        nameof(CatOpe.CG_CATEOP)
@@ -529,8 +506,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(109, "HeaderText", "Codigo");
-                    __builder3.AddAttribute(110, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(86, "HeaderText", "Codigo");
+                    __builder3.AddAttribute(87, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 67 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                TextAlign.Left
@@ -539,7 +516,7 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(111, "IsPrimaryKey", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                    __builder3.AddAttribute(88, "IsPrimaryKey", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 67 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                                              true
@@ -549,9 +526,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(112, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(113);
-                    __builder3.AddAttribute(114, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(89, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(90);
+                    __builder3.AddAttribute(91, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 68 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                        nameof(CatOpe.DES_CATEOP)
@@ -560,8 +537,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(115, "HeaderText", "Categoría");
-                    __builder3.AddAttribute(116, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(92, "HeaderText", "Categoría");
+                    __builder3.AddAttribute(93, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 68 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                    TextAlign.Left
@@ -571,9 +548,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(117, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(118);
-                    __builder3.AddAttribute(119, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(94, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(95);
+                    __builder3.AddAttribute(96, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 69 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                        nameof(CatOpe.VALOR_HORA)
@@ -582,8 +559,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(120, "HeaderText", "Valor por hora");
-                    __builder3.AddAttribute(121, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(97, "HeaderText", "Valor por hora");
+                    __builder3.AddAttribute(98, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 69 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                                         TextAlign.Left
@@ -593,9 +570,9 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(122, "\r\n                    ");
-                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(123);
-                    __builder3.AddAttribute(124, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                    __builder3.AddMarkupContent(99, "\r\n                    ");
+                    __builder3.OpenComponent<Syncfusion.Blazor.Grids.GridColumn>(100);
+                    __builder3.AddAttribute(101, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 70 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                        nameof(CatOpe.MONEDA)
@@ -604,8 +581,8 @@ using System.Net.Http.Json;
 #line hidden
 #nullable disable
                     ));
-                    __builder3.AddAttribute(125, "HeaderText", "Moneda");
-                    __builder3.AddAttribute(126, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
+                    __builder3.AddAttribute(102, "HeaderText", "Moneda");
+                    __builder3.AddAttribute(103, "TextAlign", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Syncfusion.Blazor.Grids.TextAlign>(
 #nullable restore
 #line 70 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                                                                                             TextAlign.Left
@@ -615,13 +592,11 @@ using System.Net.Http.Json;
 #nullable disable
                     ));
                     __builder3.CloseComponent();
-                    __builder3.AddMarkupContent(127, "\r\n                ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(128, "\r\n            ");
             }
-            , 129, (__value) => {
+            , 104, (__value) => {
 #nullable restore
 #line 28 "E:\SupplyChain\SUPPLYCHAIN\Pages\ABM\CateOperarios\CateOperariosPage.razor"
                           Grid = __value;
@@ -631,14 +606,11 @@ using System.Net.Http.Json;
 #nullable disable
             }
             );
-            __builder.AddMarkupContent(130, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(131, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(132, "\r\n");
             __builder.CloseElement();
-            __builder.AddMarkupContent(133, "\r\n");
-            __builder.AddMarkupContent(134, @"<style>
+            __builder.AddMarkupContent(105, "\r\n");
+            __builder.AddMarkupContent(106, @"<style>
     .form-group.col-md-6 {
         width: 200px;
     }
