@@ -179,7 +179,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/sc/areas/list")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/sc/protarea/list")]
     public partial class ProTareaPage : SupplyChain.Pages.ProTareax.ProTareaxPageBase
     {
         #pragma warning disable 1998

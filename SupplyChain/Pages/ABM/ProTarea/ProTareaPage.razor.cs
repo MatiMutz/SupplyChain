@@ -36,7 +36,7 @@ namespace SupplyChain.Pages.ProTareax
 
         protected override async Task OnInitializedAsync()
         {
-            pts = await Http.GetFromJsonAsync<List<Protarea>>("api/ProTarea");
+            pts = await Http.GetFromJsonAsync<List<Protarea>>("api/Protarea");
 
             await base.OnInitializedAsync();
         }
@@ -63,11 +63,11 @@ namespace SupplyChain.Pages.ProTareax
                 if (!found)
                 {
                     args.Data.TAREAPROC = pts.Max(s => s.TAREAPROC) + 1;
-                    response = await Http.PostAsJsonAsync("api/ProTarea", args.Data);
+                    response = await Http.PostAsJsonAsync("api/Protarea", args.Data);
                 }
                 else
                 {
-                    response = await Http.PutAsJsonAsync($"api/ProTarea/{args.Data.TAREAPROC}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/Protarea/{args.Data.TAREAPROC}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -124,7 +124,7 @@ namespace SupplyChain.Pages.ProTareax
                          
                
 
-                            var response = await Http.PostAsJsonAsync("api/ProTarea", Nuevo);
+                            var response = await Http.PostAsJsonAsync("api/Protarea", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {

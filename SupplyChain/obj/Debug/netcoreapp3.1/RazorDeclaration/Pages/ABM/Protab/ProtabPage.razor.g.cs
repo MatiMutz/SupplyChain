@@ -186,7 +186,7 @@ using System.Net.Http.Json;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/sc/monedas/list")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/sc/protab/list")]
     public partial class ProtabPage : SupplyChain.Pages.Protabx.ProtabPageBase
     {
         #pragma warning disable 1998

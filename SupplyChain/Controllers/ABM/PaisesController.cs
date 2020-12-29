@@ -24,7 +24,14 @@ namespace SupplyChain
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pais>>> GetUnidades()
         {
-            return await _context.Pais.ToListAsync();
+            try
+            {
+                return await _context.Pais.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // GET: api/Areas/5

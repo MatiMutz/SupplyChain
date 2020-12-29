@@ -75,112 +75,112 @@ using Syncfusion.Blazor;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 2 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.Grids;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 3 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 4 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.Calendars;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 5 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.DropDowns;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 6 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.Inputs;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 7 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using System.Configuration;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 8 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using System.Data.SqlClient;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 9 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.Navigations;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 10 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.Popups;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 11 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.Buttons;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 12 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using Syncfusion.Blazor.BarcodeGenerator;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 13 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using System.Text.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 15 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 14 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using System.Linq;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 17 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 16 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using SupplyChain;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 18 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 17 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using SupplyChain.Extensions;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 19 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
+#line 18 "E:\Aerre\SupplyChain\SUPPLYCHAIN\Pages\ABM\Prods\ProdPage.razor"
 using System.Net.Http.Json;
 
 #line default

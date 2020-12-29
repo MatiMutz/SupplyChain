@@ -38,7 +38,7 @@ namespace SupplyChain.Pages.Paisex
 
         protected override async Task OnInitializedAsync()
         {
-            paises = await Http.GetFromJsonAsync<List<Pais>>("api/Paises");
+            paises = await Http.GetFromJsonAsync<List<Pais>>("api/Pais");
 
             await base.OnInitializedAsync();
         }
@@ -86,11 +86,11 @@ namespace SupplyChain.Pages.Paisex
                     
                     args.Data.Cg_Pais = paises.Max(s => s.Cg_Pais) + 1;
                   
-                    response = await Http.PostAsJsonAsync("api/Paises", args.Data);
+                    response = await Http.PostAsJsonAsync("api/Pais", args.Data);
                 }
                 else
                 {
-                    response = await Http.PutAsJsonAsync($"api/Paises/{args.Data.Cg_Pais}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/Pais/{args.Data.Cg_Pais}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -115,7 +115,7 @@ namespace SupplyChain.Pages.Paisex
                     if (isConfirmed)
                     {
                         //operarios.Remove(operarios.Find(m => m.CG_OPER == args.Data.CG_OPER));
-                        await Http.DeleteAsync($"api/Paises/{args.Data.Cg_Pais}");
+                        await Http.DeleteAsync($"api/Pais/{args.Data.Cg_Pais}");
                     }
                 }
             }
@@ -144,7 +144,7 @@ namespace SupplyChain.Pages.Paisex
                             Nuevo.Cuit = selectedRecord.Cuit;
 
 
-                            var response = await Http.PostAsJsonAsync("api/Paises", Nuevo);
+                            var response = await Http.PostAsJsonAsync("api/Pais", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {

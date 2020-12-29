@@ -36,7 +36,7 @@ namespace SupplyChain.Pages.Paradax
 
         protected override async Task OnInitializedAsync()
         {
-            paradas = await Http.GetFromJsonAsync<List<Paradas>>("api/Parada");
+            paradas = await Http.GetFromJsonAsync<List<Paradas>>("api/Paradas");
 
             await base.OnInitializedAsync();
         }
@@ -63,11 +63,11 @@ namespace SupplyChain.Pages.Paradax
                 if (!found)
                 {
                     args.Data.CP = paradas.Max(s => s.CP) + 1;
-                    response = await Http.PostAsJsonAsync("api/Parada", args.Data);
+                    response = await Http.PostAsJsonAsync("api/Paradas", args.Data);
                 }
                 else
                 {
-                    response = await Http.PutAsJsonAsync($"api/Parada/{args.Data.CP}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/Paradas/{args.Data.CP}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -92,7 +92,7 @@ namespace SupplyChain.Pages.Paradax
                     if (isConfirmed)
                     {
                         //servicios.Remove(servicios.Find(m => m.PEDIDO == args.Data.PEDIDO));
-                        await Http.DeleteAsync($"api/Parada/{args.Data.CP}");
+                        await Http.DeleteAsync($"api/Paradas/{args.Data.CP}");
                     }
                 }
             }
@@ -115,13 +115,10 @@ namespace SupplyChain.Pages.Paradax
                         {
                             Paradas Nuevo = new Paradas();
 
-                            Nuevo.CP = paradas.Max(s => s.CP) + 1;
                             Nuevo.DESCRIP = selectedRecord.DESCRIP;
                             Nuevo.CG_CIA = selectedRecord.CG_CIA;
-                         
-               
 
-                            var response = await Http.PostAsJsonAsync("api/Parada", Nuevo);
+                            var response = await Http.PostAsJsonAsync("api/Paradas", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {

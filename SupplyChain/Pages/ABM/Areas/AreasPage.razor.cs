@@ -38,7 +38,7 @@ namespace SupplyChain.Pages.Areas
 
         protected override async Task OnInitializedAsync()
         {
-            areas = await Http.GetFromJsonAsync<List<Area>>("api/Areas");
+            areas = await Http.GetFromJsonAsync<List<Area>>("api/Area");
 
             await base.OnInitializedAsync();
         }
@@ -87,11 +87,11 @@ namespace SupplyChain.Pages.Areas
 
                     args.Data.CG_CIA = 1;
                     args.Data.USUARIO = "User";
-                    response = await Http.PostAsJsonAsync("api/Areas", args.Data);
+                    response = await Http.PostAsJsonAsync("api/Area", args.Data);
                 }
                 else
                 {
-                    response = await Http.PutAsJsonAsync($"api/Areas/{args.Data.CG_AREA}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/Area/{args.Data.CG_AREA}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -147,7 +147,7 @@ namespace SupplyChain.Pages.Areas
                             Nuevo.CG_CIA = 1;
                             Nuevo.USUARIO = "User";
 
-                            var response = await Http.PostAsJsonAsync("api/Areas", Nuevo);
+                            var response = await Http.PostAsJsonAsync("api/Area", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {

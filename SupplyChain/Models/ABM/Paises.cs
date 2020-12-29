@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SupplyChain
 {
-    [Table("Pais")]
+    [Table("Paises")]
     public class Pais
     {
         [ColumnaGridViewAtributo (Name = "Codigo")]
