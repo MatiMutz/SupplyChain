@@ -59,14 +59,7 @@
                                                 <SfNumericTextBox ID="Codigo" @bind-Value="@(pt.OBSERVAC)" Enabled="@Disabled"></SfNumericTextBox>
 
                                             </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="e-float-text e-label-top">CG_CIA:</label>
-                                                <SfNumericTextBox ID="CG_CIA" @bind-Value="@(pt.CG_CIA)"></SfNumericTextBox>
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="e-float-text e-label-top">CG_CIA:</label>
-                                                <SfTextBox ID="CG_CIA" @bind-Value="@(pt.USUARIO)"></SfTextBox>
-                                            </div>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -78,8 +71,6 @@
                     <GridColumn Field=@nameof(Protarea.TAREAPROC) HeaderText="Tarea" TextAlign="TextAlign.Left" IsPrimaryKey="true" Width="200"></GridColumn>
                     <GridColumn Field=@nameof(Protarea.DESCRIP) HeaderText="Descripcion" TextAlign="TextAlign.Left" Width="200"></GridColumn>
                     <GridColumn Field=@nameof(Protarea.OBSERVAC) HeaderText="Observaciones" TextAlign="TextAlign.Left" Width="200"></GridColumn>
-                    <GridColumn Field=@nameof(Protarea.CG_CIA) HeaderText="CG_CIA" TextAlign="TextAlign.Left" Width="200"></GridColumn>
-                    <GridColumn Field=@nameof(Protarea.USUARIO) HeaderText="Usuario" TextAlign="TextAlign.Left" Width="200"></GridColumn>
                 </GridColumns>
             </SfGrid>
         </div>

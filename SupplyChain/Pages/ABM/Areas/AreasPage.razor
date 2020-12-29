@@ -59,17 +59,7 @@
                                                             <SfNumericTextBox ID="CG_PROVE" @bind-Value="@(arr.CG_PROVE)"></SfNumericTextBox>
                                                         </div>
                                                     </div>
-                                                    <div class="form-row">
-                                                        <div class="form-group col-md-6">
-                                                            <label class="e-float-text e-label-top">CG CIA:</label>
-                                                            <SfNumericTextBox ID="CG_CIA" @bind-Value="@(arr.CG_CIA)"></SfNumericTextBox>
-                                                        </div>
-
-                                                        <div class="form-group col-md-6">
-                                                            <label class="e-float-text e-label-top">Usuario:</label>
-                                                            <SfTextBox ID="USUARIO" @bind-Value="@(arr.USUARIO)"></SfTextBox>
-                                                        </div>
-                                                    </div>
+                                                  
                                                 </div>
                         }
                     </Template>
@@ -79,8 +69,6 @@
                     <GridColumn Field=@nameof(Area.DES_AREA) HeaderText="Categoría" TextAlign="TextAlign.Left"></GridColumn>
                     <GridColumn Field=@nameof(Area.CG_TIPOAREA) HeaderText="Tipo hora" TextAlign="TextAlign.Left"></GridColumn>
                     <GridColumn Field=@nameof(Area.CG_PROVE) HeaderText="Proveedor" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(Area.CG_CIA) HeaderText="CIA" TextAlign="TextAlign.Left"></GridColumn>
-                    <GridColumn Field=@nameof(Area.USUARIO) HeaderText="Usuario" TextAlign="TextAlign.Left"></GridColumn>
 
                 </GridColumns>
             </SfGrid>
