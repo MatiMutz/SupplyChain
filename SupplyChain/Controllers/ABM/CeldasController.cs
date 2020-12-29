@@ -22,14 +22,14 @@ namespace SupplyChain
 
         // GET: api/Areas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Celda>>> GetUnidades()
+        public async Task<ActionResult<IEnumerable<Celdas>>> GetUnidades()
         {
             return await _context.Celda.ToListAsync();
         }
 
         // GET: api/Areas/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Celda>> GetUnidad(string id)
+        public async Task<ActionResult<Celdas>> GetUnidad(string id)
         {
             var celda = await _context.Celda.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace SupplyChain
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUnidad(string id, Celda celda)
+        public async Task<IActionResult> PutUnidad(string id, Celdas celda)
         {
             if (id != celda.CG_CELDA)
             {
@@ -77,7 +77,7 @@ namespace SupplyChain
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Celda>> PostUnidad(Celda celda)
+        public async Task<ActionResult<Celdas>> PostUnidad(Celdas celda)
         {
             _context.Celda.Add(celda);
             try
@@ -101,7 +101,7 @@ namespace SupplyChain
 
         // DELETE: api/Unidades/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Celda>> DeleteUnidad(string id)
+        public async Task<ActionResult<Celdas>> DeleteUnidad(string id)
         {
             var celda = await _context.Celda.FindAsync(id);
             if (celda == null)

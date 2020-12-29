@@ -11,6 +11,8 @@ namespace SupplyChain
 		public int CG_TIPOCELDA { get; set; } = 0;
 		public string DES_TIPOCELDA { get; set; } = "";
 		public int CG_CIA { get; set; } = 0;
+
 		public string USUARIO { get; set; } = "";
+
 	}
 }

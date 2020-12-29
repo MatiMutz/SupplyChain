@@ -11,7 +11,7 @@ namespace SupplyChain
     {
         public DbSet<Area> Area { get; set; }
         public DbSet<CatOpe> CatOpe { get; set; }
-        public DbSet<Celda> Celda { get; set; }
+        public DbSet<Celdas> Celda { get; set; }
         public DbSet<Clase> Clase { get; set; }
         public DbSet<Deposito> Deposito { get; set; }
         public DbSet<Indic> Indic { get; set; }
@@ -26,6 +26,10 @@ namespace SupplyChain
         public DbSet<TipoCelda> TipoCelda { get; set; }
         public DbSet<TipoMat> TipoMat { get; set; }
         public DbSet<TiposNoConf> TiposNoConf { get; set; }
+        public DbSet<Protab> Protab { get; set; }
+        public DbSet<Protarea> Protarea { get; set; }
+
+        
         public DbSet<Turnos> Turnos { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }

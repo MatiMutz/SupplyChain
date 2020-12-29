@@ -15,6 +15,8 @@ namespace SupplyChain
         [ColumnaGridViewAtributo(Name = "Descripcion Scrap")]
         public string DES_SCRAP { get; set; } = "";
         public int CG_CIA { get; set; } = 0;
+
         public string USUARIO { get; set; } = "";
+
     }
 }
