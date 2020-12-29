@@ -11,8 +11,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SupplyChain.Client.HelperService;
-using SupplyChain.Server.DataAccess;
 using Syncfusion.Blazor;
 
 namespace SupplyChain
@@ -37,7 +35,6 @@ namespace SupplyChain
             services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true; });
 
             services.AddTransient<CustomHttpClient>();
-            services.AddSingleton<ToastService>();
             services.AddSyncfusionBlazor();
         }
 

@@ -77,7 +77,7 @@ using SupplyChain.Shared;
 #nullable disable
 #nullable restore
 #line 13 "E:\Aerre\SupplyChain\SUPPLYCHAIN\_Imports.razor"
-using SupplyChain.Shared.Models;
+using SupplyChain;
 
 #line default
 #line hidden

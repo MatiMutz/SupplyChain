@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SupplyChain.Shared.Models
+namespace SupplyChain
 {
     /// <summary>
     /// Especial para las grillas de Devexpress y poder cambiar el nombre de las columna.

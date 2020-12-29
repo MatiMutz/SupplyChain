@@ -62,13 +62,6 @@ using Microsoft.JSInterop;
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "E:\Aerre\SupplyChain\SUPPLYCHAIN\_Imports.razor"
-using SupplyChain;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 9 "E:\Aerre\SupplyChain\SUPPLYCHAIN\_Imports.razor"
 using SupplyChain.Shared;
 
@@ -77,7 +70,7 @@ using SupplyChain.Shared;
 #nullable disable
 #nullable restore
 #line 13 "E:\Aerre\SupplyChain\SUPPLYCHAIN\_Imports.razor"
-using SupplyChain.Shared.Models;
+using SupplyChain;
 
 #line default
 #line hidden
