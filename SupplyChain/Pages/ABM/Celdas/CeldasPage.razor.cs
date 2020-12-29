@@ -62,11 +62,11 @@ namespace SupplyChain.Pages.Celda
                 if (!found)
                 {
                     args.Data.CG_CELDA = celdas.Max(s => s.CG_CELDA) + 1;
-                    response = await Http.PostAsJsonAsync("api/Celdas", args.Data);
+                    response = await Http.PostAsJsonAsync("api/Celda", args.Data);
                 }
                 else
                 {
-                    response = await Http.PutAsJsonAsync($"api/Celdas/{args.Data.CG_CELDA}", args.Data);
+                    response = await Http.PutAsJsonAsync($"api/Celda/{args.Data.CG_CELDA}", args.Data);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -140,7 +140,7 @@ namespace SupplyChain.Pages.Celda
                             Nuevo.CG_DEPOSM = selectedRecord.CG_DEPOSM;
                         
 
-                            var response = await Http.PostAsJsonAsync("api/Celdas", Nuevo);
+                            var response = await Http.PostAsJsonAsync("api/Celda", Nuevo);
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
