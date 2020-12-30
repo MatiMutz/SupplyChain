@@ -68,7 +68,7 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label class="e-float-text e-label-top">Fecha:</label>
-                                                <SfCalendar ID="Fecha" @bind-Value="@(ind.FE_IND)" Enabled="@Disabled"></SfCalendar>
+                                                <SfCalendar ID="Fecha" @bind-Value="@(ind.FE_INDIC)" Enabled="@Disabled"></SfCalendar>
 
                                             </div>
 
@@ -84,9 +84,8 @@
                     <GridColumn Field=@nameof(Indic.REGISTRO) HeaderText="Codigo" TextAlign="TextAlign.Left" IsPrimaryKey="true" Width="200"></GridColumn>
                     <GridColumn Field=@nameof(Indic.DES_IND) HeaderText="Descripcion" TextAlign="TextAlign.Left" Width="200"></GridColumn>
                     <GridColumn Field=@nameof(Indic.VA_INDIC) HeaderText="Valor ind" TextAlign="TextAlign.Left" Width="200"></GridColumn>
-
                     <GridColumn Field=@nameof(Indic.VA_COMPRA) HeaderText="Valor compra" TextAlign="TextAlign.Left" Width="200"></GridColumn>
-                    <GridColumn Field=@nameof(Indic.FE_IND) HeaderText="Fecha" TextAlign="TextAlign.Left" Width="200"></GridColumn>
+                    <GridColumn Field=@nameof(Indic.FE_INDIC) HeaderText="Fecha" TextAlign="TextAlign.Left" Width="200"></GridColumn>
                 </GridColumns>
             </SfGrid>
         </div>

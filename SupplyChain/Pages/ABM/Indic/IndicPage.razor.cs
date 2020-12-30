@@ -115,15 +115,15 @@ namespace SupplyChain.Pages.Indicx
                         {
                             Indic Nuevo = new Indic();
 
-                            Nuevo.REGISTRO = indics.Max(s => s.REGISTRO) + 1;
                             Nuevo.DES_IND = selectedRecord.DES_IND;
                             Nuevo.VA_INDIC = selectedRecord.VA_INDIC;
                             Nuevo.VA_COMPRA = selectedRecord.VA_COMPRA;
-                            Nuevo.FE_IND= selectedRecord.FE_IND;
-                            Nuevo.CG_CIA = selectedRecord.CG_CIA;
-                            Nuevo.USUARIO = selectedRecord.USUARIO;
+                            Nuevo.FE_INDIC= selectedRecord.FE_INDIC;
+                            Nuevo.CG_CIA = 1;
+                            Nuevo.USUARIO = "User";
 
                             var response = await Http.PostAsJsonAsync("api/Indic", Nuevo);
+                            Nuevo.REGISTRO = indics.Max(s => s.REGISTRO) + 1;
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {

@@ -36,7 +36,7 @@ namespace SupplyChain.Pages.Celda
 
         protected override async Task OnInitializedAsync()
         {
-            celdas = await Http.GetFromJsonAsync<List<Celdas>>("api/Celdas");
+            celdas = await Http.GetFromJsonAsync<List<Celdas>>("api/Celda");
 
             await base.OnInitializedAsync();
         }
@@ -91,7 +91,7 @@ namespace SupplyChain.Pages.Celda
                     if (isConfirmed)
                     {
                         //servicios.Remove(servicios.Find(m => m.PEDIDO == args.Data.PEDIDO));
-                        await Http.DeleteAsync($"api/Celdas/{args.Data.CG_CELDA}");
+                        await Http.DeleteAsync($"api/Celda/{args.Data.CG_CELDA}");
                     }
                 }
             }
@@ -114,17 +114,12 @@ namespace SupplyChain.Pages.Celda
                         {
                             Celdas Nuevo = new Celdas();
 
-                            Nuevo.CG_CELDA = celdas.Max(s => s.CG_CELDA) + 1;
                             Nuevo.DES_CELDA = selectedRecord.DES_CELDA;
                             Nuevo.CG_AREA = selectedRecord.CG_AREA;
-                       
+                            Nuevo.CG_CATEOP = selectedRecord.CG_CATEOP;
                             Nuevo.ILIMITADA = selectedRecord.ILIMITADA;
-                           
-                        
                             Nuevo.COEFI = selectedRecord.COEFI;
-                      
                             Nuevo.CG_PROVE = selectedRecord.CG_PROVE;
-                      
                             Nuevo.VALOR_AMOR = selectedRecord.VALOR_AMOR;
                             Nuevo.VALOR_MERC = selectedRecord.VALOR_MERC;
                             Nuevo.MONEDA = selectedRecord.MONEDA;
@@ -135,12 +130,13 @@ namespace SupplyChain.Pages.Celda
                             Nuevo.ENERGIA = selectedRecord.ENERGIA;
                             Nuevo.COMBUST = selectedRecord.COMBUST;
                             Nuevo.AIRE_COMP = selectedRecord.AIRE_COMP;
-                  
                             Nuevo.CG_TIPOCELDA = selectedRecord.CG_TIPOCELDA;
                             Nuevo.CG_DEPOSM = selectedRecord.CG_DEPOSM;
-                        
+                            Nuevo.CG_CIA = 1;
+                            Nuevo.USUARIO = "User";
 
                             var response = await Http.PostAsJsonAsync("api/Celda", Nuevo);
+                            Nuevo.CG_CELDA = celdas.Max(s => s.CG_CELDA) + 1;
 
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
